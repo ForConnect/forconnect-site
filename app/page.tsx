@@ -50,7 +50,6 @@ const content: Record<'nl' | 'en', ContentType> = {
     heroSubtitle:
       'ForConnect beantwoordt je telefoontjes in vloeiend Nederlands, plant afspraken in je agenda en stuurt herinneringen – 24/7, zonder extra personeel.',
     heroPrimaryCta: 'Plan een demo',
-    heroSecondaryCta: 'Bel de demo-lijn',
     howTitle: 'Hoe werkt ForConnect?',
     howSteps: [
       { title: '1. Klant belt je vaste nummer', text: 'ForConnect neemt op als een vriendelijke receptionist.' },
