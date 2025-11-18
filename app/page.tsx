@@ -298,7 +298,7 @@ export default function HomePage() {
             </div>
           </div>
           {/* Right side – A variant (wide, low chat box) */}
-          <div className="animate-fade-in-up flex flex-col items-center md:items-start md:w-[420px]">
+          <div className="animate-fade-in-up flex flex-col items-center md:items-start md:w-[420px] mt-10 md:mt-0">
 
             {/* CHAT BOX */}
             <div className="p-6 rounded-3xl bg-[#020617]/70 border border-gray-800 w-full h-[300px] flex flex-col justify-between shadow-[0_0_25px_#00F0FF22]">
