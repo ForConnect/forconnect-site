@@ -49,12 +49,14 @@ const content: Record<'nl' | 'en', ContentType> = {
     heroSubtitle:
       'ForConnect beantwoordt je telefoontjes in vloeiend Nederlands, plant afspraken in je agenda en stuurt herinneringen – 24/7, zonder extra personeel.',
     heroPrimaryCta: 'Plan een demo',
+
     howTitle: 'Hoe werkt ForConnect?',
     howSteps: [
-      { title: '1. Klant belt je vaste nummer', text: 'ForConnect neemt op als een vriendelijke receptionist.' },
-      { title: '2. AI plant de afspraak', text: 'De agent zet afspraken direct in je agenda.' },
-      { title: '3. Herinneringen', text: 'Klant krijgt bevestiging en herinnering.' },
+      { title: '1. Klant belt naar jouw eigen telefoonnummer', text: '' },
+      { title: '2. AI assistent plant de afspraak in', text: '' },
+      { title: '3. Klant krijgt bevestiging en herinnering per email/sms', text: '' },
     ],
+
     forWhoTitle: 'Voor wie is ForConnect?',
     forWhoItems: [
       { title: 'Kapsalons & barbershops', text: 'Mis geen afspraken meer.' },
@@ -62,6 +64,7 @@ const content: Record<'nl' | 'en', ContentType> = {
       { title: 'Nagelstudio’s', text: 'Meer structuur, minder gemiste klanten.' },
       { title: 'Tandartsen', text: 'Professionele eerste indruk.' },
     ],
+
     benefitsTitle: 'Wat levert het je op?',
     benefits: [
       { title: 'Nooit meer gemiste oproepen', text: 'Altijd bereikbaar.' },
@@ -69,6 +72,7 @@ const content: Record<'nl' | 'en', ContentType> = {
       { title: 'Vloeiend Nederlands', text: 'AI klinkt natuurlijk.' },
       { title: 'Geen extra personeel', text: 'Vaste prijs per maand.' },
     ],
+
     pricingTitle: 'Prijzen',
     pricingSubtitle: 'Transparante pakketten voor salons.',
     plans: [
@@ -84,7 +88,7 @@ const content: Record<'nl' | 'en', ContentType> = {
         price: '€99',
         per: 'per maand',
         description: 'Voor drukke salons.',
-        features: ['800 min/maand', 'Agenda koppeling', 'SMS/WhatsApp herinneringen', 'Onboarding'],
+        features: ['600 min/maand', 'Agenda koppeling', 'SMS/WhatsApp herinneringen', 'Onboarding'],
         highlight: true,
       },
       {
@@ -95,8 +99,10 @@ const content: Record<'nl' | 'en', ContentType> = {
         features: ['Meerdere salons', 'Priority support', 'Maatwerk integraties'],
       },
     ],
+
     demoTitle: 'Plan een live demo',
-    demoSubtitle: 'Laat in 15 minuten zien hoe ForConnect werkt voor jouw salon.',
+    demoSubtitle: 'We demonstreren in 5 minuten hoe ForConnect uw salon ondersteunt',
+
     form: {
       name: 'Naam',
       salon: 'Naam van je salon',
@@ -106,6 +112,7 @@ const content: Record<'nl' | 'en', ContentType> = {
       messagePlaceholder: 'Bijvoorbeeld: minder gemiste oproepen…',
       submit: 'Verzenden',
     },
+
     faqTitle: 'Veelgestelde vragen',
     faqItems: [
       { q: 'Werkt dit met mijn huidige nummer?', a: 'Ja, nummer kan doorgestuurd worden.' },
@@ -113,6 +120,7 @@ const content: Record<'nl' | 'en', ContentType> = {
       { q: 'Klinkt AI natuurlijk?', a: 'Ja, moderne NL AI stemmen.' },
       { q: 'Kan ik testen?', a: 'Ja, via demo gesprek.' },
     ],
+
     footerTagline: 'Gemaakt voor salons in Nederland.',
     footerRights: '© 2025 ForConnect. Alle rechten voorbehouden.',
   },
@@ -124,12 +132,14 @@ const content: Record<'nl' | 'en', ContentType> = {
     heroSubtitle:
       'ForConnect answers calls in fluent Dutch, books appointments, and sends reminders – 24/7, without extra staff.',
     heroPrimaryCta: 'Book a demo',
+
     howTitle: 'How does ForConnect work?',
     howSteps: [
-      { title: '1. Client calls your number', text: 'AI answers immediately.' },
-      { title: '2. AI schedules appointment', text: 'Added automatically to your calendar.' },
-      { title: '3. Reminders', text: 'Client receives confirmation and reminder.' },
+      { title: '1. Client calls your number', text: '' },
+      { title: '2. AI assistant schedules the appointment', text: '' },
+      { title: '3. Client receives confirmation & reminders via email/SMS', text: '' },
     ],
+
     forWhoTitle: 'Who is ForConnect for?',
     forWhoItems: [
       { title: 'Hair salons', text: 'Never miss a booking again.' },
@@ -137,6 +147,7 @@ const content: Record<'nl' | 'en', ContentType> = {
       { title: 'Nail studios', text: 'Better structure.' },
       { title: 'Dentists', text: 'Professional first impression.' },
     ],
+
     benefitsTitle: 'Why choose ForConnect?',
     benefits: [
       { title: 'No missed calls', text: 'Always reachable.' },
@@ -144,6 +155,7 @@ const content: Record<'nl' | 'en', ContentType> = {
       { title: 'Fluent Dutch voice', text: 'Sounds like a real receptionist.' },
       { title: 'No hiring costs', text: 'Fixed monthly fee.' },
     ],
+
     pricingTitle: 'Pricing',
     pricingSubtitle: 'Simple transparent plans.',
     plans: [
@@ -159,7 +171,7 @@ const content: Record<'nl' | 'en', ContentType> = {
         price: '€99',
         per: 'per month',
         description: 'For busy salons.',
-        features: ['800 min/month', 'Calendar integration', 'SMS/WhatsApp reminders', 'Onboarding'],
+        features: ['600 min/month', 'Calendar integration', 'SMS/WhatsApp reminders', 'Onboarding'],
         highlight: true,
       },
       {
@@ -170,8 +182,10 @@ const content: Record<'nl' | 'en', ContentType> = {
         features: ['Multiple salons', 'Priority support', 'Custom integrations'],
       },
     ],
+
     demoTitle: 'Book a live demo',
-    demoSubtitle: 'See how ForConnect can help your salon.',
+    demoSubtitle: 'We demonstrate in 5 minutes how ForConnect supports your salon.',
+
     form: {
       name: 'Name',
       salon: 'Salon name',
@@ -181,6 +195,7 @@ const content: Record<'nl' | 'en', ContentType> = {
       messagePlaceholder: 'Example: fewer missed calls…',
       submit: 'Send',
     },
+
     faqTitle: 'FAQ',
     faqItems: [
       { q: 'Works with my current number?', a: 'Yes, we can forward your number.' },
@@ -188,9 +203,10 @@ const content: Record<'nl' | 'en', ContentType> = {
       { q: 'Is AI natural?', a: 'Very natural voices.' },
       { q: 'Can I test it?', a: 'Yes, via demo call.' },
     ],
+
     footerTagline: 'Built for salons in the Netherlands.',
     footerRights: '© 2025 ForConnect. All rights reserved.',
-  },
+  }
 };
 
 export default function HomePage() {
@@ -204,14 +220,14 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-[#040815] text-white">
-      {/* Glow */}
+      {/* Glow background */}
       <div className="pointer-events-none fixed inset-0 opacity-40 blur-3xl">
         <div className="absolute -top-32 -left-32 h-80 w-80 rounded-full bg-[#00F0FF33]" />
         <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-[#00F0FF22]" />
       </div>
 
       <div className="relative mx-auto max-w-6xl px-4 pb-16 pt-6">
-        {/* NAV */}
+        {/* Nav */}
         <header className="flex items-center justify-between py-4">
           <div className="flex items-center gap-2">
             <div className="h-10 w-10 flex items-center justify-center rounded-xl border border-[#00F0FF55] shadow-[0_0_20px_#00F0FF66]">
@@ -260,7 +276,7 @@ export default function HomePage() {
           </div>
         </header>
 
-        {/* HERO */}
+        {/* Hero */}
         <section id="hero" className="pt-16 grid md:grid-cols-2 gap-10 items-center">
           <div className="space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 border border-gray-700 bg-[#020617]/80 text-xs rounded-full">
@@ -279,53 +295,103 @@ export default function HomePage() {
                 {t.heroPrimaryCta}
               </button>
             </div>
+          </div>
+          {/* Right side – A2 Modern Phone + CTA buttons */}
+          <div className="relative flex flex-col items-center md:items-end gap-4 animate-fade-in">
 
-            {/* hero demo bubble */}
-            <div className="flex justify-center pt-6">
-              <div className="p-6 rounded-3xl bg-[#020617]/70 border border-gray-800 max-w-xs space-y-3">
-                <div className="text-xs text-gray-400">{lang === 'nl' ? 'Inkomende oproep' : 'Incoming call'}</div>
+            {/* PHONE MOCKUP */}
+            <div className="relative w-[260px] md:w-[300px] aspect-[9/19] bg-[#0B1120] rounded-[2.5rem] border border-[#1E293B] shadow-[0_0_25px_#00F0FF33] overflow-hidden">
 
-                <div className="bg-[#111827] p-3 rounded-xl text-sm">
+              {/* Neon glow */}
+              <div className="absolute inset-0 rounded-[2.5rem] blur-2xl bg-[#00F0FF33]"></div>
+
+              {/* Phone screen */}
+              <div className="relative z-10 h-full w-full p-5 flex flex-col gap-3">
+
+                <div className="text-xs text-gray-400 mb-1">
+                  {lang === 'nl' ? 'Live AI demo' : 'Live AI demo'}
+                </div>
+
+                {/* Bubble 1 */}
+                <div className="bg-[#111827] p-3 rounded-xl text-sm animate-fade-in-up">
                   {lang === 'nl'
                     ? 'Goedemiddag, met de AI-receptionist van uw salon. Hoe kan ik helpen?'
                     : 'Good afternoon, AI receptionist speaking. How can I assist?'}
                 </div>
 
-                <div className="bg-[#00F0FF22] p-3 rounded-xl text-right text-sm">
+                {/* Bubble 2 */}
+                <div className="bg-[#00F0FF22] p-3 rounded-xl text-right text-sm animate-fade-in-up delay-150">
                   {lang === 'nl'
-                    ? 'Ik wil graag volgende week knippen.'
-                    : 'I’d like a haircut next week.'}
+                    ? 'Ik zou graag een knipafspraak willen.'
+                    : 'I would like to book a haircut appointment.'}
                 </div>
 
-                <div className="bg-[#111827] p-3 rounded-xl text-sm">
+                {/* Bubble 3 */}
+                <div className="bg-[#111827] p-3 rounded-xl text-sm animate-fade-in-up delay-300">
                   {lang === 'nl'
                     ? 'Prima, ik kijk met u mee.'
                     : 'Great, let me check.'}
                 </div>
+
+                <div className="mt-auto text-center text-[10px] text-gray-500">
+                  ● {lang === 'nl' ? 'AI actief' : 'AI active'}
+                </div>
               </div>
+            </div>
+
+            {/* CTA BUTTONS */}
+            <div className="flex flex-col w-full md:w-auto gap-2">
+
+              {/* Call button */}
+              <a
+                href="tel:+3162656648"
+                className="flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-[#00F0FF] text-[#020617] font-semibold text-sm hover:bg-[#66F6FF] transition shadow-[0_0_15px_#00F0FF66]"
+              >
+                <span>📞</span>
+                <span>{lang === 'nl' ? 'Bel de demo-lijn' : 'Call demo line'}</span>
+              </a>
+
+              {/* WhatsApp button */}
+              <a
+                href="https://wa.me/3162656648"
+                target="_blank"
+                className="flex items-center justify-center gap-2 px-5 py-3 rounded-full border border-[#00F0FF55] text-[#00F0FF] font-semibold text-sm hover:border-[#00F0FF] hover:bg-[#00F0FF11] transition"
+              >
+                <span>💬</span>
+                <span>{lang === 'nl' ? 'WhatsApp ons' : 'WhatsApp us'}</span>
+              </a>
+
             </div>
           </div>
         </section>
-
-        {/* HOW IT WORKS */}
+        {/* END OF HERO */}
+        {/* How it works */}
         <section id="how" className="mt-24">
           <h2 className="text-2xl font-bold">{t.howTitle}</h2>
+
           <div className="grid md:grid-cols-3 gap-6 mt-6">
             {t.howSteps.map((s, i) => (
-              <div key={i} className="p-4 border border-gray-800 rounded-xl bg-[#020617]/70">
+              <div
+                key={i}
+                className="p-4 border border-gray-800 rounded-xl bg-[#020617]/70"
+              >
                 <h3 className="font-semibold text-white mb-2">{s.title}</h3>
-                <p className="text-sm text-gray-400">{s.text}</p>
+                {s.text && <p className="text-sm text-gray-400">{s.text}</p>}
               </div>
             ))}
           </div>
         </section>
 
-        {/* FOR WHO */}
+        {/* For Who */}
         <section id="forwho" className="mt-24">
           <h2 className="text-2xl font-bold">{t.forWhoTitle}</h2>
+
           <div className="grid md:grid-cols-4 gap-6 mt-6">
             {t.forWhoItems.map((f, i) => (
-              <div key={i} className="p-4 bg-[#020617]/80 rounded-xl border border-gray-800">
+              <div
+                key={i}
+                className="p-4 bg-[#020617]/80 rounded-xl border border-gray-800"
+              >
                 <h3 className="font-semibold">{f.title}</h3>
                 <p className="text-sm text-gray-400 mt-2">{f.text}</p>
               </div>
@@ -333,12 +399,16 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* BENEFITS */}
+        {/* Benefits */}
         <section id="benefits" className="mt-24">
           <h2 className="text-2xl font-bold">{t.benefitsTitle}</h2>
+
           <div className="grid md:grid-cols-4 gap-6 mt-6">
             {t.benefits.map((b, i) => (
-              <div key={i} className="p-4 bg-[#020617]/70 rounded-xl border border-gray-800">
+              <div
+                key={i}
+                className="p-4 bg-[#020617]/70 rounded-xl border border-gray-800"
+              >
                 <h3 className="font-semibold">{b.title}</h3>
                 <p className="text-sm text-gray-400 mt-2">{b.text}</p>
               </div>
@@ -346,7 +416,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* PRICING */}
+        {/* Pricing */}
         <section id="pricing" className="mt-24">
           <h2 className="text-2xl font-bold">{t.pricingTitle}</h2>
           <p className="text-sm text-gray-400">{t.pricingSubtitle}</p>
@@ -390,7 +460,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* DEMO */}
+        {/* Demo */}
         <section id="demo" className="mt-24">
           <h2 className="text-2xl font-bold">{t.demoTitle}</h2>
           <p className="text-sm text-gray-400">{t.demoSubtitle}</p>
@@ -449,7 +519,10 @@ export default function HomePage() {
 
           <div className="mt-6 space-y-3">
             {t.faqItems.map((f, i) => (
-              <div key={i} className="p-4 bg-[#020617]/70 rounded-xl border border-gray-800">
+              <div
+                key={i}
+                className="p-4 bg-[#020617]/70 rounded-xl border border-gray-800"
+              >
                 <div className="font-semibold">{f.q}</div>
                 <div className="text-sm text-gray-400 mt-1">{f.a}</div>
               </div>
@@ -457,7 +530,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* FOOTER */}
+        {/* Footer */}
         <footer className="mt-24 border-t border-gray-800 pt-4 text-xs text-gray-500">
           <p>{t.footerTagline}</p>
           <p className="mt-1">{t.footerRights}</p>
