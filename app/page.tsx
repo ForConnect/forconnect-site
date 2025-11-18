@@ -8,7 +8,6 @@ type ContentType = {
   heroTitle: string;
   heroSubtitle: string;
   heroPrimaryCta: string;
-  heroSecondaryCa: string;
   howTitle: string;
   howSteps: { title: string; text: string }[];
   forWhoTitle: string;
@@ -205,14 +204,14 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-[#040815] text-white">
-      {/* Glow background */}
+      {/* Glow */}
       <div className="pointer-events-none fixed inset-0 opacity-40 blur-3xl">
         <div className="absolute -top-32 -left-32 h-80 w-80 rounded-full bg-[#00F0FF33]" />
         <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-[#00F0FF22]" />
       </div>
 
       <div className="relative mx-auto max-w-6xl px-4 pb-16 pt-6">
-        {/* Nav */}
+        {/* NAV */}
         <header className="flex items-center justify-between py-4">
           <div className="flex items-center gap-2">
             <div className="h-10 w-10 flex items-center justify-center rounded-xl border border-[#00F0FF55] shadow-[0_0_20px_#00F0FF66]">
@@ -261,7 +260,7 @@ export default function HomePage() {
           </div>
         </header>
 
-        {/* Hero */}
+        {/* HERO */}
         <section id="hero" className="pt-16 grid md:grid-cols-2 gap-10 items-center">
           <div className="space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 border border-gray-700 bg-[#020617]/80 text-xs rounded-full">
@@ -272,42 +271,43 @@ export default function HomePage() {
             <h1 className="text-4xl lg:text-5xl font-bold">{t.heroTitle}</h1>
             <p className="text-gray-300 text-sm max-w-md">{t.heroSubtitle}</p>
 
-           <div className="flex gap-4">
-  <button
-    onClick={() => scrollToId('demo')}
-    className="px-6 py-3 bg-[#00F0FF] text-[#020617] rounded-full font-semibold shadow-[0_0_20px_#00F0FF88] hover:bg-[#66F6FF] transition"
-  >
-    {t.heroPrimaryCta}
-  </button>
-</div>
+            <div className="flex gap-4">
+              <button
+                onClick={() => scrollToId('demo')}
+                className="px-6 py-3 bg-[#00F0FF] text-[#020617] rounded-full font-semibold shadow-[0_0_20px_#00F0FF88] hover:bg-[#66F6FF] transition"
+              >
+                {t.heroPrimaryCta}
+              </button>
+            </div>
 
-          {/* AI Demo bubble */}
-          <div className="flex justify-center">
-            <div className="p-6 rounded-3xl bg-[#020617]/70 border border-gray-800 max-w-xs space-y-3">
-              <div className="text-xs text-gray-400">{lang === 'nl' ? 'Inkomende oproep' : 'Incoming call'}</div>
+            {/* hero demo bubble */}
+            <div className="flex justify-center pt-6">
+              <div className="p-6 rounded-3xl bg-[#020617]/70 border border-gray-800 max-w-xs space-y-3">
+                <div className="text-xs text-gray-400">{lang === 'nl' ? 'Inkomende oproep' : 'Incoming call'}</div>
 
-              <div className="bg-[#111827] p-3 rounded-xl text-sm">
-                {lang === 'nl'
-                  ? 'Goedemiddag, met de AI-receptionist van uw salon. Hoe kan ik helpen?'
-                  : 'Good afternoon, AI receptionist speaking. How can I assist?'}
-              </div>
+                <div className="bg-[#111827] p-3 rounded-xl text-sm">
+                  {lang === 'nl'
+                    ? 'Goedemiddag, met de AI-receptionist van uw salon. Hoe kan ik helpen?'
+                    : 'Good afternoon, AI receptionist speaking. How can I assist?'}
+                </div>
 
-              <div className="bg-[#00F0FF22] p-3 rounded-xl text-right text-sm">
-                {lang === 'nl'
-                  ? 'Ik wil graag volgende week knippen.'
-                  : 'I’d like a haircut next week.'}
-              </div>
+                <div className="bg-[#00F0FF22] p-3 rounded-xl text-right text-sm">
+                  {lang === 'nl'
+                    ? 'Ik wil graag volgende week knippen.'
+                    : 'I’d like a haircut next week.'}
+                </div>
 
-              <div className="bg-[#111827] p-3 rounded-xl text-sm">
-                {lang === 'nl'
-                  ? 'Prima, ik kijk met u mee.'
-                  : 'Great, let me check.'}
+                <div className="bg-[#111827] p-3 rounded-xl text-sm">
+                  {lang === 'nl'
+                    ? 'Prima, ik kijk met u mee.'
+                    : 'Great, let me check.'}
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* How it works */}
+        {/* HOW IT WORKS */}
         <section id="how" className="mt-24">
           <h2 className="text-2xl font-bold">{t.howTitle}</h2>
           <div className="grid md:grid-cols-3 gap-6 mt-6">
@@ -320,7 +320,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* For Who */}
+        {/* FOR WHO */}
         <section id="forwho" className="mt-24">
           <h2 className="text-2xl font-bold">{t.forWhoTitle}</h2>
           <div className="grid md:grid-cols-4 gap-6 mt-6">
@@ -333,7 +333,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Benefits */}
+        {/* BENEFITS */}
         <section id="benefits" className="mt-24">
           <h2 className="text-2xl font-bold">{t.benefitsTitle}</h2>
           <div className="grid md:grid-cols-4 gap-6 mt-6">
@@ -346,7 +346,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Pricing */}
+        {/* PRICING */}
         <section id="pricing" className="mt-24">
           <h2 className="text-2xl font-bold">{t.pricingTitle}</h2>
           <p className="text-sm text-gray-400">{t.pricingSubtitle}</p>
@@ -390,7 +390,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Demo */}
+        {/* DEMO */}
         <section id="demo" className="mt-24">
           <h2 className="text-2xl font-bold">{t.demoTitle}</h2>
           <p className="text-sm text-gray-400">{t.demoSubtitle}</p>
@@ -457,7 +457,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Footer */}
+        {/* FOOTER */}
         <footer className="mt-24 border-t border-gray-800 pt-4 text-xs text-gray-500">
           <p>{t.footerTagline}</p>
           <p className="mt-1">{t.footerRights}</p>
