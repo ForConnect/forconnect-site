@@ -125,7 +125,6 @@ const content: Record<'nl' | 'en', ContentType> = {
     heroSubtitle:
       'ForConnect answers calls in fluent Dutch, books appointments, and sends reminders – 24/7, without extra staff.',
     heroPrimaryCta: 'Book a demo',
-    heroSecondaryCta: 'Call demo line',
     howTitle: 'How does ForConnect work?',
     howSteps: [
       { title: '1. Client calls your number', text: 'AI answers immediately.' },
@@ -273,21 +272,14 @@ export default function HomePage() {
             <h1 className="text-4xl lg:text-5xl font-bold">{t.heroTitle}</h1>
             <p className="text-gray-300 text-sm max-w-md">{t.heroSubtitle}</p>
 
-            <div className="flex gap-4">
-              <button
-                onClick={() => scrollToId('demo')}
-                className="px-6 py-3 bg-[#00F0FF] text-[#020617] rounded-full font-semibold shadow-[0_0_20px_#00F0FF88] hover:bg-[#66F6FF] transition"
-              >
-                {t.heroPrimaryCta}
-              </button>
-
-              <button
-                className="px-6 py-3 border border-gray-600 rounded-full hover:border-[#00F0FF] hover:text-[#00F0FF]"
-              >
-                {t.heroSecondaryCta}
-              </button>
-            </div>
-          </div>
+           <div className="flex gap-4">
+  <button
+    onClick={() => scrollToId('demo')}
+    className="px-6 py-3 bg-[#00F0FF] text-[#020617] rounded-full font-semibold shadow-[0_0_20px_#00F0FF88] hover:bg-[#66F6FF] transition"
+  >
+    {t.heroPrimaryCta}
+  </button>
+</div>
 
           {/* AI Demo bubble */}
           <div className="flex justify-center">
