@@ -8,6 +8,7 @@ type ContentType = {
   heroTitle: string;
   heroSubtitle: string;
   heroPrimaryCta: string;
+  heroSecondaryCta?: string;
   howTitle: string;
   howSteps: { title: string; text: string }[];
   forWhoTitle: string;
@@ -135,9 +136,9 @@ const content: Record<'nl' | 'en', ContentType> = {
 
     howTitle: 'How does ForConnect work?',
     howSteps: [
-      { title: '1. Client calls your number', text: '' },
+      { title: '1. Client calls your main phone number', text: '' },
       { title: '2. AI assistant schedules the appointment', text: '' },
-      { title: '3. Client receives confirmation & reminders via email/SMS', text: '' },
+      { title: '3. Client receives confirmation + reminder by email/sms', text: '' },
     ],
 
     forWhoTitle: 'Who is ForConnect for?',
@@ -206,7 +207,7 @@ const content: Record<'nl' | 'en', ContentType> = {
 
     footerTagline: 'Built for salons in the Netherlands.',
     footerRights: '© 2025 ForConnect. All rights reserved.',
-  }
+  },
 };
 
 export default function HomePage() {
@@ -278,7 +279,7 @@ export default function HomePage() {
 
         {/* Hero */}
         <section id="hero" className="pt-16 grid md:grid-cols-2 gap-10 items-center">
-          <div className="space-y-6">
+          <div className="space-y-6 animate-fade-in">
             <div className="inline-flex items-center gap-2 px-3 py-1 border border-gray-700 bg-[#020617]/80 text-xs rounded-full">
               <span className="h-2 w-2 rounded-full bg-[#00F0FF]" />
               <span>{t.heroBadge}</span>
@@ -296,75 +297,65 @@ export default function HomePage() {
               </button>
             </div>
           </div>
-          {/* Right side – A2 Modern Phone + CTA buttons */}
-          <div className="relative flex flex-col items-center md:items-end gap-4 animate-fade-in">
+          {/* Right side – A variant (wide, low chat box) */}
+          <div className="animate-fade-in-up flex flex-col items-center md:items-start md:w-[420px]">
 
-            {/* PHONE MOCKUP */}
-            <div className="relative w-[260px] md:w-[300px] aspect-[9/19] bg-[#0B1120] rounded-[2.5rem] border border-[#1E293B] shadow-[0_0_25px_#00F0FF33] overflow-hidden">
+            {/* CHAT BOX */}
+            <div className="p-6 rounded-3xl bg-[#020617]/70 border border-gray-800 w-full h-[300px] flex flex-col justify-between shadow-[0_0_25px_#00F0FF22]">
 
-              {/* Neon glow */}
-              <div className="absolute inset-0 rounded-[2.5rem] blur-2xl bg-[#00F0FF33]"></div>
-
-              {/* Phone screen */}
-              <div className="relative z-10 h-full w-full p-5 flex flex-col gap-3">
-
-                <div className="text-xs text-gray-400 mb-1">
+              <div>
+                <div className="text-xs text-gray-400 mb-4">
                   {lang === 'nl' ? 'Live AI demo' : 'Live AI demo'}
                 </div>
 
-                {/* Bubble 1 */}
-                <div className="bg-[#111827] p-3 rounded-xl text-sm animate-fade-in-up">
+                <div className="bg-[#111827] p-3 rounded-xl text-sm mb-3">
                   {lang === 'nl'
                     ? 'Goedemiddag, met de AI-receptionist van uw salon. Hoe kan ik helpen?'
                     : 'Good afternoon, AI receptionist speaking. How can I assist?'}
                 </div>
 
-                {/* Bubble 2 */}
-                <div className="bg-[#00F0FF22] p-3 rounded-xl text-right text-sm animate-fade-in-up delay-150">
+                <div className="bg-[#00F0FF22] p-3 rounded-xl text-sm mb-3 text-right">
                   {lang === 'nl'
                     ? 'Ik zou graag een knipafspraak willen.'
-                    : 'I would like to book a haircut appointment.'}
+                    : 'I’d like to book a haircut appointment.'}
                 </div>
 
-                {/* Bubble 3 */}
-                <div className="bg-[#111827] p-3 rounded-xl text-sm animate-fade-in-up delay-300">
+                <div className="bg-[#111827] p-3 rounded-xl text-sm">
                   {lang === 'nl'
                     ? 'Prima, ik kijk met u mee.'
                     : 'Great, let me check.'}
                 </div>
-
-                <div className="mt-auto text-center text-[10px] text-gray-500">
-                  ● {lang === 'nl' ? 'AI actief' : 'AI active'}
-                </div>
               </div>
+
+              <div className="text-xs text-gray-500 text-right mt-3">• {lang === 'nl' ? 'AI actief' : 'AI active'}</div>
             </div>
 
             {/* CTA BUTTONS */}
-            <div className="flex flex-col w-full md:w-auto gap-2">
+            <div className="flex flex-col gap-3 mt-4 w-full">
 
               {/* Call button */}
               <a
                 href="tel:+3162656648"
-                className="flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-[#00F0FF] text-[#020617] font-semibold text-sm hover:bg-[#66F6FF] transition shadow-[0_0_15px_#00F0FF66]"
+                className="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-[#00F0FF] text-[#020617] font-semibold shadow-[0_0_15px_#00F0FF55] hover:bg-[#66F6FF] transition"
               >
                 <span>📞</span>
-                <span>{lang === 'nl' ? 'Bel de demo-lijn' : 'Call demo line'}</span>
+                {lang === 'nl' ? 'Bel de demo-lijn' : 'Call demo line'}
               </a>
 
               {/* WhatsApp button */}
               <a
                 href="https://wa.me/3162656648"
                 target="_blank"
-                className="flex items-center justify-center gap-2 px-5 py-3 rounded-full border border-[#00F0FF55] text-[#00F0FF] font-semibold text-sm hover:border-[#00F0FF] hover:bg-[#00F0FF11] transition"
+                className="w-full flex items-center justify-center gap-2 py-3 rounded-full border border-gray-600 hover:border-[#00F0FF] hover:text-[#00F0FF] transition"
               >
                 <span>💬</span>
-                <span>{lang === 'nl' ? 'WhatsApp ons' : 'WhatsApp us'}</span>
+                {lang === 'nl' ? 'WhatsApp ons' : 'WhatsApp us'}
               </a>
 
             </div>
           </div>
         </section>
-        {/* END OF HERO */}
+
         {/* How it works */}
         <section id="how" className="mt-24">
           <h2 className="text-2xl font-bold">{t.howTitle}</h2>
@@ -381,7 +372,6 @@ export default function HomePage() {
             ))}
           </div>
         </section>
-
         {/* For Who */}
         <section id="forwho" className="mt-24">
           <h2 className="text-2xl font-bold">{t.forWhoTitle}</h2>
