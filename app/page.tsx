@@ -100,14 +100,13 @@ const content: Record<'nl' | 'en', ContentType> = {
         features: ['Meerdere salons', 'Priority support', 'Maatwerk integraties'],
       },
     ],
-
     demoTitle: 'Plan een live demo',
     demoSubtitle: 'We demonstreren in 5 minuten hoe ForConnect uw salon ondersteunt',
 
     form: {
       name: 'Naam',
       salon: 'Naam van je salon',
-      email: 'E-mailadres',
+      email: 'E-mailadres (verplicht)',
       phone: 'Telefoonnummer',
       message: 'Wat wil je bereiken?',
       messagePlaceholder: 'Bijvoorbeeld: minder gemiste oproepen…',
@@ -190,7 +189,7 @@ const content: Record<'nl' | 'en', ContentType> = {
     form: {
       name: 'Name',
       salon: 'Salon name',
-      email: 'Email',
+      email: 'Email (required)',
       phone: 'Phone',
       message: 'What do you want to achieve?',
       messagePlaceholder: 'Example: fewer missed calls…',
@@ -218,7 +217,6 @@ export default function HomePage() {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
-
   return (
     <div className="min-h-screen bg-[#040815] text-white">
       {/* Glow background */}
@@ -297,12 +295,10 @@ export default function HomePage() {
               </button>
             </div>
           </div>
-          {/* Right side – A variant (wide, low chat box) */}
+
+          {/* Right side – A variant */}
           <div className="animate-fade-in-up flex flex-col items-center md:items-start md:w-[420px] mt-10 md:mt-0">
-
-            {/* CHAT BOX */}
             <div className="p-6 rounded-3xl bg-[#020617]/70 border border-gray-800 w-full h-[300px] flex flex-col justify-between shadow-[0_0_25px_#00F0FF22]">
-
               <div>
                 <div className="text-xs text-gray-400 mb-4">
                   {lang === 'nl' ? 'Live AI demo' : 'Live AI demo'}
@@ -327,13 +323,13 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="text-xs text-gray-500 text-right mt-3">• {lang === 'nl' ? 'AI actief' : 'AI active'}</div>
+              <div className="text-xs text-gray-500 text-right mt-3">
+                • {lang === 'nl' ? 'AI actief' : 'AI active'}
+              </div>
             </div>
 
             {/* CTA BUTTONS */}
             <div className="flex flex-col gap-3 mt-4 w-full">
-
-              {/* Call button */}
               <a
                 href="tel:+3162656648"
                 className="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-[#00F0FF] text-[#020617] font-semibold shadow-[0_0_15px_#00F0FF55] hover:bg-[#66F6FF] transition"
@@ -342,7 +338,6 @@ export default function HomePage() {
                 {lang === 'nl' ? 'Bel de demo-lijn' : 'Call demo line'}
               </a>
 
-              {/* WhatsApp button */}
               <a
                 href="https://wa.me/3162656648"
                 target="_blank"
@@ -351,7 +346,6 @@ export default function HomePage() {
                 <span>💬</span>
                 {lang === 'nl' ? 'WhatsApp ons' : 'WhatsApp us'}
               </a>
-
             </div>
           </div>
         </section>
@@ -372,6 +366,7 @@ export default function HomePage() {
             ))}
           </div>
         </section>
+
         {/* For Who */}
         <section id="forwho" className="mt-24">
           <h2 className="text-2xl font-bold">{t.forWhoTitle}</h2>
@@ -449,38 +444,88 @@ export default function HomePage() {
             ))}
           </div>
         </section>
-
         {/* Demo */}
         <section id="demo" className="mt-24">
           <h2 className="text-2xl font-bold">{t.demoTitle}</h2>
           <p className="text-sm text-gray-400">{t.demoSubtitle}</p>
 
           <div className="grid md:grid-cols-2 gap-6 mt-6">
-            <form className="space-y-4 p-6 bg-[#020617]/70 rounded-xl border border-gray-800">
+
+            {/* FORMULAR */}
+            <form
+              onSubmit={async (e) => {
+                e.preventDefault();
+
+                const form = e.currentTarget;
+                const formData = new FormData(form);
+
+                // EMAIL REQUIRED VALIDATION
+                const email = formData.get("email") as string;
+                if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                  alert(lang === "nl"
+                    ? "Voer een geldig e-mailadres in."
+                    : "Please enter a valid email address."
+                  );
+                  return;
+                }
+
+                const res = await fetch("/api/contact", {
+                  method: "POST",
+                  body: formData,
+                });
+
+                if (res.ok) {
+                  alert(
+                    lang === "nl"
+                      ? "Uw bericht is succesvol verzonden. Bedankt!"
+                      : "Your message has been sent successfully. Thank you!"
+                  );
+                  form.reset();
+                } else {
+                  alert(
+                    lang === "nl"
+                      ? "Er is een fout opgetreden. Probeer het opnieuw."
+                      : "An error occurred. Please try again."
+                  );
+                }
+              }}
+              className="space-y-4 p-6 bg-[#020617]/70 rounded-xl border border-gray-800"
+            >
               <input
                 type="text"
+                name="name"
                 placeholder={t.form.name}
                 className="w-full p-3 bg-[#0B1220] border border-gray-700 rounded-xl"
               />
+
               <input
                 type="text"
+                name="salon"
                 placeholder={t.form.salon}
                 className="w-full p-3 bg-[#0B1220] border border-gray-700 rounded-xl"
               />
+
               <input
                 type="email"
+                name="email"
                 placeholder={t.form.email}
+                required
                 className="w-full p-3 bg-[#0B1220] border border-gray-700 rounded-xl"
               />
+
               <input
                 type="tel"
+                name="phone"
                 placeholder={t.form.phone}
                 className="w-full p-3 bg-[#0B1220] border border-gray-700 rounded-xl"
               />
+
               <textarea
+                name="message"
                 placeholder={t.form.messagePlaceholder}
                 className="w-full p-3 bg-[#0B1220] border border-gray-700 rounded-xl h-24"
               />
+
               <button
                 type="submit"
                 className="w-full px-4 py-3 bg-[#00F0FF] text-[#020617] rounded-full font-semibold"
@@ -489,20 +534,28 @@ export default function HomePage() {
               </button>
             </form>
 
+            {/* CONTACT BOX */}
             <div className="p-6 bg-[#020617]/80 rounded-xl border border-gray-800">
               <h3 className="text-lg font-semibold">Contact</h3>
 
+              {/* Company */}
+              <p className="text-sm text-gray-400 mt-3">
+                {lang === "nl" ? "Bedrijf" : "Company"}
+              </p>
+              <p className="text-sm">ForConnect</p>
+
+              {/* Email */}
               <p className="text-sm text-gray-400 mt-3">E-mail</p>
               <p className="text-sm">info@forconnect.nl</p>
 
+              {/* Phone */}
               <p className="text-sm text-gray-400 mt-3">
-                {lang === 'nl' ? 'Demo nummer' : 'Demo number'}
+                {lang === "nl" ? "Demo nummer" : "Demo number"}
               </p>
               <p className="text-sm">+31 20 123 45 67</p>
             </div>
           </div>
         </section>
-
         {/* FAQ */}
         <section id="faq" className="mt-24">
           <h2 className="text-2xl font-bold">{t.faqTitle}</h2>
