@@ -208,7 +208,6 @@ const content: Record<'nl' | 'en', ContentType> = {
     footerRights: '© 2025 ForConnect. All rights reserved.',
   },
 };
-
 export default function HomePage() {
   const [lang, setLang] = useState<'nl' | 'en'>('nl');
   const t = content[lang];
@@ -217,6 +216,7 @@ export default function HomePage() {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
+
   return (
     <div className="min-h-screen bg-[#040815] text-white">
       {/* Glow background */}
@@ -444,118 +444,109 @@ export default function HomePage() {
             ))}
           </div>
         </section>
+
         {/* Demo */}
-        <section id="demo" className="mt-24">
-          <h2 className="text-2xl font-bold">{t.demoTitle}</h2>
-          <p className="text-sm text-gray-400">{t.demoSubtitle}</p>
+       <section id="demo" className="mt-24 relative overflow-hidden rounded-2xl">
+  {/* Background image */}
+  <div
+    className="absolute inset-0 bg-cover bg-center"
+    style={{ backgroundImage: "url('/contact-bg.png')" }}
+  />
+  <div className="absolute inset-0 bg-black/70" />
 
-          <div className="grid md:grid-cols-2 gap-6 mt-6">
+  <div className="relative">
+    <h2 className="text-2xl font-bold">{t.demoTitle}</h2>
+    <p className="text-sm text-gray-300">{t.demoSubtitle}</p>
 
-            {/* FORMULAR */}
-            <form
-              onSubmit={async (e) => {
-                e.preventDefault();
+    <div className="grid md:grid-cols-2 gap-6 mt-6">
+      
+      {/* FORMULAR – ONLY ONE, CLEAN */}
+      <form
+        onSubmit={async (e) => {
+          e.preventDefault();
 
-                const form = e.currentTarget;
-                const formData = new FormData(form);
+          const form = e.currentTarget;
+          const formData = new FormData(form);
 
-                // EMAIL REQUIRED VALIDATION
-                const email = formData.get("email") as string;
-                if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-                  alert(lang === "nl"
-                    ? "Voer een geldig e-mailadres in."
-                    : "Please enter a valid email address."
-                  );
-                  return;
-                }
+          const email = formData.get("email") as string;
+          if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            alert(
+              lang === "nl"
+                ? "Voer een geldig e-mailadres in."
+                : "Please enter a valid email address."
+            );
+            return;
+          }
 
-                const res = await fetch("/api/contact", {
-                  method: "POST",
-                  body: formData,
-                });
+          const res = await fetch("/api/contact", {
+            method: "POST",
+            body: formData,
+          });
 
-                if (res.ok) {
-                  alert(
-                    lang === "nl"
-                      ? "Uw bericht is succesvol verzonden. Bedankt!"
-                      : "Your message has been sent successfully. Thank you!"
-                  );
-                  form.reset();
-                } else {
-                  alert(
-                    lang === "nl"
-                      ? "Er is een fout opgetreden. Probeer het opnieuw."
-                      : "An error occurred. Please try again."
-                  );
-                }
-              }}
-              className="space-y-4 p-6 bg-[#020617]/70 rounded-xl border border-gray-800"
-            >
-              <input
-                type="text"
-                name="name"
-                placeholder={t.form.name}
-                className="w-full p-3 bg-[#0B1220] border border-gray-700 rounded-xl"
-              />
+          if (res.ok) {
+            alert(
+              lang === "nl"
+                ? "Uw bericht is succesvol verzonden. Bedankt!"
+                : "Your message has been sent successfully. Thank you!"
+            );
+            form.reset();
+          } else {
+            alert(
+              lang === "nl"
+                ? "Er is een fout opgetreden. Probeer het opnieuw."
+                : "An error occurred. Please try again."
+            );
+          }
+        }}
+        className="space-y-4 p-6 bg-[#020617]/80 rounded-xl border border-gray-800"
+      >
+        <input type="text" name="name" placeholder={t.form.name}
+          className="w-full p-3 bg-[#0B1220] border border-gray-700 rounded-xl" />
 
-              <input
-                type="text"
-                name="salon"
-                placeholder={t.form.salon}
-                className="w-full p-3 bg-[#0B1220] border border-gray-700 rounded-xl"
-              />
+        <input type="text" name="salon" placeholder={t.form.salon}
+          className="w-full p-3 bg-[#0B1220] border border-gray-700 rounded-xl" />
 
-              <input
-                type="email"
-                name="email"
-                placeholder={t.form.email}
-                required
-                className="w-full p-3 bg-[#0B1220] border border-gray-700 rounded-xl"
-              />
+        <input type="email" name="email" required
+          placeholder={t.form.email}
+          className="w-full p-3 bg-[#0B1220] border border-gray-700 rounded-xl" />
 
-              <input
-                type="tel"
-                name="phone"
-                placeholder={t.form.phone}
-                className="w-full p-3 bg-[#0B1220] border border-gray-700 rounded-xl"
-              />
+        <input type="tel" name="phone" placeholder={t.form.phone}
+          className="w-full p-3 bg-[#0B1220] border border-gray-700 rounded-xl" />
 
-              <textarea
-                name="message"
-                placeholder={t.form.messagePlaceholder}
-                className="w-full p-3 bg-[#0B1220] border border-gray-700 rounded-xl h-24"
-              />
+        <textarea name="message" placeholder={t.form.messagePlaceholder}
+          className="w-full p-3 bg-[#0B1220] border border-gray-700 rounded-xl h-24" />
 
-              <button
-                type="submit"
-                className="w-full px-4 py-3 bg-[#00F0FF] text-[#020617] rounded-full font-semibold"
-              >
-                {t.form.submit}
-              </button>
-            </form>
+        <button
+          type="submit"
+          className="w-full px-4 py-3 bg-[#00F0FF] text-[#020617] rounded-full font-semibold"
+        >
+          {t.form.submit}
+        </button>
+      </form>
 
-            {/* CONTACT BOX */}
-            <div className="p-6 bg-[#020617]/80 rounded-xl border border-gray-800">
-              <h3 className="text-lg font-semibold">Contact</h3>
+      {/* CONTACT BOX */}
+      <div className="p-6 bg-[#020617]/85 rounded-xl border border-gray-800">
+        <h3 className="text-lg font-semibold">Contact</h3>
 
-              {/* Company */}
-              <p className="text-sm text-gray-400 mt-3">
-                {lang === "nl" ? "Bedrijf" : "Company"}
-              </p>
-              <p className="text-sm">ForConnect</p>
+        <p className="text-sm text-gray-400 mt-3">
+          {lang === "nl" ? "Bedrijf" : "Company"}
+        </p>
+        <p className="text-sm">ForConnect</p>
 
-              {/* Email */}
-              <p className="text-sm text-gray-400 mt-3">E-mail</p>
-              <p className="text-sm">info@forconnect.nl</p>
+        <p className="text-sm text-gray-400 mt-3">E-mail</p>
+        <p className="text-sm">info@forconnect.nl</p>
 
-              {/* Phone */}
-              <p className="text-sm text-gray-400 mt-3">
-                {lang === "nl" ? "Demo nummer" : "Demo number"}
-              </p>
-              <p className="text-sm">+31 20 123 45 67</p>
-            </div>
-          </div>
-        </section>
+        <p className="text-sm text-gray-400 mt-3">
+          {lang === "nl" ? "Demo nummer" : "Demo number"}
+        </p>
+        <p className="text-sm">+31 20 123 45 67</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
         {/* FAQ */}
         <section id="faq" className="mt-24">
           <h2 className="text-2xl font-bold">{t.faqTitle}</h2>
