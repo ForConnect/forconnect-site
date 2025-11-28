@@ -328,43 +328,37 @@ export default function HomePage() {
               </div>
             </div>
 
-          {/* CTA BUTTONS */}
+{/* CTA BUTTONS */}
 <div className="flex flex-col gap-3 mt-4 w-full">
   <a
     href="tel:+3197010256601"
     className="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-[#00F0FF] text-[#020617] font-semibold shadow-[0_0_15px_#00F0FF55] hover:bg-[#66F6FF] transition"
   >
     <span>📞</span>
-    +31 970 102 56601
-  </a>
-
-  <a
-    href="https://wa.me/3197010256601"
-    target="_blank"
-    className="w-full flex items-center justify-center gap-2 py-3 rounded-full border border-gray-600 hover:border-[#00F0FF] hover:text-[#00F0FF] transition"
-  >
-    <span>💬</span>
-    +31 970 102 56601
+    {lang === 'nl' ? 'Bel de demo-lijn' : 'Call demo line'}
   </a>
 </div>
-        </section>
 
-        {/* How it works */}
-        <section id="how" className="mt-24">
-          <h2 className="text-2xl font-bold">{t.howTitle}</h2>
+</div> {/* zatvaranje desnog card container-a */}
+</section> {/* zatvaranje HERO sekcije */}
 
-          <div className="grid md:grid-cols-3 gap-6 mt-6">
-            {t.howSteps.map((s, i) => (
-              <div
-                key={i}
-                className="p-4 border border-gray-800 rounded-xl bg-[#020617]/70"
-              >
-                <h3 className="font-semibold text-white mb-2">{s.title}</h3>
-                {s.text && <p className="text-sm text-gray-400">{s.text}</p>}
-              </div>
-            ))}
-          </div>
-        </section>
+
+{/* How it works */}
+<section id="how" className="mt-24">
+  <h2 className="text-2xl font-bold">{t.howTitle}</h2>
+
+  <div className="grid md:grid-cols-3 gap-6 mt-6">
+    {t.howSteps.map((s, i) => (
+      <div
+        key={i}
+        className="p-4 border border-gray-800 rounded-xl bg-[#020617]/70"
+      >
+        <h3 className="font-semibold text-white mb-2">{s.title}</h3>
+        {s.text && <p className="text-sm text-gray-400">{s.text}</p>}
+      </div>
+    ))}
+  </div>
+</section>
 
         {/* For Who */}
         <section id="forwho" className="mt-24">
@@ -523,28 +517,46 @@ export default function HomePage() {
         </button>
       </form>
 
-      {/* CONTACT BOX */}
-      <div className="p-6 bg-[#020617]/85 rounded-xl border border-gray-800">
-        <h3 className="text-lg font-semibold">Contact</h3>
+ {/* CONTACT BOX */}
+<div className="p-6 bg-[#020617]/85 rounded-xl border border-gray-800">
+  <h3 className="text-lg font-semibold">Contact</h3>
 
-        <p className="text-sm text-gray-400 mt-3">
-          {lang === "nl" ? "Bedrijf" : "Company"}
-        </p>
-        <p className="text-sm">ForConnect</p>
+  <p className="text-sm text-gray-400 mt-3">
+    {lang === "nl" ? "Bedrijf" : "Company"}
+  </p>
+  <p className="text-sm">ForConnect</p>
 
-        <p className="text-sm text-gray-400 mt-3">E-mail</p>
-        <p className="text-sm">info@forconnect.nl</p>
+  <p className="text-sm text-gray-400 mt-3">E-mail</p>
+  <p className="text-sm">info@forconnect.nl</p>
 
-        <p className="text-sm text-gray-400 mt-3">
-          {lang === "nl" ? "Demo nummer" : "Demo number"}
-        </p>
-        <p className="text-sm">+31 20 123 45 67</p>
-      </div>
+  <p className="text-sm text-gray-400 mt-3">
+    {lang === "nl" ? "Contact nummer" : "Contact number"}
+  </p>
 
-    </div>
+  <div className="flex items-center gap-2 text-sm mt-1">
+    <span>📞</span>
+    <a href="tel:+31626256648" className="hover:text-[#00F0FF] transition">
+      +31 6 26 25 66 48
+    </a>
   </div>
-</section>
 
+  <div className="flex items-center gap-4 mt-2 text-sm">
+    <a
+      href="https://wa.me/31626256648"
+      target="_blank"
+      className="hover:text-[#00F0FF] transition flex items-center gap-1"
+    >
+      <span>💬</span> WhatsApp
+    </a>
+
+    <a
+      href="viber://chat?number=31626256648"
+      className="hover:text-[#00F0FF] transition flex items-center gap-1"
+    >
+      <span>📱</span> Viber
+    </a>
+  </div>
+</div>
 
         {/* FAQ */}
         <section id="faq" className="mt-24">
