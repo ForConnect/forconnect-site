@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "ForConnect - AI voice agent",
   description: "AI telefoniste",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon_new.ico",
   },
 };
 
