@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "eslint"
   },
- "dependencies": {
+"dependencies": {
   "@radix-ui/react-scroll-area": "^1.2.10",
   "@radix-ui/react-slot": "^1.2.4",
   "class-variance-authority": "^0.7.1",
