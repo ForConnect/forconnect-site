@@ -329,7 +329,7 @@ export default function HomePage() {
             {/* CTA BUTTONS */}
             <div className="flex flex-col gap-3 mt-4 w-full">
               <a
-                href="tel:+13612641661"
+                href="tel:+31267913273"
                 className="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-[#00F0FF] text-[#020617] font-semibold shadow-[0_0_15px_#00F0FF55] hover:bg-[#66F6FF] transition"
               >
                 <span>📞</span>
