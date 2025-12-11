@@ -79,22 +79,22 @@ const content: Record<'nl' | 'en', ContentType> = {
     plans: [
       {
         name: 'Start',
-        price: '€69',
+        price: '€59',
         per: 'per maand',
         description: 'Voor kleine salons.',
-        features: ['300 min/maand', 'E-mail bevestigingen', 'Basis agenda integratie'],
+        features: ['300 min/maand', 'E-mail bevestigingen', 'Agenda koppeling'],
       },
       {
         name: 'Pro',
-        price: '€99',
+        price: '€89',
         per: 'per maand',
         description: 'Voor drukke salons.',
-        features: ['600 min/maand', 'Agenda koppeling', 'SMS/WhatsApp herinneringen', 'Onboarding'],
+        features: ['600 min/maand', 'SMS/WhatsApp herinneringen', 'Agenda koppeling'],
         highlight: true,
       },
       {
         name: 'Multi',
-        price: '€149',
+        price: '€139',
         per: 'per maand',
         description: 'Voor ketens.',
         features: ['Meerdere salons', 'Priority support', 'Maatwerk integraties'],
@@ -141,12 +141,13 @@ const content: Record<'nl' | 'en', ContentType> = {
     ],
 
     forWhoTitle: 'Who is ForConnect for?',
- forWhoItems: [
-    { title: 'Hair salons', text: 'Never miss a booking again.' },
-    { title: 'Beauty salons', text: 'Work without interruptions.' },
-    { title: 'Nail studios', text: 'Better structure.' },
-    { title: 'Dentists', text: 'Professional first impression.' },
-  ],
+    forWhoItems: [
+      { title: 'Hair salons', text: 'Never miss a booking again.' },
+      { title: 'Beauty salons', text: 'Work without interruptions.' },
+      { title: 'Nail studios', text: 'Better structure.' },
+      { title: 'Dentists', text: 'Professional first impression.' },
+    ],
+
     benefitsTitle: 'Why choose ForConnect?',
     benefits: [
       { title: 'No missed calls', text: 'Always reachable.' },
@@ -160,22 +161,22 @@ const content: Record<'nl' | 'en', ContentType> = {
     plans: [
       {
         name: 'Start',
-        price: '€69',
+        price: '€59',
         per: 'per month',
         description: 'For small salons.',
-        features: ['300 min/month', 'Email confirmations', 'Basic calendar integration'],
+        features: ['300 min/month', 'Email confirmations', 'Calendar integration'],
       },
       {
         name: 'Pro',
-        price: '€99',
+        price: '€89',
         per: 'per month',
         description: 'For busy salons.',
-        features: ['600 min/month', 'Calendar integration', 'SMS/WhatsApp reminders', 'Onboarding'],
+        features: ['600 min/month', 'SMS/WhatsApp reminders', 'Calendar integration'],
         highlight: true,
       },
       {
         name: 'Multi',
-        price: '€149',
+        price: '€139',
         per: 'per month',
         description: 'For multi-location brands.',
         features: ['Multiple salons', 'Priority support', 'Custom integrations'],
@@ -207,7 +208,6 @@ const content: Record<'nl' | 'en', ContentType> = {
     footerRights: '© 2025 ForConnect. All rights reserved.',
   },
 };
-
 export default function HomePage() {
   const [lang, setLang] = useState<'nl' | 'en'>('nl');
   const t = content[lang];
@@ -317,9 +317,7 @@ export default function HomePage() {
                 </div>
 
                 <div className="bg-[#111827] p-3 rounded-xl text-sm">
-                  {lang === 'nl'
-                    ? 'Prima, ik kijk met u mee.'
-                    : 'Great, let me check.'}
+                  {lang === 'nl' ? 'Prima, ik kijk met u mee.' : 'Great, let me check.'}
                 </div>
               </div>
 
@@ -331,7 +329,7 @@ export default function HomePage() {
             {/* CTA BUTTONS */}
             <div className="flex flex-col gap-3 mt-4 w-full">
               <a
-                href="tel:+3197010256601"
+                href="tel:+13612641661"
                 className="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-[#00F0FF] text-[#020617] font-semibold shadow-[0_0_15px_#00F0FF55] hover:bg-[#66F6FF] transition"
               >
                 <span>📞</span>
@@ -347,10 +345,7 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-3 gap-6 mt-6">
             {t.howSteps.map((s, i) => (
-              <div
-                key={i}
-                className="p-4 border border-gray-800 rounded-xl bg-[#020617]/70"
-              >
+              <div key={i} className="p-4 border border-gray-800 rounded-xl bg-[#020617]/70">
                 <h3 className="font-semibold text-white mb-2">{s.title}</h3>
                 {s.text && <p className="text-sm text-gray-400">{s.text}</p>}
               </div>
@@ -406,7 +401,7 @@ export default function HomePage() {
                     ? 'border-[#00F0FF] shadow-[0_0_25px_#00F0FF55]'
                     : 'border-gray-700'
                 } bg-[#020617]/70`}
-            >
+              >
                 <h3 className="font-semibold text-lg">{p.name}</h3>
                 <p className="text-sm text-gray-400 mt-1">{p.description}</p>
 
@@ -437,10 +432,7 @@ export default function HomePage() {
         </section>
 
         {/* Demo */}
-        <section
-          id="demo"
-          className="mt-24 relative overflow-hidden rounded-2xl"
-        >
+        <section id="demo" className="mt-24 relative overflow-hidden rounded-2xl">
           {/* Background image */}
           <div
             className="absolute inset-0 bg-cover bg-center"
@@ -461,33 +453,33 @@ export default function HomePage() {
                   const form = e.currentTarget;
                   const formData = new FormData(form);
 
-                  const email = formData.get("email") as string;
+                  const email = formData.get('email') as string;
                   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
                     alert(
-                      lang === "nl"
-                        ? "Voer een geldig e-mailadres in."
-                        : "Please enter a valid email address."
+                      lang === 'nl'
+                        ? 'Voer een geldig e-mailadres in.'
+                        : 'Please enter a valid email address.'
                     );
                     return;
                   }
 
-                  const res = await fetch("/api/contact", {
-                    method: "POST",
+                  const res = await fetch('/api/contact', {
+                    method: 'POST',
                     body: formData,
                   });
 
                   if (res.ok) {
                     alert(
-                      lang === "nl"
-                        ? "Uw bericht is succesvol verzonden. Bedankt!"
-                        : "Your message has been sent successfully. Thank you!"
+                      lang === 'nl'
+                        ? 'Uw bericht is succesvol verzonden. Bedankt!'
+                        : 'Your message has been sent successfully. Thank you!'
                     );
                     form.reset();
                   } else {
                     alert(
-                      lang === "nl"
-                        ? "Er is een fout opgetreden. Probeer het opnieuw."
-                        : "An error occurred. Please try again."
+                      lang === 'nl'
+                        ? 'Er is een fout opgetreden. Probeer het opnieuw.'
+                        : 'An error occurred. Please try again.'
                     );
                   }
                 }}
@@ -541,7 +533,7 @@ export default function HomePage() {
                 <h3 className="text-lg font-semibold">Contact</h3>
 
                 <p className="text-sm text-gray-400 mt-3">
-                  {lang === "nl" ? "Bedrijf" : "Company"}
+                  {lang === 'nl' ? 'Bedrijf' : 'Company'}
                 </p>
                 <p className="text-sm">ForConnect</p>
 
@@ -549,7 +541,7 @@ export default function HomePage() {
                 <p className="text-sm">info@forconnect.nl</p>
 
                 <p className="text-sm text-gray-400 mt-3">
-                  {lang === "nl" ? "Contact nummer" : "Contact number"}
+                  {lang === 'nl' ? 'Contact nummer' : 'Contact number'}
                 </p>
 
                 {/* PHONE */}

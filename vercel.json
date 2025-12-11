@@ -1,0 +1,14 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/admin/dashboard",
+      "has": [
+        {
+          "type": "host",
+          "value": "admin.forconnect.nl"
+        }
+      ]
+    }
+  ]
+}
