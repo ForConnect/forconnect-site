@@ -86,7 +86,7 @@ const content: Record<'nl' | 'en', ContentType> = {
       },
       {
         name: 'Pro',
-        price: '€89',
+        price: '€99',
         per: 'per maand',
         description: 'Voor drukke salons.',
         features: ['600 min/maand', 'SMS/WhatsApp herinneringen', 'Agenda koppeling'],
@@ -168,7 +168,7 @@ const content: Record<'nl' | 'en', ContentType> = {
       },
       {
         name: 'Pro',
-        price: '€89',
+        price: '€99',
         per: 'per month',
         description: 'For busy salons.',
         features: ['600 min/month', 'SMS/WhatsApp reminders', 'Calendar integration'],
