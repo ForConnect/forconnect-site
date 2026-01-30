@@ -49,7 +49,7 @@ const content: Record<'nl' | 'en', ContentType> = {
     heroBadge: 'AI voice agent voor servicebedrijven in Nederland',
     heroTitle: 'Altijd bereikbaar, zonder de telefoon op te nemen.',
     heroSubtitle:
-      'ForConnect beantwoordt inkomende oproepen in vloeiend Nederlands, plant afspraken en stuurt bevestigingen — 24/7, zonder extra personeel.',
+      'ForConnect beantwoordt inkomende oproepen in vloeiend Nederlands, plant afspraken en stuurt bevestigingen - 24/7, zonder extra personeel.',
     heroPrimaryCta: 'Plan een demo',
 
     howTitle: 'Hoe werkt ForConnect?',
@@ -135,7 +135,7 @@ const content: Record<'nl' | 'en', ContentType> = {
       email: 'E-mailadres (verplicht)',
       phone: 'Telefoonnummer',
       message: 'Wat wil je verbeteren?',
-      messagePlaceholder: 'Bijvoorbeeld: minder gemiste oproepen…',
+      messagePlaceholder: 'Bijvoorbeeld: minder gemiste oproepen...',
       submit: 'Verzenden',
     },
 
@@ -157,7 +157,7 @@ const content: Record<'nl' | 'en', ContentType> = {
     heroBadge: 'AI voice agent for service businesses in the Netherlands',
     heroTitle: 'Always reachable, without picking up the phone.',
     heroSubtitle:
-      'ForConnect answers incoming calls in fluent Dutch, schedules appointments and sends confirmations — 24/7.',
+      'ForConnect answers incoming calls in fluent Dutch, schedules appointments and sends confirmations - 24/7.',
     heroPrimaryCta: 'Book a demo',
 
     howTitle: 'How does ForConnect work?',
@@ -171,7 +171,7 @@ const content: Record<'nl' | 'en', ContentType> = {
     forWhoItems: [
       {
         title: 'Plumbers',
-        text: 'No more missed calls, even when you're on-site. ForConnect schedules appointments and brings structure to your planning.',
+        text: 'No more missed calls, even when you are on-site. ForConnect schedules appointments and brings structure to your planning.',
       },
       {
         title: 'Electricians',
@@ -231,7 +231,7 @@ const content: Record<'nl' | 'en', ContentType> = {
       email: 'Email (required)',
       phone: 'Phone',
       message: 'What would you like to improve?',
-      messagePlaceholder: 'Example: fewer missed calls…',
+      messagePlaceholder: 'Example: fewer missed calls...',
       submit: 'Send',
     },
 
@@ -336,7 +336,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Right side – demo preview card */}
+          {/* Right side demo preview card */}
           <div className="animate-fade-in-up flex flex-col items-center md:items-start md:w-[420px] mt-10 md:mt-0">
             <div className="p-6 rounded-3xl bg-[#020617]/70 border border-gray-800 w-full h-[300px] flex flex-col justify-between shadow-[0_0_25px_#00F0FF22]">
               <div>
@@ -353,7 +353,7 @@ export default function HomePage() {
                 <div className="bg-[#00F0FF22] p-3 rounded-xl text-sm mb-3 text-right">
                   {lang === 'nl'
                     ? 'Ik zou graag een knipafspraak willen.'
-                    : 'I'd like to book a haircut appointment.'}
+                    : 'I would like to book a haircut appointment.'}
                 </div>
 
                 <div className="bg-[#111827] p-3 rounded-xl text-sm">
