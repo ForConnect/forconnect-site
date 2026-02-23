@@ -88,40 +88,46 @@ const content: Record<'nl' | 'en', ContentType> = {
     ],
 
     pricingTitle: 'Prijzen',
-    pricingSubtitle: 'Transparante pakketten, afgestemd op jouw bedrijf.',
+    pricingSubtitle: 'Transparante pakketten, afgestemd op jouw bedrijf. 7 dagen gratis proberen.',
     plans: [
       {
-        name: 'Start',
-        price: 'Vanaf €69',
+        name: 'Basis',
+        price: '€59',
         per: 'per maand',
         description: 'Voor zelfstandigen en kleine bedrijven.',
         features: [
-          'AI beantwoordt oproepen',
-          'Afspraakregistratie',
-          'E-mail bevestigingen',
+          'AI beantwoordt oproepen 24/7',
+          'Bericht opnemen + doorsturen',
+          'E-mail notificaties',
+          '1 telefoonnummer',
+          'Tot 300 belminuten',
         ],
       },
       {
-        name: 'Pro',
-        price: 'Vanaf €119',
+        name: 'Plus',
+        price: '€99',
         per: 'per maand',
         description: 'Voor drukke servicebedrijven.',
         features: [
-          'Meer belminuten',
-          'SMS / WhatsApp bevestigingen',
+          'Alles van Basis, plus:',
+          'Agenda integratie (Google/Outlook)',
+          'WhatsApp + SMS bevestigingen',
           'Prioriteit ondersteuning',
+          'Tot 600 belminuten',
         ],
         highlight: true,
       },
       {
-        name: 'Business',
+        name: 'Pro Plus',
         price: 'Prijs op maat',
         per: '',
-        description: 'Voor bedrijven met meerdere medewerkers of speciale wensen.',
+        description: 'Voor bedrijven met meerdere locaties of speciale wensen.',
         features: [
-          'Meerdere lijnen',
-          'Complexe planningen',
+          'Alles van Plus, plus:',
+          'Meerdere telefoonnummers/locaties',
+          'Geavanceerde call flows',
           'Persoonlijke onboarding',
+          'Onbeperkte belminuten',
         ],
       },
     ],
@@ -196,29 +202,47 @@ const content: Record<'nl' | 'en', ContentType> = {
     ],
 
     pricingTitle: 'Pricing',
-    pricingSubtitle: 'Flexible plans for growing businesses.',
+    pricingSubtitle: 'Flexible plans for growing businesses. 7-day free trial.',
     plans: [
       {
-        name: 'Start',
-        price: 'From €69',
+        name: 'Basis',
+        price: '€59',
         per: 'per month',
         description: 'For small businesses.',
-        features: ['Call handling', 'Appointments', 'Email confirmations'],
+        features: [
+          'AI answers calls 24/7',
+          'Message recording + forwarding',
+          'Email notifications',
+          '1 phone number',
+          'Up to 300 call minutes',
+        ],
       },
       {
-        name: 'Pro',
-        price: 'From €119',
+        name: 'Plus',
+        price: '€99',
         per: 'per month',
         description: 'For busy service businesses.',
-        features: ['More minutes', 'SMS / WhatsApp', 'Priority support'],
+        features: [
+          'Everything in Basis, plus:',
+          'Calendar integration (Google/Outlook)',
+          'WhatsApp + SMS confirmations',
+          'Priority support',
+          'Up to 600 call minutes',
+        ],
         highlight: true,
       },
       {
-        name: 'Business',
+        name: 'Pro Plus',
         price: 'Custom',
         per: '',
-        description: 'For businesses with multiple employees or special needs.',
-        features: ['Multiple lines', 'Advanced scheduling', 'Onboarding'],
+        description: 'For businesses with multiple locations or special needs.',
+        features: [
+          'Everything in Plus, plus:',
+          'Multiple phone numbers/locations',
+          'Advanced call flows',
+          'Personal onboarding',
+          'Unlimited call minutes',
+        ],
       },
     ],
 
@@ -469,6 +493,15 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+
+          {/* Trial disclaimer */}
+          <div className="mt-8 text-center">
+            <p className="text-xs text-gray-500">
+              {lang === 'nl' 
+                ? '7 dagen gratis proberen • Geen creditcard vereist • Geen verplichtingen • Stop op elk moment'
+                : '7-day free trial • No credit card required • No obligations • Cancel anytime'}
+            </p>
+          </div>
         </section>
 
         {/* Demo */}
@@ -632,6 +665,38 @@ export default function HomePage() {
                     </svg>
                     Viber
                   </a>
+                </div>
+
+                {/* Trust Badges */}
+                <div className="mt-6 pt-6 border-t border-gray-700">
+                  <div className="flex items-center gap-2 mb-3">
+                    <svg className="w-5 h-5 text-[#00F0FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <span className="text-sm font-semibold">
+                      {lang === 'nl' ? 'Actief in heel Nederland' : 'Active throughout the Netherlands'}
+                    </span>
+                  </div>
+                  
+                  <div className="space-y-2 text-xs text-gray-400">
+                    <div className="flex items-center gap-2">
+                      <span className="text-[#00F0FF]">✓</span>
+                      <span>GDPR compliant</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-[#00F0FF]">✓</span>
+                      <span>{lang === 'nl' ? 'Nederlandse servers' : 'Dutch servers'}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-[#00F0FF]">✓</span>
+                      <span>{lang === 'nl' ? '7 dagen gratis proberen' : '7-day free trial'}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-[#00F0FF]">✓</span>
+                      <span>{lang === 'nl' ? 'Geen setup kosten' : 'No setup fees'}</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
