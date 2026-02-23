@@ -107,7 +107,7 @@ const content: Record<'nl' | 'en', ContentType> = {
         name: 'Plus',
         price: '€99',
         per: 'per maand',
-        description: 'Voor drukke servicebedrijven.',
+        description: 'Meest gekozen',
         features: [
           'Alles van Basis, plus:',
           'Agenda integratie (Google/Outlook)',
@@ -221,7 +221,7 @@ const content: Record<'nl' | 'en', ContentType> = {
         name: 'Plus',
         price: '€99',
         per: 'per month',
-        description: 'For busy service businesses.',
+        description: 'Most popular',
         features: [
           'Everything in Basis, plus:',
           'Calendar integration (Google/Outlook)',
@@ -496,7 +496,7 @@ export default function HomePage() {
 
           {/* Trial disclaimer */}
           <div className="mt-8 text-center">
-            <p className="text-xs text-gray-500">
+            <p className="text-xs text-gray-300">
               {lang === 'nl' 
                 ? '7 dagen gratis proberen • Geen creditcard vereist • Geen verplichtingen • Stop op elk moment'
                 : '7-day free trial • No credit card required • No obligations • Cancel anytime'}
