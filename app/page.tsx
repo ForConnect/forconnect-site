@@ -62,20 +62,20 @@ const content: Record<'nl' | 'en', ContentType> = {
     forWhoTitle: 'Voor wie is ForConnect?',
     forWhoItems: [
       {
-        title: 'Loodgieters',
-        text: 'Geen gemiste oproepen meer, ook wanneer je op locatie werkt. ForConnect plant afspraken en zorgt voor structuur in je planning.',
+        title: 'Fysiotherapie & zorgpraktijken',
+        text: 'Geen onderbrekingen tijdens behandelingen. Patiënten worden direct geholpen.',
       },
       {
-        title: 'Elektriciens',
-        text: 'Altijd professioneel bereikbaar, ook tijdens installaties en storingen. Klanten krijgen direct antwoord en bevestiging.',
+        title: 'Loodgieters & installateurs',
+        text: 'Geen gemiste spoedklussen meer. Altijd bereikbaar, ook tijdens werkzaamheden.',
       },
       {
-        title: 'Installatie- & servicebedrijven',
-        text: 'Voor bedrijven die veel inkomende oproepen krijgen. Meer overzicht, minder onderbrekingen en betere opvolging van klanten.',
+        title: 'Kapsalons & schoonheidssalons',
+        text: 'Minder telefoontjes tijdens het werk. Afspraken volledig automatisch geregeld.',
       },
       {
-        title: 'Kapsalons, barbershops & schoonheidssalons',
-        text: 'Minder telefoontjes tijdens het werk. Afspraken en herinneringen volledig automatisch geregeld.',
+        title: 'Andere servicebedrijven',
+        text: 'Altijd bereikbaar voor klanten, ook buiten kantoortijden en in het weekend.',
       },
     ],
 
@@ -170,20 +170,20 @@ const content: Record<'nl' | 'en', ContentType> = {
     forWhoTitle: 'Who is ForConnect for?',
     forWhoItems: [
       {
-        title: 'Plumbers',
-        text: 'No more missed calls, even when you are on-site. ForConnect schedules appointments and brings structure to your planning.',
+        title: 'Physiotherapy & healthcare practices',
+        text: 'No interruptions during treatments. Patients are helped immediately.',
       },
       {
-        title: 'Electricians',
-        text: 'Always professionally reachable, even during installations and emergencies. Customers get immediate response and confirmation.',
+        title: 'Plumbers & installers',
+        text: 'No more missed emergency calls. Always reachable, even during work.',
       },
       {
-        title: 'Installation & service companies',
-        text: 'For businesses with high call volumes. Better overview, fewer interruptions and improved customer follow-up.',
+        title: 'Hair & beauty salons',
+        text: 'Fewer phone calls during work. Appointments fully automated.',
       },
       {
-        title: 'Hair salons, barbershops & beauty salons',
-        text: 'Fewer phone calls during work. Appointments and reminders fully automated.',
+        title: 'Other service businesses',
+        text: 'Always available for customers, even outside office hours and on weekends.',
       },
     ],
 
@@ -346,18 +346,18 @@ export default function HomePage() {
 
                 <div className="bg-[#111827] p-3 rounded-xl text-sm mb-3">
                   {lang === 'nl'
-                    ? 'Goedemiddag, met de AI-receptionist van uw salon. Hoe kan ik helpen?'
-                    : 'Good afternoon, AI receptionist speaking. How can I assist?'}
+                    ? 'Goedemiddag, u spreekt met de digitale assistent. Waarmee kan ik u helpen?'
+                    : 'Good afternoon, you are speaking with the digital assistant. How can I help you?'}
                 </div>
 
                 <div className="bg-[#00F0FF22] p-3 rounded-xl text-sm mb-3 text-right">
                   {lang === 'nl'
-                    ? 'Ik zou graag een knipafspraak willen.'
-                    : 'I would like to book a haircut appointment.'}
+                    ? 'Ik wil graag een afspraak maken.'
+                    : 'I would like to make an appointment.'}
                 </div>
 
                 <div className="bg-[#111827] p-3 rounded-xl text-sm">
-                  {lang === 'nl' ? 'Prima, ik kijk met u mee.' : 'Great, let me check.'}
+                  {lang === 'nl' ? 'Natuurlijk. Ik kijk direct naar beschikbare momenten voor u.' : 'Of course. Let me check available times for you.'}
                 </div>
               </div>
 
