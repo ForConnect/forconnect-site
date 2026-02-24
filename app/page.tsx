@@ -46,36 +46,36 @@ const content: Record<'nl' | 'en', ContentType> = {
   nl: {
     nav: ['Home', 'Hoe het werkt', 'Voor wie', 'Voordelen', 'Prijzen', 'Demo', 'FAQ'],
 
-    heroBadge: 'AI voice agent voor servicebedrijven in Nederland',
-    heroTitle: 'Altijd bereikbaar, zonder de telefoon op te nemen.',
+    heroBadge: 'AI Telefoonassistent voor Fysiopraktijken',
+    heroTitle: 'Geen onderbroken behandelingen meer.',
     heroSubtitle:
-      'ForConnect beantwoordt inkomende oproepen in vloeiend Nederlands, plant afspraken en stuurt bevestigingen - 24/7, zonder extra personeel.',
+      'Uw telefoon wordt beantwoord, patiëntgegevens worden genoteerd en netjes naar uw e-mail gestuurd — zodat u ongestoord kunt behandelen.',
     heroPrimaryCta: 'Plan een demo',
 
     howTitle: 'Hoe werkt ForConnect?',
     howSteps: [
-      { title: '1. Klant belt jouw vaste nummer', text: '' },
-      { title: '2. AI handelt het verzoek af', text: '' },
-      { title: '3. Bevestiging wordt automatisch verstuurd', text: '' },
+      { title: '1. Patiënt belt uw praktijk', text: '' },
+      { title: '2. Assistent noteert naam, geboortedatum, reden en contactgegevens', text: '' },
+      { title: '3. U ontvangt alles per e-mail — klaar om terug te bellen', text: '' },
     ],
 
     forWhoTitle: 'Voor wie is ForConnect?',
     forWhoItems: [
       {
-        title: 'Fysiotherapie & zorgpraktijken',
-        text: 'Geen onderbrekingen tijdens behandelingen. Patiënten worden direct geholpen.',
+        title: 'Solo fysiotherapeuten',
+        text: 'Geen gemiste patiënten tijdens behandelingen. Focus volledig op de patiënt voor u.',
       },
       {
-        title: 'Loodgieters & installateurs',
-        text: 'Geen gemiste spoedklussen meer. Altijd bereikbaar, ook tijdens werkzaamheden.',
+        title: 'Groepspraktijken',
+        text: 'Efficiënte intake voor meerdere therapeuten. Alle informatie netjes georganiseerd.',
       },
       {
-        title: 'Kapsalons & schoonheidssalons',
-        text: 'Minder telefoontjes tijdens het werk. Afspraken volledig automatisch geregeld.',
+        title: 'Sportfysiotherapie',
+        text: 'Snelle intake voor sporters met blessures. Direct de juiste informatie vastgelegd.',
       },
       {
-        title: 'Andere servicebedrijven',
-        text: 'Altijd bereikbaar voor klanten, ook buiten kantoortijden en in het weekend.',
+        title: 'Manuele therapie & specialismen',
+        text: 'Professionele bereikbaarheid die past bij uw expertise en specialisatie.',
       },
     ],
 
@@ -160,36 +160,36 @@ const content: Record<'nl' | 'en', ContentType> = {
   en: {
     nav: ['Home', 'How it works', 'For whom', 'Benefits', 'Pricing', 'Demo', 'FAQ'],
 
-    heroBadge: 'AI voice agent for service businesses in the Netherlands',
-    heroTitle: 'Always reachable, without picking up the phone.',
+    heroBadge: 'AI Phone Assistant for Physiotherapy Practices',
+    heroTitle: 'No more interrupted treatments.',
     heroSubtitle:
-      'ForConnect answers incoming calls in fluent Dutch, schedules appointments and sends confirmations - 24/7.',
+      'Your phone is answered, patient details are recorded and sent to your email — so you can treat without interruptions.',
     heroPrimaryCta: 'Book a demo',
 
     howTitle: 'How does ForConnect work?',
     howSteps: [
-      { title: '1. Customer calls your main number', text: '' },
-      { title: '2. AI handles the request', text: '' },
-      { title: '3. Confirmation is sent automatically', text: '' },
+      { title: '1. Patient calls your practice', text: '' },
+      { title: '2. Assistant records name, date of birth, reason and contact details', text: '' },
+      { title: '3. You receive everything by email — ready to call back', text: '' },
     ],
 
     forWhoTitle: 'Who is ForConnect for?',
     forWhoItems: [
       {
-        title: 'Physiotherapy & healthcare practices',
-        text: 'No interruptions during treatments. Patients are helped immediately.',
+        title: 'Solo physiotherapists',
+        text: 'No missed patients during treatments. Focus fully on the patient in front of you.',
       },
       {
-        title: 'Plumbers & installers',
-        text: 'No more missed emergency calls. Always reachable, even during work.',
+        title: 'Group practices',
+        text: 'Efficient intake for multiple therapists. All information neatly organized.',
       },
       {
-        title: 'Hair & beauty salons',
-        text: 'Fewer phone calls during work. Appointments fully automated.',
+        title: 'Sports physiotherapy',
+        text: 'Quick intake for athletes with injuries. Right information captured immediately.',
       },
       {
-        title: 'Other service businesses',
-        text: 'Always available for customers, even outside office hours and on weekends.',
+        title: 'Manual therapy & specialisms',
+        text: 'Professional availability that matches your expertise and specialization.',
       },
     ],
 
