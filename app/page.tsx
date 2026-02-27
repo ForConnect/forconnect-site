@@ -667,6 +667,25 @@ export default function HomePage() {
                   </a>
                 </div>
 
+                {/* AI AGENT */}
+                <div className="mt-5 pt-4 border-t border-gray-700">
+                  <p className="text-xs text-gray-400 mb-2">
+                    {lang === 'nl' ? 'Of probeer onze AI assistent' : 'Or try our AI assistant'}
+                  </p>
+                  <div className="flex items-center gap-2 text-sm">
+                    <span className="text-lg">🤖</span>
+                    <a
+                      href="tel:+31970102566601"
+                      className="hover:text-[#00F0FF] transition"
+                    >
+                      +31 97 010 256 601
+                    </a>
+                  </div>
+                  <p className="text-xs text-gray-500 mt-1">
+                    {lang === 'nl' ? '24/7 beschikbaar' : '24/7 available'}
+                  </p>
+                </div>
+
                 {/* Trust Badges */}
                 <div className="mt-6 pt-6 border-t border-gray-700">
                   <div className="flex items-center gap-2 mb-3">
