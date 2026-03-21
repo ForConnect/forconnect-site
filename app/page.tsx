@@ -621,18 +621,17 @@ export default function HomePage() {
                 <div className="flex items-center gap-2 text-sm mt-1">
                   <span>📞</span>
                   <a
-                    href="tel:+31626256648"
+                    href="tel:+31634483701"
                     className="hover:text-[#00F0FF] transition"
                   >
-                    +31 6 26 25 66 48
+                    +31 6 34 48 37 01
                   </a>
                 </div>
 
-                {/* WHATSAPP + VIBER */}
-                <div className="flex items-center gap-4 mt-3 text-sm">
-                  {/* WhatsApp */}
+                {/* WHATSAPP */}
+                <div className="mt-3 text-sm">
                   <a
-                    href="https://wa.me/31626256648"
+                    href="https://wa.me/31634483701"
                     target="_blank"
                     className="flex items-center gap-2 hover:text-[#00F0FF] transition"
                   >
@@ -647,38 +646,20 @@ export default function HomePage() {
                     </svg>
                     WhatsApp
                   </a>
-
-                  {/* Viber */}
-                  <a
-                    href="viber://chat?number=31626256648"
-                    className="flex items-center gap-2 hover:text-[#00F0FF] transition"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      fill="#7360F2"
-                    >
-                      <path d="M17.472 12.382c-.297-.149-1.758-.868-2.03-.966-.273-.099-.472-.148-.671.149-.198.297-.768.966-.941 1.164-.173.199-.347.223-.644.075-.297-.149-1.256-.464-2.392-1.48-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.173.198-.298.298-.497.099-.198.05-.372-.025-.52-.075-.149-.671-1.611-.92-2.206-.242-.579-.487-.5-.671-.51l-.571-.01c-.198 0-.52.074-.792.372-.272.297-1.044 1.02-1.044 2.479 0 1.459 1.069 2.875 1.219 3.074.148.198 2.107 3.215 5.099 4.509.713.308 1.267.491 1.7.628.713.227 1.362.196 1.874.119.571-.085 1.758-.718 2.006-1.413.248-.695.248-1.29.173-1.413-.074-.124-.272-.198-.57-.347z" />
-                      <path d="M12.004 2.002c5.514 0 9.994 4.48 9.994 9.994 0 5.513-4.48 9.994-9.994 9.994s-9.994-4.481-9.994-9.994c0-5.514 4.48-9.994 9.994-9.994m0-2.002C5.375 0 .01 5.365.01 11.996.01 18.626 5.375 24 12.004 24c6.629 0 11.994-5.374 11.994-12.004C24 5.365 18.633 0 12.004 0z" />
-                    </svg>
-                    Viber
-                  </a>
                 </div>
 
-                {/* AI AGENT */}
+                {/* DEMO PRAKTIJK */}
                 <div className="mt-5 pt-4 border-t border-gray-700">
                   <p className="text-xs text-gray-400 mb-2">
-                    {lang === 'nl' ? 'Of probeer onze AI assistent' : 'Or try our AI assistant'}
+                    {lang === 'nl' ? 'Of probeer onze DEMO praktijk' : 'Or try our DEMO practice'}
                   </p>
                   <div className="flex items-center gap-2 text-sm">
-                    <span className="text-lg">🤖</span>
+                    <span className="text-lg">🎧</span>
                     <a
-                      href="tel:+31970102566601"
+                      href="tel:+31267913273"
                       className="hover:text-[#00F0FF] transition"
                     >
-                      +31 97 010 256 601
+                      +31 26 791 32 73
                     </a>
                   </div>
                   <p className="text-xs text-gray-500 mt-1">
