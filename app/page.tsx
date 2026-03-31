@@ -474,7 +474,7 @@ export default function HomePage() {
                   <span className="text-sm text-gray-400">{p.per}</span>
                 </div>
 
-                <ul className="mt-4 text-sm text-gray-300 space-y-1 flex-1">
+                <ul className="mt-4 text-sm text-gray-300 space-y-1 flex-1 pb-6">
                   {p.features.map((f, j) => (
                     <li key={j}>• {f}</li>
                   ))}
@@ -595,7 +595,7 @@ export default function HomePage() {
 
                 <button
                   type="submit"
-                  className="w-full px-4 py-3 bg-[#00F0FF] text-[#020617] rounded-full font-semibold"
+                  className="w-full px-4 py-3 bg-[#00F0FF] text-[#020617] rounded-full font-semibold mb-6"
                 >
                   {t.form.submit}
                 </button>
