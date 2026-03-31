@@ -121,7 +121,7 @@ const content: Record<'nl' | 'en', ContentType> = {
         name: 'Pro Plus',
         price: 'Prijs op maat',
         per: '',
-        description: 'Voor bedrijven met meerdere locaties of speciale wensen.',
+        description: 'Voor bedrijven met speciale wensen.',
         features: [
           'Alles van Plus, plus:',
           'Meerdere telefoonnummers/locaties',
@@ -235,7 +235,7 @@ const content: Record<'nl' | 'en', ContentType> = {
         name: 'Pro Plus',
         price: 'Custom',
         per: '',
-        description: 'For businesses with multiple locations or special needs.',
+        description: 'For businesses with special needs.',
         features: [
           'Everything in Plus, plus:',
           'Multiple phone numbers/locations',
@@ -517,7 +517,7 @@ export default function HomePage() {
             <h2 className="text-2xl font-bold">{t.demoTitle}</h2>
             <p className="text-sm text-gray-300">{t.demoSubtitle}</p>
 
-            <div className="grid md:grid-cols-2 gap-4 mt-6">
+            <div className="grid md:grid-cols-2 gap-3 mt-6">
               {/* FORM */}
               <form
                 onSubmit={async (e) => {
@@ -556,7 +556,7 @@ export default function HomePage() {
                     );
                   }
                 }}
-                className="space-y-4 p-6 bg-[#020617]/80 rounded-xl border border-gray-800"
+                className="space-y-4 p-4 bg-[#020617]/80 rounded-xl border border-gray-800"
               >
                 <input
                   type="text"
@@ -602,7 +602,7 @@ export default function HomePage() {
               </form>
 
               {/* CONTACT BOX */}
-              <div className="p-6 bg-[#020617]/85 rounded-xl border border-gray-800">
+              <div className="p-4 bg-[#020617]/85 rounded-xl border border-gray-800">
                 <h3 className="text-lg font-semibold">Contact</h3>
 
                 <p className="text-sm text-gray-400 mt-3">
