@@ -464,7 +464,7 @@ export default function HomePage() {
                   p.highlight
                     ? 'border-[#00F0FF] shadow-[0_0_25px_#00F0FF55]'
                     : 'border-gray-700'
-                } bg-[#020617]/70`}
+                } bg-[#020617]/70 flex flex-col`}
               >
                 <h3 className="font-semibold text-lg">{p.name}</h3>
                 <p className="text-sm text-gray-400 mt-1">{p.description}</p>
@@ -474,7 +474,7 @@ export default function HomePage() {
                   <span className="text-sm text-gray-400">{p.per}</span>
                 </div>
 
-                <ul className="mt-4 text-sm text-gray-300 space-y-1">
+                <ul className="mt-4 text-sm text-gray-300 space-y-1 flex-1">
                   {p.features.map((f, j) => (
                     <li key={j}>• {f}</li>
                   ))}
@@ -482,7 +482,7 @@ export default function HomePage() {
 
                 <button
                   onClick={() => scrollToId('demo')}
-                  className={`mt-6 w-full px-4 py-2 rounded-full font-semibold ${
+                  className={`mt-auto w-full px-4 py-2 rounded-full font-semibold ${
                     p.highlight
                       ? 'bg-[#00F0FF] text-[#020617]'
                       : 'border border-gray-600 hover:border-[#00F0FF]'
@@ -517,7 +517,7 @@ export default function HomePage() {
             <h2 className="text-2xl font-bold">{t.demoTitle}</h2>
             <p className="text-sm text-gray-300">{t.demoSubtitle}</p>
 
-            <div className="grid md:grid-cols-2 gap-6 mt-6">
+            <div className="grid md:grid-cols-2 gap-4 mt-6">
               {/* FORM */}
               <form
                 onSubmit={async (e) => {
