@@ -49,12 +49,12 @@ const content: Record<'nl' | 'en', ContentType> = {
     heroBadge: 'AI Telefoonassistent voor Fysiopraktijken',
     heroTitle: 'Geen onderbroken behandelingen meer.',
     heroSubtitle:
-      'Uw telefoon wordt beantwoord, patiëntgegevens worden genoteerd en netjes naar uw e-mail gestuurd - zodat u ongestoord kunt behandelen.',
+      'Uw telefoon wordt beantwoord, patientgegevens worden genoteerd en netjes naar uw e-mail gestuurd - zodat u ongestoord kunt behandelen.',
     heroPrimaryCta: 'Plan een demo',
 
     howTitle: 'Hoe werkt ForConnect?',
     howSteps: [
-      { title: '1. Patiënt belt uw praktijk', text: '' },
+      { title: '1. Patient belt uw praktijk', text: '' },
       { title: '2. Assistent noteert naam, geboortedatum, reden en contactgegevens', text: '' },
       { title: '3. U ontvangt alles per e-mail - klaar om terug te bellen', text: '' },
     ],
@@ -63,11 +63,11 @@ const content: Record<'nl' | 'en', ContentType> = {
     forWhoItems: [
       {
         title: 'Solo fysiotherapeuten',
-        text: 'Geen gemiste patiënten tijdens behandelingen. Focus volledig op de patiënt voor u.',
+        text: 'Geen gemiste patienten tijdens behandelingen. Focus volledig op de patient voor u.',
       },
       {
         title: 'Groepspraktijken',
-        text: 'Efficiënte intake voor meerdere therapeuten. Alle informatie netjes georganiseerd.',
+        text: 'Efficiente intake voor meerdere therapeuten. Alle informatie netjes georganiseerd.',
       },
       {
         title: 'Sportfysiotherapie',
@@ -92,7 +92,7 @@ const content: Record<'nl' | 'en', ContentType> = {
     plans: [
       {
         name: 'Basis',
-        price: '€59',
+        price: '\u20AC59',
         per: 'per maand',
         description: 'Voor zelfstandigen en kleine bedrijven.',
         features: [
@@ -105,7 +105,7 @@ const content: Record<'nl' | 'en', ContentType> = {
       },
       {
         name: 'Plus',
-        price: '€99',
+        price: '\u20AC99',
         per: 'per maand',
         description: 'Meest gekozen',
         features: [
@@ -154,7 +154,7 @@ const content: Record<'nl' | 'en', ContentType> = {
     ],
 
     footerTagline: 'Gemaakt voor fysiopraktijken in Nederland.',
-    footerRights: '© 2026 ForConnect. Alle rechten voorbehouden.',
+    footerRights: '\u00A9 2026 ForConnect. Alle rechten voorbehouden.',
   },
 
   en: {
@@ -206,7 +206,7 @@ const content: Record<'nl' | 'en', ContentType> = {
     plans: [
       {
         name: 'Basis',
-        price: '€59',
+        price: '\u20AC59',
         per: 'per month',
         description: 'For small businesses.',
         features: [
@@ -219,7 +219,7 @@ const content: Record<'nl' | 'en', ContentType> = {
       },
       {
         name: 'Plus',
-        price: '€99',
+        price: '\u20AC99',
         per: 'per month',
         description: 'Most popular',
         features: [
@@ -268,7 +268,7 @@ const content: Record<'nl' | 'en', ContentType> = {
     ],
 
     footerTagline: 'Built for physiotherapy practices in the Netherlands.',
-    footerRights: '© 2026 ForConnect. All rights reserved.',
+    footerRights: '\u00A9 2026 ForConnect. All rights reserved.',
   },
 };
 
@@ -365,7 +365,7 @@ export default function HomePage() {
             <div className="p-6 rounded-3xl bg-[#020617]/70 border border-gray-800 w-full h-[300px] flex flex-col justify-between shadow-[0_0_25px_#00F0FF22]">
               <div>
                 <div className="text-xs text-gray-400 mb-4">
-                  {lang === 'nl' ? 'Live AI demo' : 'Live AI demo'}
+                  Live AI demo
                 </div>
 
                 <div className="bg-[#111827] p-3 rounded-xl text-sm mb-3">
@@ -386,7 +386,7 @@ export default function HomePage() {
               </div>
 
               <div className="text-xs text-gray-500 text-right mt-3">
-                • {lang === 'nl' ? 'AI actief' : 'AI active'}
+                {lang === 'nl' ? '* AI actief' : '* AI active'}
               </div>
             </div>
 
@@ -396,13 +396,11 @@ export default function HomePage() {
                 href="tel:+31634483701"
                 className="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-[#00F0FF] text-[#020617] font-semibold shadow-[0_0_15px_#00F0FF55] hover:bg-[#66F6FF] transition"
               >
-                <span>📞</span>
+                <span>{'\\ud83d\\udcde'}</span>
                 {lang === 'nl' ? 'Bel de demo-lijn' : 'Call demo line'}
               </a>
             </div>
           </div>
-        </section>
-
         </section>
 
         {/* Founder Statement */}
@@ -411,28 +409,28 @@ export default function HomePage() {
             <h3 className="text-xl font-semibold text-center text-gray-200 mb-8">
               {lang === 'nl' ? 'Van de oprichter' : 'From the founder'}
             </h3>
-            
+
             <p className="text-base text-gray-300 leading-relaxed mb-4 text-center max-w-2xl mx-auto">
-              {lang === 'nl' 
-                ? 'Wanneer u met ForConnect werkt, voelt dat voor mij als samenwerken. Uw patiënten worden voor een groot deel ook onze verantwoordelijkheid - en die neem ik serieus.'
+              {lang === 'nl'
+                ? 'Wanneer u met ForConnect werkt, voelt dat voor mij als samenwerken. Uw patienten worden voor een groot deel ook onze verantwoordelijkheid - en die neem ik serieus.'
                 : 'When you work with ForConnect, it feels like collaboration to me. Your patients become largely our responsibility as well - and I take that seriously.'}
             </p>
-            
+
             <p className="text-base text-gray-300 leading-relaxed mb-8 text-center max-w-2xl mx-auto">
               {lang === 'nl'
-                ? 'Daarom is onze assistent er om uw praktijk te ondersteunen - zodat u zich met een gerust gevoel volledig kunt richten op uw patiënten.'
+                ? 'Daarom is onze assistent er om uw praktijk te ondersteunen - zodat u zich met een gerust gevoel volledig kunt richten op uw patienten.'
                 : 'That is why our assistant is here to support your practice - so you can focus fully on your patients with peace of mind.'}
             </p>
-            
+
             <div className="flex items-center justify-center gap-4 pt-6 border-t border-gray-700">
-              <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
-                <img 
-                  src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCABQAFADASIAAhEBAxEB/8QAHAAAAgMBAQEBAAAAAAAAAAAABAUDBgcCAQAI/8QAMBAAAgEDAwIFAwMEAwAAAAAAAQIDAAQRBRIhBjETIkFRYRRxkQcVgRUjobEy0eH/xAAZAQADAQEBAAAAAAAAAAAAAAAAAwQCAQX/xAAfEQACAgMAAgMAAAAAAAAAAAAAAQIRAxIhBDETMkH/2gAMAwEAAhEDEQA/ANIhiBo1IwB2qCNSK8jmdnJ3Hg4raZimw5UqQJXkAyvNThadB8FvjI9tfba5mu4IDh2OfZRmh49XspJfDMhjb08QYB/eufNBOrNLHJq0ggpUTLRZHFRMtak+GBfMCoODQTFjIPMaW3CjGaWM4EyrSGx0FwZIOKhheNp2TjcDRI7cCgrW28O7llb7m4rh2I4gGOK6lc+J4SnHGWauI25yKWanq8entvME07vwscQyTj/yszyaxCONykQ6jdR2+9d2SP8ANcT9ZWesytb2lnOJVbLLKoDcd+BVd1fqS3S9aGO3kd842oAMfzUMlb4epijrHpeumdel+risZ33RSeRM/a3p+3p/FW2Tc+cdqxjTtTklLSCJ4ZIiHAJBzg54/itVv7G9x4tncnYRuCk4NWYJy11ZF5OOKna/SSdnAIIpftDTrzk8mgLiXUIv+6Nj85ppawexpjcqT3o5e9VvW9Ta1u9kZySeaDMej176K2jZ3PCjJxQ9zZw6np4d2dZDGdhRtp5pDb3cmoSRw8eGGyzD7vimd3qf9arc4d0LGIEqo/xU+VKKQrEltiLQekrTpx7m+uZo/ESFlVc52BvcnuTVHvtBhvbuWRWHnbJ+ee+aP1nqGwubKRPDnvNV3MxlWXbGjEAbQM+YAevvVWs9Zj0+4YSQSRFmzvzuUn1zSdX7RfCUV9i22NlHaxsoJOQc5Oa1fSI3i6fsI5JC8ggTcx9cjNZbbGS9ZY7dC8kowqj1JrV7cNHZwRvgMsaqQO2QKd4120T+XXEhVqZnVvIRs9a9sZzKVJ9sUTcMCGDDy0NboscyhDlcGnpvtkj9DBHFUfqUT3mqSWluwQkZ+fzVxR6WXGkJJeSXgkCswwS3oKASoTfVLo9nbkkNtAVQPuY1Lr96sti7ZGWUBvilfUGr6HYoi/VJcTwfpSLkA/J7VTdO6ia96hms5j/xTWpVQx7sGz/uk5EtRmO90N7nTJ4tAtY7K1tTsjBLSAAk0huNOVrST6iKFXxyU9DXmpS39s2yG8k8P0Uk8fg0mNzcu+Jp2I9Rnik1wtWSlqzR+kJ4pdUUb1V0jZkGe57cfjNX2PUVkBQOA6nGK/OA6hubLUo7iykKGEFVPfOe+f4q46F10l1dbb6dbct95B2k/PtVGJVGnwizS2laNgmnRlHfOOagt8LdAqfKQaUaddNLCHMiyxMPK6HIP70bblRdqVY4wc00WhX1F1YujL9NbgSXjDPm/TGPc/6rNNY6i1HUW3Xl7LIvOEBwv4AFLNa1+S/1Ge+cY8RsqmfTsopfFK9zNI8mMKBGoHYe+KU3ZpBIkJQM/wCo8/A+KAaUwajbSoxVlfAajZOB3pbdrvHviirBOnZerxZLi2RjDuYjkrVH1a88O5ktIxtC8OfUn2p9onV0dhpTpfK0s0OBGPWQegP4qn3UzXd5NcNwZXZyPyc0rHBptMfmyRcVqcA5/FdA47Gua+zTyUb6T1HquiSh7G8kiGclAcq35U8GtI0n+r1rJBs1bT2jl2kGa3wVJx3KnkfsTWP5r4thT+KFwD//2Q=="
+              <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 bg-gray-700">
+                <img
+                  src="/milos-optimized.jpg"
                   alt="Milos Stevanovic"
                   className="w-full h-full object-cover"
                 />
               </div>
-              
+
               <div>
                 <p className="font-semibold text-white">
                   {lang === 'nl' ? '- Milos Stevanovic, oprichter' : '- Milos Stevanovic, founder'}
@@ -442,27 +440,27 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Benefits */}
-        <section id="benefits" className="mt-24">
+        {/* Testimonial */}
+        <section className="mt-24">
           <div className="relative p-8 rounded-2xl border border-cyan-500/30 bg-gradient-to-br from-slate-950 to-slate-900 shadow-lg">
             <div className="absolute top-6 left-6 text-cyan-500/20 text-6xl">&ldquo;</div>
-            
+
             <div className="relative pl-8">
               <p className="text-base md:text-lg text-gray-200 leading-relaxed italic mb-6">
-                {lang === 'nl' 
-                  ? 'Geen gemiste patiënten meer. Ik ontvang alle gesprekken per e-mail met reden en contactgegevens, zodat ik meteen weet wie prioriteit heeft. Patiënten zijn ook blij dat ze altijd worden geholpen, en ik kan ongestoord behandelen.'
+                {lang === 'nl'
+                  ? 'Geen gemiste patienten meer. Ik ontvang alle gesprekken per e-mail met reden en contactgegevens, zodat ik meteen weet wie prioriteit heeft. Patienten zijn ook blij dat ze altijd worden geholpen, en ik kan ongestoord behandelen.'
                   : 'No more missed patients. I receive every call by email with reason and contact details, so I immediately know who has priority. Patients are also happy that they are always helped, and I can treat without interruptions.'}
               </p>
-              
+
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center overflow-hidden">
-                  <img 
-                    src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAcABwDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAACAIGBwP/xAAnEAACAQQCAQMEAwAAAAAAAAABAgMEBQYRAAcSITFRCBMUQRUWIv/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwBkVE0NPA89RLHDEg8nd2Cqo+ST7cz7uvserwCnxwW2wNfKm+3WO3xokpX7QZSxk0qsX0AToa+d+nLD2fYKjK+uMjxqkmjhqLpbKikhkk34K7xsqlteutkb5hnTnax6t6p/rnbeM3HFJ8Zj/DgnfxkS6EeqrTgHcj6YbKeUYGmLrsAAknngSdKd5o1mkBKRlgGYD3IHudc6cOHRNPlnY3eld3ddcblxvHpLN/G2iCpfc9WhcMJSP0pAJ3oD/ShSwBbiP4Fc7Qv9RivW+SZLRxRy1NttdRVwpJvwZ0jZlDa9dbA3zBugenaTOLJQ9u9lXytyfJ7zTGajeZVEVtU+QQxxkFGddlhtfBSRpNjyKZniinheGeNJY3GmR1BVh8EH35MAAaA0BwDp0vX5rgv1B3Xp+/5bV5ZZZbS13t1XX7aqg3IB4s5JLb2wOyRtVKhdsvEXyDQwvMkzRI0sYIRyoLLv30f1vk+B/9k="
+                  <img
+                    src="/arnhem-west-fysio-logo.png"
                     alt="Arnhem West Fysio"
                     className="w-full h-full object-contain p-1"
                   />
                 </div>
-                
+
                 <div>
                   <p className="text-sm text-gray-400">Nina Radmilovic</p>
                   <p className="font-semibold text-white">Arnhem West Fysio</p>
@@ -500,43 +498,6 @@ export default function HomePage() {
                 <p className="text-sm text-gray-400 mt-2">{f.text}</p>
               </div>
             ))}
-          </div>
-        </section>
-
-        {/* Founder Statement */}
-        <section className="mt-24">
-          <div className="max-w-3xl mx-auto p-8 bg-gradient-to-br from-slate-950 to-slate-900 rounded-2xl border border-gray-800">
-            <h3 className="text-lg font-semibold text-gray-300 mb-6">
-              {lang === 'nl' ? 'Van de oprichter' : 'From the founder'}
-            </h3>
-            
-            <p className="text-base text-gray-200 leading-relaxed mb-4">
-              {lang === 'nl' 
-                ? 'Wanneer u met ForConnect werkt, voelt dat voor mij als samenwerken. Uw patiënten worden voor een groot deel ook onze verantwoordelijkheid - en die neem ik serieus.'
-                : 'When you work with ForConnect, it feels like collaboration to me. Your patients become largely our responsibility as well - and I take that seriously.'}
-            </p>
-            
-            <p className="text-base text-gray-200 leading-relaxed mb-6">
-              {lang === 'nl'
-                ? 'Daarom is onze assistent er om uw praktijk te ondersteunen - zodat u zich met een gerust gevoel volledig kunt richten op uw patiënten.'
-                : 'That is why our assistant is here to support your practice - so you can focus fully on your patients with peace of mind.'}
-            </p>
-            
-            <div className="flex items-center gap-4 pt-4 border-t border-gray-700">
-              <div className="w-14 h-14 rounded-full overflow-hidden">
-                <img 
-                  src="data:image/jpeg;base64,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"
-                  alt="Miloš Stevanović"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              
-              <div>
-                <p className="font-semibold text-white">
-                  {lang === 'nl' ? '- Miloš Stevanović, oprichter' : '- Miloš Stevanović, founder'}
-                </p>
-              </div>
-            </div>
           </div>
         </section>
 
@@ -582,7 +543,7 @@ export default function HomePage() {
 
                 <ul className="mt-4 text-sm text-gray-300 space-y-1 flex-1 pb-6">
                   {p.features.map((f, j) => (
-                    <li key={j}>• {f}</li>
+                    <li key={j}>&#8226; {f}</li>
                   ))}
                 </ul>
 
@@ -603,9 +564,9 @@ export default function HomePage() {
           {/* Trial disclaimer */}
           <div className="mt-8 text-center">
             <p className="text-xs text-gray-300">
-              {lang === 'nl' 
-                ? '7 dagen gratis proberen • Geen creditcard vereist • Geen verplichtingen • Stop op elk moment'
-                : '7-day free trial • No credit card required • No obligations • Cancel anytime'}
+              {lang === 'nl'
+                ? '7 dagen gratis proberen - Geen creditcard vereist - Geen verplichtingen - Stop op elk moment'
+                : '7-day free trial - No credit card required - No obligations - Cancel anytime'}
             </p>
           </div>
         </section>
@@ -619,7 +580,7 @@ export default function HomePage() {
           />
           <div className="absolute inset-0 bg-black/70" />
 
-          <div className="relative">
+          <div className="relative p-6">
             <h2 className="text-2xl font-bold">{t.demoTitle}</h2>
             <p className="text-sm text-gray-300">{t.demoSubtitle}</p>
 
@@ -725,7 +686,7 @@ export default function HomePage() {
 
                 {/* PHONE */}
                 <div className="flex items-center gap-2 text-sm mt-1">
-                  <span>📞</span>
+                  <span>&#x1F4DE;</span>
                   <a
                     href="tel:+3197010256601"
                     className="hover:text-[#00F0FF] transition"
@@ -739,6 +700,7 @@ export default function HomePage() {
                   <a
                     href="https://wa.me/31634483701"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-2 hover:text-[#00F0FF] transition"
                   >
                     <svg
@@ -760,7 +722,7 @@ export default function HomePage() {
                     {lang === 'nl' ? 'Of probeer onze DEMO praktijk' : 'Or try our DEMO practice'}
                   </p>
                   <div className="flex items-center gap-2 text-sm">
-                    <span className="text-lg">🎧</span>
+                    <span className="text-lg">&#x1F3A7;</span>
                     <a
                       href="tel:+31267913273"
                       className="hover:text-[#00F0FF] transition"
@@ -784,22 +746,22 @@ export default function HomePage() {
                       {lang === 'nl' ? 'Actief in heel Nederland' : 'Active throughout the Netherlands'}
                     </span>
                   </div>
-                  
+
                   <div className="space-y-2 text-xs text-gray-400">
                     <div className="flex items-center gap-2">
-                      <span className="text-[#00F0FF]">✓</span>
+                      <span className="text-[#00F0FF]">&#x2713;</span>
                       <span>GDPR compliant</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="text-[#00F0FF]">✓</span>
+                      <span className="text-[#00F0FF]">&#x2713;</span>
                       <span>{lang === 'nl' ? 'Nederlandse servers' : 'Dutch servers'}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="text-[#00F0FF]">✓</span>
+                      <span className="text-[#00F0FF]">&#x2713;</span>
                       <span>{lang === 'nl' ? '7 dagen gratis proberen' : '7-day free trial'}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="text-[#00F0FF]">✓</span>
+                      <span className="text-[#00F0FF]">&#x2713;</span>
                       <span>{lang === 'nl' ? 'Geen setup kosten' : 'No setup fees'}</span>
                     </div>
                   </div>
@@ -819,7 +781,7 @@ export default function HomePage() {
                       aria-label="Instagram"
                     >
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                       </svg>
                     </a>
 
@@ -831,7 +793,7 @@ export default function HomePage() {
                       aria-label="Facebook"
                     >
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                       </svg>
                     </a>
 
@@ -843,7 +805,7 @@ export default function HomePage() {
                       aria-label="LinkedIn"
                     >
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                       </svg>
                     </a>
                   </div>
@@ -888,7 +850,7 @@ export default function HomePage() {
                 aria-label="Instagram"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                 </svg>
               </a>
 
@@ -900,7 +862,7 @@ export default function HomePage() {
                 aria-label="Facebook"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                 </svg>
               </a>
 
@@ -912,7 +874,7 @@ export default function HomePage() {
                 aria-label="LinkedIn"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                 </svg>
               </a>
             </div>
