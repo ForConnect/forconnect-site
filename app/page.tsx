@@ -403,8 +403,17 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Testimonial */}
+        {/* Testimonial Header */}
         <section className="mt-20">
+          <h2 className="text-xl md:text-2xl font-semibold text-center text-gray-200 mb-8">
+            {lang === 'nl' 
+              ? 'Vertrouwd door praktijken — en gebouwd met verantwoordelijkheid'
+              : 'Trusted by practices — and built with responsibility'}
+          </h2>
+        </section>
+
+        {/* Testimonial */}
+        <section className="mt-6">
           <div className="relative p-8 rounded-2xl border border-cyan-500/30 bg-gradient-to-br from-slate-950 to-slate-900 shadow-lg">
             <div className="absolute top-6 left-6 text-cyan-500/20 text-6xl">&ldquo;</div>
             
@@ -461,6 +470,43 @@ export default function HomePage() {
                 <p className="text-sm text-gray-400 mt-2">{f.text}</p>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* Founder Statement */}
+        <section className="mt-24">
+          <div className="max-w-3xl mx-auto p-8 bg-gradient-to-br from-slate-950 to-slate-900 rounded-2xl border border-gray-800">
+            <h3 className="text-lg font-semibold text-gray-300 mb-6">
+              {lang === 'nl' ? 'Van de oprichter' : 'From the founder'}
+            </h3>
+            
+            <p className="text-base text-gray-200 leading-relaxed mb-4">
+              {lang === 'nl' 
+                ? 'Wanneer u met ForConnect werkt, voelt dat voor mij als samenwerken. Uw patiënten worden voor een groot deel ook onze verantwoordelijkheid — en die neem ik serieus.'
+                : 'When you work with ForConnect, it feels like collaboration to me. Your patients become largely our responsibility as well — and I take that seriously.'}
+            </p>
+            
+            <p className="text-base text-gray-200 leading-relaxed mb-6">
+              {lang === 'nl'
+                ? 'Daarom is onze assistent er om uw praktijk te ondersteunen — zodat u zich met een gerust gevoel volledig kunt richten op uw patiënten.'
+                : 'That is why our assistant is here to support your practice — so you can focus fully on your patients with peace of mind.'}
+            </p>
+            
+            <div className="flex items-center gap-4 pt-4 border-t border-gray-700">
+              <div className="w-14 h-14 rounded-full overflow-hidden">
+                <img 
+                  src="data:image/jpeg;base64,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"
+                  alt="Miloš Stevanović"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              
+              <div>
+                <p className="font-semibold text-white">
+                  {lang === 'nl' ? '— Miloš Stevanović, oprichter' : '— Miloš Stevanović, founder'}
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
