@@ -409,15 +409,19 @@ export default function HomePage() {
             <div className="absolute top-6 left-6 text-cyan-500/20 text-6xl">&ldquo;</div>
             
             <div className="relative pl-8">
-              <p className="text-lg md:text-xl text-gray-200 leading-relaxed italic mb-6">
+              <p className="text-base md:text-lg text-gray-200 leading-relaxed italic mb-6">
                 {lang === 'nl' 
                   ? 'Geen gemiste patiënten meer. Ik ontvang alle gesprekken per e-mail met reden en contactgegevens, zodat ik meteen weet wie prioriteit heeft. Patiënten zijn ook blij dat ze altijd worden geholpen, en ik kan ongestoord behandelen.'
                   : 'No more missed patients. I receive every call by email with reason and contact details, so I immediately know who has priority. Patients are also happy that they are always helped, and I can treat without interruptions.'}
               </p>
               
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-cyan-500/10 border-2 border-cyan-500 flex items-center justify-center">
-                  <span className="text-cyan-500 font-bold text-lg">NR</span>
+                <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center overflow-hidden">
+                  <img 
+                    src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAcABwDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAACAIGBwP/xAAnEAACAQQCAQMEAwAAAAAAAAABAgMEBQYRAAcSITFRCBMUQRUWIv/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwBkVE0NPA89RLHDEg8nd2Cqo+ST7cz7uvserwCnxwW2wNfKm+3WO3xokpX7QZSxk0qsX0AToa+d+nLD2fYKjK+uMjxqkmjhqLpbKikhkk34K7xsqlteutkb5hnTnax6t6p/rnbeM3HFJ8Zj/DgnfxkS6EeqrTgHcj6YbKeUYGmLrsAAknngSdKd5o1mkBKRlgGYD3IHudc6cOHRNPlnY3eld3ddcblxvHpLN/G2iCpfc9WhcMJSP0pAJ3oD/ShSwBbiP4Fc7Qv9RivW+SZLRxRy1NttdRVwpJvwZ0jZlDa9dbA3zBugenaTOLJQ9u9lXytyfJ7zTGajeZVEVtU+QQxxkFGddlhtfBSRpNjyKZniinheGeNJY3GmR1BVh8EH35MAAaA0BwDp0vX5rgv1B3Xp+/5bV5ZZZbS13t1XX7aqg3IB4s5JLb2wOyRtVKhdsvEXyDQwvMkzRI0sYIRyoLLv30f1vk+B/9k="
+                    alt="Arnhem West Fysio"
+                    className="w-full h-full object-contain p-1"
+                  />
                 </div>
                 
                 <div>
