@@ -49,14 +49,14 @@ const content: Record<'nl' | 'en', ContentType> = {
     heroBadge: 'AI Telefoonassistent voor Fysiopraktijken',
     heroTitle: 'Geen onderbroken behandelingen meer.',
     heroSubtitle:
-      'Uw telefoon wordt beantwoord, patiëntgegevens worden genoteerd en netjes naar uw e-mail gestuurd — zodat u ongestoord kunt behandelen.',
+      'Uw telefoon wordt beantwoord, patiëntgegevens worden genoteerd en netjes naar uw e-mail gestuurd - zodat u ongestoord kunt behandelen.',
     heroPrimaryCta: 'Plan een demo',
 
     howTitle: 'Hoe werkt ForConnect?',
     howSteps: [
       { title: '1. Patiënt belt uw praktijk', text: '' },
       { title: '2. Assistent noteert naam, geboortedatum, reden en contactgegevens', text: '' },
-      { title: '3. U ontvangt alles per e-mail — klaar om terug te bellen', text: '' },
+      { title: '3. U ontvangt alles per e-mail - klaar om terug te bellen', text: '' },
     ],
 
     forWhoTitle: 'Voor wie is ForConnect?',
@@ -163,14 +163,14 @@ const content: Record<'nl' | 'en', ContentType> = {
     heroBadge: 'AI Phone Assistant for Physiotherapy Practices',
     heroTitle: 'No more interrupted treatments.',
     heroSubtitle:
-      'Your phone is answered, patient details are recorded and sent to your email — so you can treat without interruptions.',
+      'Your phone is answered, patient details are recorded and sent to your email - so you can treat without interruptions.',
     heroPrimaryCta: 'Book a demo',
 
     howTitle: 'How does ForConnect work?',
     howSteps: [
       { title: '1. Patient calls your practice', text: '' },
       { title: '2. Assistant records name, date of birth, reason and contact details', text: '' },
-      { title: '3. You receive everything by email — ready to call back', text: '' },
+      { title: '3. You receive everything by email - ready to call back', text: '' },
     ],
 
     forWhoTitle: 'Who is ForConnect for?',
@@ -414,14 +414,14 @@ export default function HomePage() {
             
             <p className="text-base text-gray-300 leading-relaxed mb-4 text-center max-w-2xl mx-auto">
               {lang === 'nl' 
-                ? 'Wanneer u met ForConnect werkt, voelt dat voor mij als samenwerken. Uw patiënten worden voor een groot deel ook onze verantwoordelijkheid — en die neem ik serieus.'
-                : 'When you work with ForConnect, it feels like collaboration to me. Your patients become largely our responsibility as well — and I take that seriously.'}
+                ? 'Wanneer u met ForConnect werkt, voelt dat voor mij als samenwerken. Uw patiënten worden voor een groot deel ook onze verantwoordelijkheid - en die neem ik serieus.'
+                : 'When you work with ForConnect, it feels like collaboration to me. Your patients become largely our responsibility as well - and I take that seriously.'}
             </p>
             
             <p className="text-base text-gray-300 leading-relaxed mb-8 text-center max-w-2xl mx-auto">
               {lang === 'nl'
-                ? 'Daarom is onze assistent er om uw praktijk te ondersteunen — zodat u zich met een gerust gevoel volledig kunt richten op uw patiënten.'
-                : 'That is why our assistant is here to support your practice — so you can focus fully on your patients with peace of mind.'}
+                ? 'Daarom is onze assistent er om uw praktijk te ondersteunen - zodat u zich met een gerust gevoel volledig kunt richten op uw patiënten.'
+                : 'That is why our assistant is here to support your practice - so you can focus fully on your patients with peace of mind.'}
             </p>
             
             <div className="flex items-center justify-center gap-4 pt-6 border-t border-gray-700">
@@ -435,7 +435,7 @@ export default function HomePage() {
               
               <div>
                 <p className="font-semibold text-white">
-                  {lang === 'nl' ? '— Milos Stevanovic, oprichter' : '— Milos Stevanovic, founder'}
+                  {lang === 'nl' ? '- Milos Stevanovic, oprichter' : '- Milos Stevanovic, founder'}
                 </p>
               </div>
             </div>
@@ -512,14 +512,14 @@ export default function HomePage() {
             
             <p className="text-base text-gray-200 leading-relaxed mb-4">
               {lang === 'nl' 
-                ? 'Wanneer u met ForConnect werkt, voelt dat voor mij als samenwerken. Uw patiënten worden voor een groot deel ook onze verantwoordelijkheid — en die neem ik serieus.'
-                : 'When you work with ForConnect, it feels like collaboration to me. Your patients become largely our responsibility as well — and I take that seriously.'}
+                ? 'Wanneer u met ForConnect werkt, voelt dat voor mij als samenwerken. Uw patiënten worden voor een groot deel ook onze verantwoordelijkheid - en die neem ik serieus.'
+                : 'When you work with ForConnect, it feels like collaboration to me. Your patients become largely our responsibility as well - and I take that seriously.'}
             </p>
             
             <p className="text-base text-gray-200 leading-relaxed mb-6">
               {lang === 'nl'
-                ? 'Daarom is onze assistent er om uw praktijk te ondersteunen — zodat u zich met een gerust gevoel volledig kunt richten op uw patiënten.'
-                : 'That is why our assistant is here to support your practice — so you can focus fully on your patients with peace of mind.'}
+                ? 'Daarom is onze assistent er om uw praktijk te ondersteunen - zodat u zich met een gerust gevoel volledig kunt richten op uw patiënten.'
+                : 'That is why our assistant is here to support your practice - so you can focus fully on your patients with peace of mind.'}
             </p>
             
             <div className="flex items-center gap-4 pt-4 border-t border-gray-700">
@@ -533,7 +533,7 @@ export default function HomePage() {
               
               <div>
                 <p className="font-semibold text-white">
-                  {lang === 'nl' ? '— Miloš Stevanović, oprichter' : '— Miloš Stevanović, founder'}
+                  {lang === 'nl' ? '- Miloš Stevanović, oprichter' : '- Miloš Stevanović, founder'}
                 </p>
               </div>
             </div>
