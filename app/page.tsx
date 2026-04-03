@@ -403,6 +403,35 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Testimonial */}
+        <section className="mt-20">
+          <div className="relative p-8 rounded-2xl border border-[#00F0FF]/30 bg-gradient-to-br from-[#020617] to-[#0a1628] shadow-[0_0_50px_rgba(0,240,255,0.15)]">
+            {/* Quote icon */}
+            <div className="absolute top-6 left-6 text-[#00F0FF]/20 text-6xl font-serif">"</div>
+            
+            <div className="relative pl-8">
+              <p className="text-lg md:text-xl text-gray-200 leading-relaxed italic mb-6">
+                {lang === 'nl' 
+                  ? 'Geen gemiste patiënten meer. Ik ontvang alle gesprekken per e-mail met reden en contactgegevens, zodat ik meteen weet wie prioriteit heeft. Patiënten zijn ook blij dat ze altijd worden geholpen, en ik kan ongestoord behandelen.'
+                  : 'No more missed patients. I receive every call by email with reason and contact details, so I immediately know who has priority. Patients are also happy that they\'re always helped, and I can treat without interruptions.'}
+              </p>
+              
+              <div className="flex items-center gap-4">
+                {/* Avatar */}
+                <div className="w-12 h-12 rounded-full bg-[#00F0FF]/10 border-2 border-[#00F0FF] flex items-center justify-center">
+                  <span className="text-[#00F0FF] font-bold text-lg">NR</span>
+                </div>
+                
+                {/* Name and practice */}
+                <div>
+                  <p className="font-semibold text-white">Nina Radmilović</p>
+                  <p className="text-sm text-gray-400">Arnhem West Fysio</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* How it works */}
         <section id="how" className="mt-24">
           <h2 className="text-2xl font-bold">{t.howTitle}</h2>
