@@ -450,8 +450,8 @@ export default function HomePage() {
             <div className="relative pl-8">
               <p className="text-base md:text-lg text-gray-200 leading-relaxed italic mb-6">
                 {lang === 'nl' 
-                  ? 'Geen gemiste patiënten meer. Geen voicemail luisteren over en over. Ik ontvang alle gesprekken per e-mail met reden en contactgegevens, zodat ik meteen weet wie prioriteit heeft. Patiënten zijn ook blij dat ze altijd worden geholpen, en ik kan ongestoord behandelen.'
-                  : 'No more missed patients. No more listening to voicemail over and over. I receive every call by email with reason and contact details, so I immediately know who has priority. Patients are also happy that they are always helped, and I can treat without interruptions.'}
+                  ? 'Geen gemiste patiënten meer. Ik ontvang alle gesprekken per e-mail met reden en contactgegevens, zodat ik meteen weet wie prioriteit heeft. Patiënten zijn ook blij dat ze altijd worden geholpen, en ik kan ongestoord behandelen.'
+                  : 'No more missed patients. I receive every call by email with reason and contact details, so I immediately know who has priority. Patients are also happy that they are always helped, and I can treat without interruptions.'}
               </p>
               
               <div className="flex items-center gap-4">
