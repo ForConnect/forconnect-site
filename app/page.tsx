@@ -413,7 +413,7 @@ export default function HomePage() {
               <p className="text-lg md:text-xl text-gray-200 leading-relaxed italic mb-6">
                 {lang === 'nl' 
                   ? 'Geen gemiste patiënten meer. Ik ontvang alle gesprekken per e-mail met reden en contactgegevens, zodat ik meteen weet wie prioriteit heeft. Patiënten zijn ook blij dat ze altijd worden geholpen, en ik kan ongestoord behandelen.'
-                  : 'No more missed patients. I receive every call by email with reason and contact details, so I immediately know who has priority. Patients are also happy that they\'re always helped, and I can treat without interruptions.'}
+                  : "No more missed patients. I receive every call by email with reason and contact details, so I immediately know who has priority. Patients are also happy that they're always helped, and I can treat without interruptions."}
               </p>
               
               <div className="flex items-center gap-4">
