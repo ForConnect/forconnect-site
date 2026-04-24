@@ -70,11 +70,11 @@ const content: Record<'nl' | 'en', ContentType> = {
       { title: 'Geen personeelskosten', text: 'Vaste maandprijs.' },
     ],
     pricingTitle: 'Prijzen',
-    pricingSubtitle: 'Transparante pakketten, afgestemd op jouw bedrijf. 7 dagen gratis proberen.',
+    pricingSubtitle: 'Transparante pakketten, afgestemd op jouw bedrijf. 14 dagen gratis proberen.',
     plans: [
       { name: 'Starter', price: '\u20AC39', per: 'per maand', description: 'Voor startende praktijken.', features: ['AI beantwoordt oproepen 24/7', 'Bericht opnemen + doorsturen', 'E-mail notificaties', '1 telefoonnummer', 'Tot 150 belminuten'] },
-      { name: 'Basis', price: '\u20AC59', per: 'per maand', description: 'Voor zelfstandigen en kleine bedrijven.', features: ['AI beantwoordt oproepen 24/7', 'Bericht opnemen + doorsturen', 'E-mail notificaties', '1 telefoonnummer', 'Tot 300 belminuten'] },
-      { name: 'Plus', price: '\u20AC99', per: 'per maand', description: 'Meest gekozen', features: ['Alles van Basis, plus:', 'Aangepaste gespreksflow', '2 telefoonnummers', 'Prioriteit ondersteuning', 'Tot 600 belminuten'], highlight: true },
+      { name: 'Basis', price: '\u20AC59', per: 'per maand', description: 'Meest gekozen', features: ['AI beantwoordt oproepen 24/7', 'Bericht opnemen + doorsturen', 'E-mail notificaties', '1 telefoonnummer', 'Tot 300 belminuten'], highlight: true },
+{ name: 'Plus', price: '\u20AC99', per: 'per maand', description: 'Voor groeiende praktijken.', features: ['Alles van Basis, plus:', 'Aangepaste gespreksflow', '2 telefoonnummers', 'Prioriteit ondersteuning', 'Tot 600 belminuten'] },
       { name: 'Pro Plus', price: 'Prijs op maat', per: '', description: 'Voor bedrijven met speciale wensen.', features: ['Alles van Plus, plus:', 'Agenda integratie (Google/Outlook)', 'Meerdere telefoonnummers/locaties', 'Geavanceerde call flows', 'Onbeperkte belminuten'] },
     ],
     demoTitle: 'Plan een live demo',
@@ -405,7 +405,7 @@ export default function HomePage() {
             ))}
           </div>
           <div className="mt-8 text-center">
-            <p className="text-xs text-gray-300">{lang === 'nl' ? '7 dagen gratis proberen - Geen creditcard vereist - Geen verplichtingen - Stop op elk moment' : '7-day free trial - No credit card required - No obligations - Cancel anytime'}</p>
+            <p className="text-xs text-gray-300">{lang === 'nl' ? '14 dagen gratis proberen - Geen creditcard vereist - Geen verplichtingen - Stop op elk moment' : '7-day free trial - No credit card required - No obligations - Cancel anytime'}</p>
           </div>
         </section>
 
