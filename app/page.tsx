@@ -457,7 +457,7 @@ export default function HomePage() {
                   <div className="space-y-2 text-xs text-gray-400">
                     <div className="flex items-center gap-2"><span className="text-[#00F0FF]">&#x2713;</span><span>GDPR compliant</span></div>
                     <div className="flex items-center gap-2"><span className="text-[#00F0FF]">&#x2713;</span><span>{lang === 'nl' ? 'EU servers' : 'EU servers'}</span></div>
-                    <div className="flex items-center gap-2"><span className="text-[#00F0FF]">&#x2713;</span><span>{lang === 'nl' ? '7 dagen gratis proberen' : '14-day free trial'}</span></div>
+                    <div className="flex items-center gap-2"><span className="text-[#00F0FF]">&#x2713;</span><span>{lang === 'nl' ? '14 dagen gratis proberen' : '14-day free trial'}</span></div>
                   </div>
                 </div>
                 <div className="mt-6 pt-6 border-t border-gray-700">
