@@ -117,7 +117,7 @@ const content: Record<'nl' | 'en', ContentType> = {
       { title: 'No staff costs', text: 'Fixed monthly fee.' },
     ],
     pricingTitle: 'Pricing',
-    pricingSubtitle: 'Flexible plans for growing businesses. 7-day free trial.',
+    pricingSubtitle: 'Flexible plans for growing businesses. 14-day free trial.',
     plans: [
       { name: 'Starter', price: '\u20AC39', per: 'per month', description: 'For starting practices.', features: ['AI answers calls 24/7', 'Complete call reports via email', 'Email notifications', '1 phone number', 'Up to 150 call minutes'] },
       { name: 'Basis', price: '\u20AC59', per: 'per month', description: 'Most popular', features: ['AI answers calls 24/7', 'Complete call reports via email', 'Email notifications', '1 phone number', 'Up to 300 call minutes'], highlight: true },
@@ -405,7 +405,7 @@ export default function HomePage() {
             ))}
           </div>
           <div className="mt-8 text-center">
-            <p className="text-xs text-gray-300">{lang === 'nl' ? '14 dagen gratis proberen - Geen creditcard vereist - Geen verplichtingen - Stop op elk moment' : '7-day free trial - No credit card required - No obligations - Cancel anytime'}</p>
+            <p className="text-xs text-gray-300">{lang === 'nl' ? '14 dagen gratis proberen - Geen creditcard vereist - Geen verplichtingen - Stop op elk moment' : '14-day free trial - No credit card required - No obligations - Cancel anytime'}</p>
           </div>
         </section>
 
@@ -457,7 +457,7 @@ export default function HomePage() {
                   <div className="space-y-2 text-xs text-gray-400">
                     <div className="flex items-center gap-2"><span className="text-[#00F0FF]">&#x2713;</span><span>GDPR compliant</span></div>
                     <div className="flex items-center gap-2"><span className="text-[#00F0FF]">&#x2713;</span><span>{lang === 'nl' ? 'EU servers' : 'EU servers'}</span></div>
-                    <div className="flex items-center gap-2"><span className="text-[#00F0FF]">&#x2713;</span><span>{lang === 'nl' ? '7 dagen gratis proberen' : '7-day free trial'}</span></div>
+                    <div className="flex items-center gap-2"><span className="text-[#00F0FF]">&#x2713;</span><span>{lang === 'nl' ? '7 dagen gratis proberen' : '14-day free trial'}</span></div>
                   </div>
                 </div>
                 <div className="mt-6 pt-6 border-t border-gray-700">
