@@ -388,7 +388,7 @@ export default function HomePage() {
         <section id="pricing" className="mt-24">
           <h2 className="text-2xl font-bold">{t.pricingTitle}</h2>
           <p className="text-sm text-gray-400">{t.pricingSubtitle}</p>
-          <div className="grid md:grid-cols-3 gap-6 mt-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6 max-w-7xl mx-auto">
             {t.plans.map((p, i) => (
               <div key={i} className={`p-6 rounded-xl border ${p.highlight ? 'border-[#00F0FF] shadow-[0_0_25px_#00F0FF55]' : 'border-gray-700'} bg-[#020617]/70 flex flex-col`}>
                 <h3 className="font-semibold text-lg">{p.name}</h3>
