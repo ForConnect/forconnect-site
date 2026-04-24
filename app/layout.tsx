@@ -11,9 +11,24 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "ForConnect - AI voice agent",
-  description: "AI telefoniste",
+  description: "AI telefoonassistent voor fysiopraktijken. Geen gemiste oproepen meer.",
   icons: {
     icon: "/favicon_new.ico",
+  },
+  openGraph: {
+    title: "ForConnect - AI voice agent",
+    description: "AI telefoonassistent voor fysiopraktijken. Geen gemiste oproepen meer.",
+    url: "https://forconnect.nl",
+    siteName: "ForConnect",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "ForConnect - AI voice agent",
+      },
+    ],
+    type: "website",
   },
 };
 
@@ -31,13 +46,14 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
         <Script id="google-ads" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-17907678375');
-          `}
-        </Script>
+  {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17907678375');
+    gtag('config', 'G-KEV8C2GPZZ');
+  `}
+</Script>
       </head>
 
       <body
