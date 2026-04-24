@@ -72,8 +72,8 @@ const content: Record<'nl' | 'en', ContentType> = {
     pricingTitle: 'Prijzen',
     pricingSubtitle: 'Transparante pakketten, afgestemd op jouw bedrijf. 14 dagen gratis proberen.',
     plans: [
-      { name: 'Starter', price: '\u20AC39', per: 'per maand', description: 'Voor startende praktijken.', features: ['AI beantwoordt oproepen 24/7', 'Bericht opnemen + doorsturen', 'E-mail notificaties', '1 telefoonnummer', 'Tot 150 belminuten'] },
-      { name: 'Basis', price: '\u20AC59', per: 'per maand', description: 'Meest gekozen', features: ['AI beantwoordt oproepen 24/7', 'Bericht opnemen + doorsturen', 'E-mail notificaties', '1 telefoonnummer', 'Tot 300 belminuten'], highlight: true },
+      { name: 'Starter', price: '\u20AC39', per: 'per maand', description: 'Voor startende praktijken.', features: ['AI beantwoordt oproepen 24/7', 'Volledige gespreksrapportage per e-mail', 'E-mail notificaties', '1 telefoonnummer', 'Tot 150 belminuten'] },
+      { name: 'Basis', price: '\u20AC59', per: 'per maand', description: 'Meest gekozen', features: ['AI beantwoordt oproepen 24/7', 'Volledige gespreksrapportage per e-mail', 'E-mail notificaties', '1 telefoonnummer', 'Tot 300 belminuten'], highlight: true },
 { name: 'Plus', price: '\u20AC99', per: 'per maand', description: 'Voor groeiende praktijken.', features: ['Alles van Basis, plus:', 'Aangepaste gespreksflow', '2 telefoonnummers', 'Prioriteit ondersteuning', 'Tot 600 belminuten'] },
       { name: 'Pro Plus', price: 'Prijs op maat', per: '', description: 'Voor bedrijven met speciale wensen.', features: ['Alles van Plus, plus:', 'Agenda integratie (Google/Outlook)', 'Meerdere telefoonnummers/locaties', 'Geavanceerde call flows', 'Onbeperkte belminuten'] },
     ],
@@ -119,9 +119,9 @@ const content: Record<'nl' | 'en', ContentType> = {
     pricingTitle: 'Pricing',
     pricingSubtitle: 'Flexible plans for growing businesses. 7-day free trial.',
     plans: [
-      { name: 'Starter', price: '\u20AC39', per: 'per month', description: 'For starting practices.', features: ['AI answers calls 24/7', 'Message recording + forwarding', 'Email notifications', '1 phone number', 'Up to 150 call minutes'] },
-      { name: 'Basis', price: '\u20AC59', per: 'per month', description: 'For small businesses.', features: ['AI answers calls 24/7', 'Message recording + forwarding', 'Email notifications', '1 phone number', 'Up to 300 call minutes'] },
-      { name: 'Plus', price: '\u20AC99', per: 'per month', description: 'Most popular', features: ['Everything in Basis, plus:', 'Personalized call flow', '2 phone numbers', 'Priority support', 'Up to 600 call minutes'], highlight: true },
+      { name: 'Starter', price: '\u20AC39', per: 'per month', description: 'For starting practices.', features: ['AI answers calls 24/7', 'Complete call reports via email', 'Email notifications', '1 phone number', 'Up to 150 call minutes'] },
+      { name: 'Basis', price: '\u20AC59', per: 'per month', description: 'Most popular', features: ['AI answers calls 24/7', 'Complete call reports via email', 'Email notifications', '1 phone number', 'Up to 300 call minutes'], highlight: true },
+{ name: 'Plus', price: '\u20AC99', per: 'per month', description: 'For growing practices.', features: ['Everything in Basis, plus:', 'Personalized call flow', '2 phone numbers', 'Priority support', 'Up to 600 call minutes'] },
       { name: 'Pro Plus', price: 'Custom', per: '', description: 'For businesses with special needs.', features: ['Everything in Plus, plus:', 'Calendar integration (Google/Outlook)', 'Multiple phone numbers/locations', 'Advanced call flows', 'Unlimited call minutes'] },
     ],
     demoTitle: 'Book a live demo',
