@@ -1,236 +1,600 @@
+"use client";
+
 export default function KappersPage() {
+
+
   return (
-    <main className="min-h-screen bg-[#0f0f0f] text-white font-sans">
+    <main
+      style={{
+        backgroundColor: "#0a0f1a",
+        color: "#ffffff",
+        fontFamily: "'Segoe UI', system-ui, sans-serif",
+        minHeight: "100vh",
+      }}
+    >
       {/* NAV */}
-      <nav className="flex items-center justify-between px-6 py-5 max-w-6xl mx-auto">
-        <span className="text-lg font-semibold tracking-tight text-white">ForConnect</span>
-        <a
-          href="tel:+31634483701"
-          className="text-sm bg-white text-black px-4 py-2 rounded-full font-medium hover:bg-neutral-200 transition"
+      <nav
+        style={{
+          borderBottom: "1px solid rgba(0,229,255,0.15)",
+          width: "100%",
+        }}
+      >
+        <div
+          style={{
+            maxWidth: "1100px",
+            margin: "0 auto",
+            padding: "0 32px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            height: "72px",
+          }}
         >
-          Bel ons
-        </a>
+          <div style={{ display: "flex", alignItems: "center", gap: "12px", flexShrink: 0 }}>
+            <div
+              style={{
+                width: "44px",
+                height: "44px",
+                backgroundColor: "#0d1b2a",
+                border: "1px solid rgba(0,229,255,0.4)",
+                borderRadius: "10px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <span style={{ color: "#00e5ff", fontWeight: 800, fontSize: "20px" }}>F</span>
+            </div>
+            <div>
+              <div style={{ fontWeight: 700, fontSize: "17px", lineHeight: 1.2 }}>ForConnect</div>
+              <div style={{ color: "#64748b", fontSize: "12px" }}>AI Voice Agent</div>
+            </div>
+          </div>
+          <div style={{ display: "flex", alignItems: "center", gap: "28px" }}>
+            <div style={{ display: "flex", gap: "24px", fontSize: "14px" }}>
+              {[
+                { label: "Hoe het werkt", href: "#hoe-werkt-het" },
+                { label: "Voordelen", href: "#voordelen" },
+                { label: "Prijzen", href: "#prijzen" },
+                { label: "Contact", href: "#contact" },
+              ].map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  style={{ color: "#94a3b8", textDecoration: "none", whiteSpace: "nowrap" }}
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+            <a
+              href="tel:+310970102566001"
+              style={{
+                backgroundColor: "#00e5ff",
+                color: "#0a0f1a",
+                fontWeight: 700,
+                padding: "10px 20px",
+                borderRadius: "8px",
+                textDecoration: "none",
+                fontSize: "14px",
+                whiteSpace: "nowrap",
+                flexShrink: 0,
+              }}
+            >
+              Bel ons
+            </a>
+          </div>
+        </div>
       </nav>
 
-      {/* HERO */}
-      <section className="max-w-4xl mx-auto px-6 pt-20 pb-16 text-center">
-        <span className="inline-block text-xs uppercase tracking-widest text-neutral-400 mb-4 border border-neutral-700 px-3 py-1 rounded-full">
-          Voor kappers & schoonheidssalons
-        </span>
-        <h1 className="text-4xl sm:text-6xl font-bold leading-tight tracking-tight mb-6">
-          Nooit meer een{" "}
-          <span className="text-[#c9f542]">gemiste afspraak.</span>
-        </h1>
-        <p className="text-lg text-neutral-400 max-w-2xl mx-auto mb-10">
-          Onze AI-assistent neemt de telefoon op, beantwoordt vragen en plant
-          afspraken direct in uw agenda — zodat u zich kunt focussen op uw
-          klanten.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <a
-            href="#contact"
-            className="bg-[#c9f542] text-black font-semibold px-6 py-3 rounded-full hover:bg-[#d8ff55] transition"
-          >
-            Gratis proberen — 14 dagen
-          </a>
-          <a
-            href="tel:+31267913273"
-            className="border border-neutral-600 text-white px-6 py-3 rounded-full hover:border-neutral-400 transition text-sm"
-          >
-            🎧 Bel de demo-lijn
-          </a>
-        </div>
-      </section>
+      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 24px" }}>
 
-      {/* QUOTE */}
-      <section className="max-w-3xl mx-auto px-6 py-10 text-center">
-        <blockquote className="text-xl sm:text-2xl text-neutral-300 italic leading-relaxed border-l-4 border-[#c9f542] pl-6 text-left">
-          „Die beller hangt op — en u weet niet wie het was."
-        </blockquote>
-        <p className="text-neutral-500 mt-4 text-sm pl-6">
-          Dat hoeft niet meer zo te zijn.
-        </p>
-      </section>
-
-      {/* HOE WERKT HET */}
-      <section className="max-w-5xl mx-auto px-6 py-16">
-        <h2 className="text-2xl font-bold text-center mb-12">Hoe werkt het?</h2>
-        <div className="grid sm:grid-cols-3 gap-8">
-          {[
-            {
-              step: "01",
-              title: "Telefoon gaat over",
-              desc: "U bent bezig met een klant. De AI neemt automatisch op.",
-            },
-            {
-              step: "02",
-              title: "AI handelt het af",
-              desc: "Beantwoordt vragen, plant afspraken in uw Google Agenda, noteert naam en nummer.",
-            },
-            {
-              step: "03",
-              title: "U ontvangt een bericht",
-              desc: "Per e-mail of WhatsApp — overzichtelijk, direct bruikbaar.",
-            },
-          ].map((item) => (
-            <div
-              key={item.step}
-              className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6"
+        {/* HERO */}
+        <section style={{ padding: "80px 0 60px", textAlign: "center" }}>
+          <div
+            style={{
+              display: "inline-block",
+              backgroundColor: "rgba(0,229,255,0.1)",
+              border: "1px solid rgba(0,229,255,0.3)",
+              borderRadius: "20px",
+              padding: "6px 16px",
+              fontSize: "13px",
+              color: "#00e5ff",
+              marginBottom: "24px",
+              letterSpacing: "0.5px",
+            }}
+          >
+            Voor kappers en beauty salons
+          </div>
+          <h1
+            style={{
+              fontSize: "clamp(32px, 5vw, 58px)",
+              fontWeight: 800,
+              lineHeight: 1.15,
+              letterSpacing: "-1px",
+              marginBottom: "24px",
+              maxWidth: "820px",
+              margin: "0 auto 24px",
+            }}
+          >
+            Uw telefoon gaat.{" "}
+            <span style={{ color: "#00e5ff" }}>U knipt.</span>{" "}
+            Wie neemt op?
+          </h1>
+          <p
+            style={{
+              fontSize: "18px",
+              color: "#94a3b8",
+              maxWidth: "580px",
+              margin: "0 auto 40px",
+              lineHeight: 1.7,
+            }}
+          >
+            ForConnect neemt automatisch op, boekt de afspraak direct in uw Google Agenda
+            en stuurt u een bericht. 24 uur per dag, ook in het weekend.
+          </p>
+          <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
+            <a
+              href="tel:+31267913273"
+              style={{
+                backgroundColor: "#00e5ff",
+                color: "#0a0f1a",
+                fontWeight: 700,
+                padding: "14px 28px",
+                borderRadius: "10px",
+                textDecoration: "none",
+                fontSize: "16px",
+              }}
             >
-              <span className="text-[#c9f542] text-xs font-bold tracking-widest">
-                {item.step}
-              </span>
-              <h3 className="text-lg font-semibold mt-2 mb-2">{item.title}</h3>
-              <p className="text-neutral-400 text-sm leading-relaxed">{item.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* WAT KAN HET */}
-      <section className="max-w-4xl mx-auto px-6 py-12">
-        <h2 className="text-2xl font-bold text-center mb-10">Wat kan de assistent?</h2>
-        <div className="grid sm:grid-cols-2 gap-4">
-          {[
-            "📅 Afspraken inplannen in Google Agenda",
-            "🔁 Bezette tijden herkennen en alternatieven aanbieden",
-            "💬 Vragen beantwoorden over prijzen, locatie en openingstijden",
-            "📋 Naam, nummer en reden van elk gesprek noteren",
-            "📩 Overzicht sturen per e-mail of WhatsApp",
-            "🌙 24/7 bereikbaar — ook buiten openingstijden",
-          ].map((item) => (
-            <div
-              key={item}
-              className="flex items-start gap-3 bg-neutral-900 border border-neutral-800 rounded-xl px-5 py-4 text-sm text-neutral-300"
+              Bel de demolijn
+            </a>
+            <a
+              href="#contact"
+              style={{
+                backgroundColor: "transparent",
+                color: "#ffffff",
+                fontWeight: 600,
+                padding: "14px 28px",
+                borderRadius: "10px",
+                textDecoration: "none",
+                fontSize: "16px",
+                border: "1px solid rgba(255,255,255,0.2)",
+              }}
             >
-              {item}
-            </div>
-          ))}
-        </div>
-      </section>
+              Plan een demo
+            </a>
+          </div>
+        </section>
 
-      {/* PRIJS */}
-      <section className="max-w-4xl mx-auto px-6 py-16 text-center">
-        <h2 className="text-2xl font-bold mb-3">Transparante prijzen</h2>
-        <p className="text-neutral-400 mb-10 text-sm">
-          Geen verrassingen. Geen verborgen kosten. 14 dagen gratis proberen.
-        </p>
-        <div className="grid sm:grid-cols-3 gap-6">
-          {[
-            {
-              name: "Starter",
-              price: "€39",
-              desc: "Tot 150 belminuten",
-              features: ["AI beantwoordt oproepen 24/7", "E-mail rapportage", "1 telefoonnummer"],
-              highlight: false,
-            },
-            {
-              name: "Basis",
-              price: "€59",
-              desc: "Meest gekozen",
-              features: ["AI beantwoordt oproepen 24/7", "E-mail rapportage", "Tot 300 belminuten"],
-              highlight: true,
-            },
-            {
-              name: "Plus",
-              price: "€99",
-              desc: "Met agenda-integratie",
-              features: ["Agenda-koppeling (Google)", "Aangepaste gespreksflow", "Prioriteit support"],
-              highlight: false,
-            },
-          ].map((plan) => (
-            <div
-              key={plan.name}
-              className={`rounded-2xl p-6 border text-left ${
-                plan.highlight
-                  ? "border-[#c9f542] bg-neutral-900"
-                  : "border-neutral-800 bg-neutral-900"
-              }`}
+        {/* QUOTE */}
+        <section style={{ padding: "20px 0 60px" }}>
+          <div
+            style={{
+              borderLeft: "3px solid #00e5ff",
+              padding: "20px 28px",
+              backgroundColor: "rgba(0,229,255,0.05)",
+              borderRadius: "0 10px 10px 0",
+              maxWidth: "680px",
+              margin: "0 auto",
+            }}
+          >
+            <p
+              style={{
+                fontSize: "22px",
+                fontStyle: "italic",
+                color: "#e2e8f0",
+                lineHeight: 1.5,
+                margin: 0,
+              }}
             >
-              {plan.highlight && (
-                <span className="text-xs bg-[#c9f542] text-black px-2 py-0.5 rounded-full font-semibold mb-3 inline-block">
-                  Meest gekozen
-                </span>
-              )}
-              <h3 className="text-lg font-bold">{plan.name}</h3>
-              <p className="text-3xl font-bold mt-2">
-                {plan.price}
-                <span className="text-sm font-normal text-neutral-400">/maand</span>
-              </p>
-              <p className="text-neutral-500 text-xs mt-1 mb-4">{plan.desc}</p>
-              <ul className="space-y-2">
-                {plan.features.map((f) => (
-                  <li key={f} className="text-sm text-neutral-300 flex gap-2">
-                    <span className="text-[#c9f542]">✓</span> {f}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-        <p className="text-neutral-500 text-xs mt-6">
-          Ongeveer één behandeling per maand — en u mist nooit meer een klant.
-        </p>
-      </section>
+              "Die beller hangt op - en u weet niet wie het was."
+            </p>
+          </div>
+        </section>
 
-      {/* CONTACT */}
-      <section
-        id="contact"
-        className="max-w-xl mx-auto px-6 py-16 text-center"
-      >
-        <h2 className="text-2xl font-bold mb-3">Gratis proberen</h2>
-        <p className="text-neutral-400 text-sm mb-8">
-          Vul uw gegevens in — wij bellen u terug en stellen alles in.
-        </p>
-        <form
-          action="https://formsubmit.co/info@forconnect.nl"
-          method="POST"
-          className="flex flex-col gap-4 text-left"
-        >
-          <input type="hidden" name="_subject" value="Nieuwe aanvraag - Kappers" />
-          <input type="hidden" name="_captcha" value="false" />
-          <input
-            type="text"
-            name="naam"
-            placeholder="Uw naam"
-            required
-            className="bg-neutral-900 border border-neutral-700 rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-[#c9f542]"
-          />
-          <input
-            type="text"
-            name="salon"
-            placeholder="Naam van uw salon"
-            required
-            className="bg-neutral-900 border border-neutral-700 rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-[#c9f542]"
-          />
-          <input
-            type="tel"
-            name="telefoon"
-            placeholder="Uw telefoonnummer"
-            required
-            className="bg-neutral-900 border border-neutral-700 rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-[#c9f542]"
-          />
-          <button
-            type="submit"
-            className="bg-[#c9f542] text-black font-semibold py-3 rounded-full hover:bg-[#d8ff55] transition"
+        {/* HOE WERKT HET */}
+        <section id="hoe-werkt-het" style={{ padding: "60px 0" }}>
+          <h2
+            style={{
+              textAlign: "center",
+              fontSize: "32px",
+              fontWeight: 700,
+              marginBottom: "48px",
+              letterSpacing: "-0.5px",
+            }}
           >
-            Stuur mijn aanvraag →
-          </button>
-        </form>
-        <p className="text-neutral-600 text-xs mt-4">
-          Of stuur een WhatsApp:{" "}
-          <a
-            href="https://wa.me/31634483701"
-            className="text-neutral-400 hover:text-white transition"
+            Hoe werkt het?
+          </h2>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+              gap: "24px",
+            }}
           >
-            +31 6 34 48 37 01
-          </a>
-        </p>
-      </section>
+            {[
+              {
+                step: "1",
+                title: "Telefoon gaat",
+                desc: "Een klant belt uw salon. ForConnect neemt direct op - professioneel en in het Nederlands.",
+              },
+              {
+                step: "2",
+                title: "Agent regelt alles",
+                desc: "De assistent vraagt naar naam en gewenste behandeling. Het telefoonnummer wordt automatisch herkend. De afspraak wordt direct geboekt in uw Google Agenda.",
+              },
+              {
+                step: "3",
+                title: "Klaar - of u krijgt een bericht",
+                desc: "Boekt de agent zelf? Dan staat de afspraak direct in uw agenda - geen verdere actie nodig. Wilt u liever zelf inplannen? Dan ontvangt u een e-mail of WhatsApp met naam, nummer en gewenste behandeling.",
+              },
+            ].map((item) => (
+              <div
+                key={item.step}
+                style={{
+                  backgroundColor: "rgba(255,255,255,0.03)",
+                  border: "1px solid rgba(255,255,255,0.08)",
+                  borderRadius: "12px",
+                  padding: "28px",
+                }}
+              >
+                <div
+                  style={{
+                    width: "40px",
+                    height: "40px",
+                    backgroundColor: "rgba(0,229,255,0.15)",
+                    border: "1px solid rgba(0,229,255,0.4)",
+                    borderRadius: "10px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontSize: "18px",
+                    fontWeight: 800,
+                    color: "#00e5ff",
+                    marginBottom: "16px",
+                  }}
+                >
+                  {item.step}
+                </div>
+                <h3 style={{ fontSize: "18px", fontWeight: 700, marginBottom: "10px" }}>
+                  {item.title}
+                </h3>
+                <p style={{ color: "#94a3b8", lineHeight: 1.6, margin: 0, fontSize: "15px" }}>
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* FEATURES */}
+        <section id="voordelen" style={{ padding: "60px 0" }}>
+          <h2
+            style={{
+              textAlign: "center",
+              fontSize: "32px",
+              fontWeight: 700,
+              marginBottom: "12px",
+              letterSpacing: "-0.5px",
+            }}
+          >
+            Wat doet de assistent?
+          </h2>
+          <p
+            style={{
+              textAlign: "center",
+              color: "#94a3b8",
+              marginBottom: "48px",
+              fontSize: "16px",
+            }}
+          >
+            Alles wat u van een goede receptionist verwacht - zonder de kosten.
+          </p>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+              gap: "16px",
+            }}
+          >
+            {[
+              { icon: "📅", title: "Afspraken boeken", desc: "Direct in Google Agenda - naam, behandeling en tijd worden automatisch ingevuld. U hoeft niets te doen." },
+              { icon: "🕐", title: "24/7 beschikbaar", desc: "Ook 's avonds, in het weekend en op feestdagen. Geen enkele beller wordt gemist." },
+              { icon: "📱", title: "Melding alleen indien nodig", desc: "Boekt de agent zelf? Dan geen melding - alles staat al in uw agenda. Wilt u zelf inplannen? Dan krijgt u een WhatsApp of e-mail." },
+              { icon: "📞", title: "Nummer automatisch herkend", desc: "De agent vraagt niet naar het telefoonnummer. Het systeem ziet de beller automatisch en slaat dit op." },
+              { icon: "🇳🇱", title: "Volledig Nederlands", desc: "De assistent spreekt vloeiend Nederlands en past zich aan uw klantenbestand aan." },
+              { icon: "✂️", title: "Behandelingen herkennen", desc: "Knippen, kleuren, highlights - de assistent kent uw diensten en boekt correct." },
+            ].map((f) => (
+              <div
+                key={f.title}
+                style={{
+                  backgroundColor: "rgba(255,255,255,0.03)",
+                  border: "1px solid rgba(255,255,255,0.08)",
+                  borderRadius: "12px",
+                  padding: "24px",
+                }}
+              >
+                <div style={{ fontSize: "28px", marginBottom: "12px" }}>{f.icon}</div>
+                <h3 style={{ fontSize: "16px", fontWeight: 700, marginBottom: "8px" }}>
+                  {f.title}
+                </h3>
+                <p style={{ color: "#94a3b8", lineHeight: 1.6, margin: 0, fontSize: "14px" }}>
+                  {f.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* PRICING */}
+        <section id="prijzen" style={{ padding: "60px 0" }}>
+          <h2
+            style={{
+              textAlign: "center",
+              fontSize: "32px",
+              fontWeight: 700,
+              marginBottom: "12px",
+              letterSpacing: "-0.5px",
+            }}
+          >
+            Prijzen
+          </h2>
+          <p
+            style={{
+              textAlign: "center",
+              color: "#94a3b8",
+              marginBottom: "48px",
+              fontSize: "16px",
+            }}
+          >
+            Geen setup kosten. Maandelijks opzegbaar.
+          </p>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+              gap: "20px",
+              alignItems: "stretch",
+            }}
+          >
+            {[
+              {
+                name: "Starter",
+                sub: "Voor startende salons.",
+                price: "39",
+                priceLabel: "per maand",
+                featured: false,
+                features: [
+                  "AI beantwoordt oproepen 24/7",
+                  "Volledige gespreksrapportage per e-mail",
+                  "E-mail notificaties",
+                  "1 telefoonnummer",
+                  "Tot 150 belminuten",
+                ],
+              },
+              {
+                name: "Basis",
+                sub: "Meest gekozen",
+                price: "59",
+                priceLabel: "per maand",
+                featured: true,
+                features: [
+                  "AI beantwoordt oproepen 24/7",
+                  "Volledige gespreksrapportage per e-mail",
+                  "E-mail notificaties",
+                  "1 telefoonnummer",
+                  "Tot 300 belminuten",
+                ],
+              },
+              {
+                name: "Plus",
+                sub: "Voor groeiende salons.",
+                price: "99",
+                priceLabel: "per maand",
+                featured: false,
+                features: [
+                  "Alles van Basis, plus:",
+                  "Aangepaste gespreksflow",
+                  "2 telefoonnummers",
+                  "Prioriteit ondersteuning",
+                  "Tot 600 belminuten",
+                ],
+              },
+              {
+                name: "Pro Plus",
+                sub: "Voor salons met speciale wensen.",
+                price: null,
+                priceLabel: null,
+                featured: false,
+                features: [
+                  "Alles van Plus, plus:",
+                  "Agenda integratie (Google/Outlook)",
+                  "Meerdere telefoonnummers/locaties",
+                  "Geavanceerde call flows",
+                  "Onbeperkte belminuten",
+                ],
+              },
+            ].map((pkg) => (
+              <div
+                key={pkg.name}
+                style={{
+                  backgroundColor: pkg.featured ? "rgba(0,229,255,0.06)" : "rgba(255,255,255,0.03)",
+                  border: pkg.featured ? "1px solid rgba(0,229,255,0.5)" : "1px solid rgba(255,255,255,0.1)",
+                  borderRadius: "14px",
+                  padding: "28px 24px",
+                  display: "flex",
+                  flexDirection: "column",
+                  height: "100%",
+                  boxSizing: "border-box",
+                }}
+              >
+                <h3 style={{ fontSize: "20px", fontWeight: 800, marginBottom: "6px" }}>{pkg.name}</h3>
+                <p style={{ color: pkg.featured ? "#00e5ff" : "#94a3b8", fontSize: "14px", marginBottom: "20px" }}>
+                  {pkg.sub}
+                </p>
+                {pkg.price ? (
+                  <div style={{ marginBottom: "24px" }}>
+                    <span style={{ fontSize: "42px", fontWeight: 800 }}>&euro;{pkg.price}</span>
+                    <span style={{ color: "#94a3b8", fontSize: "15px", marginLeft: "6px" }}>{pkg.priceLabel}</span>
+                  </div>
+                ) : (
+                  <div style={{ marginBottom: "24px" }}>
+                    <span style={{ fontSize: "28px", fontWeight: 800 }}>Prijs op maat</span>
+                  </div>
+                )}
+                <ul style={{ listStyle: "none", padding: 0, margin: "0 0 28px", display: "flex", flexDirection: "column", gap: "10px", flex: 1 }}>
+                  {pkg.features.map((f) => (
+                    <li key={f} style={{ display: "flex", alignItems: "flex-start", gap: "8px", fontSize: "14px", color: "#cbd5e1", lineHeight: 1.5 }}>
+                      <span style={{ color: "#00e5ff", flexShrink: 0, marginTop: "1px" }}>&bull;</span>
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href="#contact"
+                  style={{
+                    display: "block",
+                    textAlign: "center",
+                    padding: "13px",
+                    backgroundColor: pkg.featured ? "#00e5ff" : "transparent",
+                    border: pkg.featured ? "none" : "1px solid rgba(255,255,255,0.25)",
+                    borderRadius: "50px",
+                    color: pkg.featured ? "#0a0f1a" : "#ffffff",
+                    textDecoration: "none",
+                    fontWeight: 700,
+                    fontSize: "15px",
+                  }}
+                >
+                  Kies dit pakket
+                </a>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* CONTACT FORM */}
+        <section id="contact" style={{ padding: "60px 0 80px" }}>
+          <div
+            style={{
+              maxWidth: "560px",
+              margin: "0 auto",
+              backgroundColor: "rgba(255,255,255,0.03)",
+              border: "1px solid rgba(255,255,255,0.08)",
+              borderRadius: "16px",
+              padding: "40px",
+            }}
+          >
+            <h2
+              style={{
+                fontSize: "28px",
+                fontWeight: 700,
+                marginBottom: "8px",
+                letterSpacing: "-0.4px",
+              }}
+            >
+              Interesse? Neem contact op.
+            </h2>
+            <p style={{ color: "#94a3b8", fontSize: "15px", marginBottom: "32px", lineHeight: 1.6 }}>
+              Wij bellen u terug voor een gratis gesprek van 15 minuten.
+            </p>
+
+            <form
+              onSubmit={async (e) => {
+                e.preventDefault();
+                const form = e.currentTarget;
+                const formData = new FormData(form);
+                const email = formData.get("email") as string;
+                if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                  alert("Voer een geldig e-mailadres in.");
+                  return;
+                }
+                const res = await fetch("/api/contact", { method: "POST", body: formData });
+                if (res.ok) {
+                  alert("Uw bericht is succesvol verzonden. Bedankt!");
+                  form.reset();
+                } else {
+                  alert("Er is een fout opgetreden. Probeer het opnieuw.");
+                }
+              }}
+              style={{ display: "flex", flexDirection: "column", gap: "16px" }}
+            >
+              {[
+                { label: "Uw naam", name: "name", placeholder: "Jan de Vries", type: "text", required: false },
+                { label: "Naam salon", name: "salon", placeholder: "Kapsalon De Vries", type: "text", required: false },
+                { label: "Telefoonnummer", name: "telefoon", placeholder: "+31 6 12 34 56 78", type: "tel", required: false },
+                { label: "E-mailadres", name: "email", placeholder: "jan@kapsalon.nl", type: "email", required: true },
+              ].map((field) => (
+                <div key={field.name}>
+                  <label
+                    style={{
+                      display: "block",
+                      fontSize: "13px",
+                      fontWeight: 600,
+                      color: "#94a3b8",
+                      marginBottom: "6px",
+                      textTransform: "uppercase",
+                      letterSpacing: "0.5px",
+                    }}
+                  >
+                    {field.label}
+                  </label>
+                  <input
+                    type={field.type}
+                    name={field.name}
+                    placeholder={field.placeholder}
+                    required={field.required}
+                    style={{
+                      width: "100%",
+                      backgroundColor: "rgba(255,255,255,0.05)",
+                      border: "1px solid rgba(255,255,255,0.12)",
+                      borderRadius: "8px",
+                      padding: "12px 14px",
+                      color: "#ffffff",
+                      fontSize: "15px",
+                      outline: "none",
+                      boxSizing: "border-box",
+                    }}
+                  />
+                </div>
+              ))}
+              <button
+                type="submit"
+                style={{
+                  backgroundColor: "#00e5ff",
+                  color: "#0a0f1a",
+                  fontWeight: 700,
+                  padding: "14px",
+                  borderRadius: "10px",
+                  border: "none",
+                  fontSize: "16px",
+                  cursor: "pointer",
+                  marginTop: "8px",
+                }}
+              >
+                Verzenden
+              </button>
+            </form>
+          </div>
+        </section>
+      </div>
 
       {/* FOOTER */}
-      <footer className="border-t border-neutral-800 text-center text-neutral-600 text-xs py-6">
-        © 2026 ForConnect — Gemaakt voor kappers & schoonheidssalons in Nederland.
+      <footer
+        style={{
+          borderTop: "1px solid rgba(255,255,255,0.06)",
+          padding: "32px 24px",
+          textAlign: "center",
+        }}
+      >
+        <p style={{ color: "#475569", fontSize: "14px", margin: "0 0 8px" }}>
+          Gemaakt voor kappers en beauty salons in Nederland
+        </p>
+        <p style={{ color: "#334155", fontSize: "13px", margin: 0 }}>
+          ForConnect &copy; 2026 &middot;{" "}
+          <a href="/" style={{ color: "#475569", textDecoration: "none" }}>
+            Terug naar hoofdpagina
+          </a>
+        </p>
       </footer>
     </main>
   );
