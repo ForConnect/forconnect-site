@@ -45,7 +45,7 @@ type ContentType = {
 const content: Record<'nl' | 'en', ContentType> = {
   nl: {
     nav: ['Home', 'Hoe het werkt', 'Voor wie', 'Voordelen', 'Prijzen', 'Demo', 'Contact', 'FAQ'],
-    heroBadge: 'AI Telefoonassistent voor Fysiopraktijken',
+    heroBadge: 'AI Telefoonassistent voor Fysiopraktijken / Kinesitherapiepraktijken',
     heroTitle: 'Geen onderbroken behandelingen meer.',
     heroSubtitle: 'Uw telefoon wordt beantwoord, patiëntgegevens worden genoteerd en netjes naar uw e-mail gestuurd - zodat u ongestoord kunt behandelen.',
     heroPrimaryCta: 'Plan een demo',
