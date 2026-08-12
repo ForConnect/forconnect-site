@@ -169,7 +169,8 @@ export default function HomePage() {
           </nav>
           <div className="flex items-center gap-3">
             <div className="flex rounded-full border p-1 border-gray-700 bg-[#020617]/70 text-xs">
-              <span className="px-3 py-1 rounded-full bg-[#00F0FF] text-[#020617]">NL/BE</span>
+              <button onClick={() => setLang('nl')} className={`px-3 py-1 rounded-full ${lang === 'nl' ? 'bg-[#00F0FF] text-[#020617]' : 'text-gray-300'}`}>NL/BE</button>
+              <button onClick={() => setLang('en')} className={`px-3 py-1 rounded-full ${lang === 'en' ? 'bg-[#00F0FF] text-[#020617]' : 'text-gray-300'}`}>EN</button>
             </div>
           </div>
         </header>
@@ -474,12 +475,12 @@ export default function HomePage() {
                     <div className="flex items-center gap-2">
                       <span className="text-lg">&#x1F3A7;</span>
                       <a href="tel:+31267913273" className="hover:text-[#00F0FF] transition">+31 26 791 32 73</a>
-                      <span className="text-xs text-gray-500">Nederland</span>
+                      <span className="text-xs">Nederland</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <span className="text-lg">&#x1F3A7;</span>
                       <a href="tel:+3278700402" className="hover:text-[#00F0FF] transition">+32 78 700 402</a>
-                      <span className="text-xs text-gray-500">België</span>
+                      <span className="text-xs">België</span>
                     </div>
                   </div>
                   <p className="text-xs text-gray-500 mt-1">{lang === 'nl' ? '24/7 beschikbaar' : '24/7 available'}</p>
