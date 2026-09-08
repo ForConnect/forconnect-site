@@ -202,7 +202,7 @@ export default function HomePage() {
               <div className="text-xs text-gray-500 text-right mt-3">{lang === 'nl' ? '* AI actief' : '* AI active'}</div>
             </div>
             <div className="flex flex-col gap-3 mt-4 w-full">
-              <a href="tel:+31267913273" className="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-[#00F0FF] text-[#020617] font-semibold shadow-[0_0_15px_#00F0FF55] hover:bg-[#66F6FF] transition">
+              <a href="tel:+31266690470" className="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-[#00F0FF] text-[#020617] font-semibold shadow-[0_0_15px_#00F0FF55] hover:bg-[#66F6FF] transition">
                 <span>&#x1F4DE;</span> {lang === 'nl' ? 'Bel de demo-lijn' : 'Call demo line'}
               </a>
             </div>
@@ -474,7 +474,7 @@ export default function HomePage() {
                   <div className="space-y-2 text-sm">
                     <div className="flex items-center gap-2">
                       <span className="text-lg">&#x1F3A7;</span>
-                      <a href="tel:+31267913273" className="hover:text-[#00F0FF] transition">+31 26 791 32 73</a>
+                      <a href="tel:+31266690470" className="hover:text-[#00F0FF] transition">+31 26 669 04 70</a>
                       <span className="text-xs">Nederland</span>
                     </div>
                     <div className="flex items-center gap-2">
