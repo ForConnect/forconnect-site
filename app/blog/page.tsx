@@ -25,14 +25,24 @@ export default function BlogIndex() {
           <Link
             key={p.slug}
             href={`/blog/${p.slug}`}
-            className="block p-6 rounded-xl border border-gray-800 bg-[#020617]/70 transition-all duration-300 hover:border-[#00F0FF] hover:shadow-[0_0_25px_#00F0FF33]"
+            className="group block overflow-hidden rounded-xl border border-gray-800 bg-[#020617]/70 transition-all duration-300 hover:border-[#00F0FF] hover:shadow-[0_0_25px_#00F0FF33]"
           >
-            <p className="text-xs text-gray-400">
-              {formatDate(p.date)} · {p.readMinutes} min lezen
-            </p>
-            <h2 className="text-xl font-semibold mt-2">{p.title}</h2>
-            <p className="text-sm text-gray-400 mt-3">{p.description}</p>
-            <span className="inline-block mt-4 text-sm text-[#00F0FF]">Lees verder</span>
+            <div className="relative aspect-[1200/630] w-full overflow-hidden">
+              <img
+                src={p.image}
+                alt={p.imageAlt}
+                className="h-full w-full object-cover opacity-90 transition-all duration-300 group-hover:scale-[1.05] group-hover:brightness-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent" />
+            </div>
+            <div className="p-6">
+              <p className="text-xs text-gray-400">
+                {formatDate(p.date)} · {p.readMinutes} min lezen
+              </p>
+              <h2 className="text-xl font-semibold mt-2">{p.title}</h2>
+              <p className="text-sm text-gray-400 mt-3">{p.description}</p>
+              <span className="inline-block mt-4 text-sm text-[#00F0FF]">Lees verder</span>
+            </div>
           </Link>
         ))}
       </div>

@@ -4,7 +4,13 @@ export type Post = {
   description: string;
   date: string; // YYYY-MM-DD
   readMinutes: number;
-  sections: { heading: string; paragraphs: string[] }[];
+  image: string; // path in /public, e.g. /blog/name.jpg (1200x630)
+  imageAlt: string;
+  sections: {
+    heading: string;
+    paragraphs: string[];
+    stats?: { value: string; label: string }[];
+  }[];
 };
 
 export const SITE_URL = 'https://forconnect.nl';
@@ -17,6 +23,8 @@ export const posts: Post[] = [
       'Elke gemiste oproep is een patient die naar een andere praktijk belt. Lees hoe u dit voorkomt zonder extra personeel.',
     date: '2026-10-14',
     readMinutes: 4,
+    image: '/blog/gemiste-telefoontjes.jpg',
+    imageAlt: 'Telefoon rinkelt in een fysiopraktijk terwijl de fysiotherapeut een patient behandelt',
     sections: [
       {
         heading: 'Het probleem: u kunt niet tegelijk behandelen en opnemen',
@@ -27,6 +35,11 @@ export const posts: Post[] = [
       },
       {
         heading: 'Een rekenvoorbeeld',
+        stats: [
+          { value: '2', label: 'gemiste nieuwe patienten per week' },
+          { value: '8', label: 'gemiste patienten per maand' },
+          { value: '€1.600', label: 'omzet per maand (voorbeeld)' },
+        ],
         paragraphs: [
           'Stel dat u per week 2 nieuwe patienten mist doordat de telefoon niet wordt opgenomen. Dat zijn ongeveer 8 patienten per maand.',
           'Als een nieuwe patient u gemiddeld 200 euro oplevert (dit is een voorbeeldbedrag, rekent u met uw eigen cijfers), dan gaat het om ongeveer 1.600 euro omzet per maand die naar andere praktijken gaat.',
