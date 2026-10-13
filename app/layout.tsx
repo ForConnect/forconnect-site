@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { Providers } from "./providers";
+import ChatWidget from "./ChatWidget";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -60,23 +61,7 @@ export default function RootLayout({
         className={`${inter.variable} antialiased bg-background text-foreground`}
       >
         <Providers>{children}</Providers>
-
-        {/* Retell chat widget */}
-        <Script
-          id="retell-widget"
-          src="https://dashboard.retellai.com/retell-widget-v2.js"
-          type="module"
-          strategy="afterInteractive"
-          data-public-key="public_key_e3f1f140c69972a1367ba"
-          data-agent-id="agent_8d5f70931454b5c4584dfd1a51"
-          data-title="ForConnect Assistent"
-          data-bot-name="Sanne"
-          data-fab-text="Vragen? Chat met Sanne"
-          data-popup-message="Hoi! Kan ik u ergens mee helpen?"
-          data-theme-color="#040815"
-          data-component-color="#00B8D4"
-          data-logo-url="/logo.svg"
-        />
+        <ChatWidget />
       </body>
     </html>
   );
