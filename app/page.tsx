@@ -141,6 +141,7 @@ const content: Record<'nl' | 'en', ContentType> = {
 
 export default function HomePage() {
   const [lang, setLang] = useState<'nl' | 'en'>('nl');
+  const [menuOpen, setMenuOpen] = useState(false);
   const t = content[lang];
   const scrollToId = (id: string) => { const el = document.getElementById(id); if (el) el.scrollIntoView({ behavior: 'smooth' }); };
 
@@ -151,7 +152,7 @@ export default function HomePage() {
         <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-[#00F0FF22]" />
       </div>
       <div className="relative mx-auto max-w-6xl px-4 pb-16 pt-6">
-        <header className="flex items-center justify-between py-4">
+        <header className="relative flex items-center justify-between py-4">
           <div className="flex items-center gap-2">
             <div className="h-10 w-10 flex items-center justify-center rounded-xl border border-[#00F0FF55] shadow-[0_0_20px_#00F0FF66]">
               <span className="text-xl text-[#00F0FF] font-bold">F</span>
@@ -177,7 +178,33 @@ export default function HomePage() {
               <button onClick={() => setLang('nl')} className={`px-3 py-1 rounded-full ${lang === 'nl' ? 'bg-[#00F0FF] text-[#020617]' : 'text-gray-300'}`}>NL/BE</button>
               <button onClick={() => setLang('en')} className={`px-3 py-1 rounded-full ${lang === 'en' ? 'bg-[#00F0FF] text-[#020617]' : 'text-gray-300'}`}>EN</button>
             </div>
+            <button
+              onClick={() => setMenuOpen((o) => !o)}
+              className="md:hidden flex h-9 w-9 items-center justify-center rounded-lg border border-gray-700 bg-[#020617]/70 text-gray-300 hover:text-[#00F0FF] transition"
+              aria-label="Menu"
+              aria-expanded={menuOpen}
+            >
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                {menuOpen
+                  ? <path strokeLinecap="round" strokeLinejoin="round" d="M6 6l12 12M18 6L6 18" />
+                  : <path strokeLinecap="round" strokeLinejoin="round" d="M4 7h16M4 12h16M4 17h16" />}
+              </svg>
+            </button>
           </div>
+          {menuOpen && (
+            <div className="md:hidden absolute right-0 top-full z-50 mt-2 w-56 rounded-xl border border-gray-700 bg-[#020617]/95 p-2 backdrop-blur">
+              {t.nav.map((item, i) => {
+                const ids = lang === 'nl'
+                  ? ['hero', 'how', 'forwho', 'benefits', 'pricing', 'demo', 'demo', 'faq', 'blog']
+                  : ['hero', 'how', 'forwho', 'benefits', 'pricing', 'demo', 'faq', 'blog'];
+                const cls = 'block w-full rounded-lg px-3 py-2 text-left text-sm text-gray-200 hover:bg-[#00F0FF22] hover:text-[#00F0FF] transition';
+                if (ids[i] === 'blog') {
+                  return (<a key={i} href="/blog" className={cls}>{item}</a>);
+                }
+                return (<button key={i} onClick={() => { setMenuOpen(false); scrollToId(ids[i]); }} className={cls}>{item}</button>);
+              })}
+            </div>
+          )}
         </header>
 
         <section id="hero" className="pt-16 grid md:grid-cols-2 gap-10 items-center">
