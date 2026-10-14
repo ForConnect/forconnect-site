@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Waveform from '@/components/Waveform';
 
 type ContentType = {
   nav: string[];
@@ -74,7 +75,7 @@ const content: Record<'nl' | 'en', ContentType> = {
     plans: [
       { name: 'Starter', price: '\u20AC39', per: 'per maand', description: 'Voor startende praktijken.', features: ['AI beantwoordt oproepen 24/7', 'Volledige gespreksrapportage per e-mail', 'E-mail notificaties', '1 telefoonnummer', 'Tot 150 belminuten'] },
       { name: 'Basis', price: '\u20AC59', per: 'per maand', description: 'Meest gekozen', features: ['AI beantwoordt oproepen 24/7', 'Volledige gespreksrapportage per e-mail', 'E-mail notificaties', '1 telefoonnummer', 'Tot 300 belminuten'], highlight: true },
-{ name: 'Plus', price: '\u20AC99', per: 'per maand', description: 'Voor groeiende praktijken.', features: ['Alles van Basis, plus:', 'Aangepaste gespreksflow', '2 telefoonnummers', 'Prioriteit ondersteuning', 'Tot 600 belminuten'] },
+      { name: 'Plus', price: '\u20AC99', per: 'per maand', description: 'Voor groeiende praktijken.', features: ['Alles van Basis, plus:', 'Aangepaste gespreksflow', '2 telefoonnummers', 'Prioriteit ondersteuning', 'Tot 600 belminuten'] },
       { name: 'Pro Plus', price: 'Prijs op maat', per: '', description: 'Voor bedrijven met speciale wensen.', features: ['Alles van Plus, plus:', 'Agenda integratie (Google/Outlook)', 'Meerdere telefoonnummers/locaties', 'Geavanceerde call flows', 'Onbeperkte belminuten'] },
     ],
     demoTitle: 'Plan een live demo',
@@ -98,10 +99,10 @@ const content: Record<'nl' | 'en', ContentType> = {
     heroPrimaryCta: 'Book a demo',
     howTitle: 'How does ForConnect work?',
     howSteps: [
-  { title: '1. Patient calls your practice', text: '' },
-  { title: '2. The AI assistant handles the conversation and processes the request', text: '' },
-  { title: '3. If needed, you receive everything by email – ready to schedule, change or cancel appointments', text: '' },
-],
+      { title: '1. Patient calls your practice', text: '' },
+      { title: '2. The AI assistant handles the conversation and processes the request', text: '' },
+      { title: '3. If needed, you receive everything by email – ready to schedule, change or cancel appointments', text: '' },
+    ],
     forWhoTitle: 'Who is ForConnect for?',
     forWhoItems: [
       { title: 'Solo physiotherapists', text: 'No missed patients during treatments. Focus fully on the patient in front of you.' },
@@ -121,7 +122,7 @@ const content: Record<'nl' | 'en', ContentType> = {
     plans: [
       { name: 'Starter', price: '\u20AC39', per: 'per month', description: 'For starting practices.', features: ['AI answers calls 24/7', 'Complete call reports via email', 'Email notifications', '1 phone number', 'Up to 150 call minutes'] },
       { name: 'Basis', price: '\u20AC59', per: 'per month', description: 'Most popular', features: ['AI answers calls 24/7', 'Complete call reports via email', 'Email notifications', '1 phone number', 'Up to 300 call minutes'], highlight: true },
-{ name: 'Plus', price: '\u20AC99', per: 'per month', description: 'For growing practices.', features: ['Everything in Basis, plus:', 'Personalized call flow', '2 phone numbers', 'Priority support', 'Up to 600 call minutes'] },
+      { name: 'Plus', price: '\u20AC99', per: 'per month', description: 'For growing practices.', features: ['Everything in Basis, plus:', 'Personalized call flow', '2 phone numbers', 'Priority support', 'Up to 600 call minutes'] },
       { name: 'Pro Plus', price: 'Custom', per: '', description: 'For businesses with special needs.', features: ['Everything in Plus, plus:', 'Calendar integration (Google/Outlook)', 'Multiple phone numbers/locations', 'Advanced call flows', 'Unlimited call minutes'] },
     ],
     demoTitle: 'Book a live demo',
@@ -214,9 +215,9 @@ export default function HomePage() {
               <span>{t.heroBadge}</span>
             </div>
 
-<div className="mt-3 text-sm text-gray-400">
-  ✓ Actief sinds 2023
-</div>
+            <div className="mt-3 text-sm text-gray-400">
+              ✓ Actief sinds 2023
+            </div>
             <h1 className="text-4xl lg:text-5xl font-bold">{t.heroTitle}</h1>
             <p className="text-gray-300 text-sm max-w-md">{t.heroSubtitle}</p>
             <div className="flex gap-4">
@@ -258,68 +259,69 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-<section className="mt-16">
-  <div className="p-8 rounded-2xl border border-cyan-500/30 bg-gradient-to-br from-slate-950 to-slate-900 shadow-lg">
+        <section className="mt-16">
+          <div className="p-8 rounded-2xl border border-cyan-500/30 bg-gradient-to-br from-slate-950 to-slate-900 shadow-lg">
 
-    <h2 className="text-xl md:text-2xl font-bold text-white mb-3">
-      {lang === 'nl'
-        ? '🎧 Luister naar een echt gesprek'
-        : '🎧 Listen to a real conversation'}
-    </h2>
+            <h2 className="text-xl md:text-2xl font-bold text-white mb-3">
+              {lang === 'nl'
+                ? '🎧 Luister naar een echt gesprek'
+                : '🎧 Listen to a real conversation'}
+            </h2>
 
-    <p className="text-gray-300 mb-6">
-      {lang === 'nl'
-        ? 'Zo klinkt een telefoongesprek met de ForConnect assistent. Duur: 1:21.'
-        : 'This is what a phone call with the ForConnect assistant sounds like. Duration: 1:21.'}
-    </p>
+            <p className="text-gray-300 mb-6">
+              {lang === 'nl'
+                ? 'Zo klinkt een telefoongesprek met de ForConnect assistent. Duur: 1:21.'
+                : 'This is what a phone call with the ForConnect assistant sounds like. Duration: 1:21.'}
+            </p>
 
-    <audio controls className="w-full">
-      <source src="/audio/forconnect-demo.mp3" type="audio/mpeg" />
-      Your browser does not support audio.
-    </audio>
+            <Waveform />
+            <audio controls className="w-full">
+              <source src="/audio/forconnect-demo.mp3" type="audio/mpeg" />
+              Your browser does not support audio.
+            </audio>
 
-  </div>
-</section>
+          </div>
+        </section>
         <section id="how" className="mt-24">
           <h2 className="text-2xl font-bold">{t.howTitle}</h2>
 
-<p className="text-sm text-gray-400 mt-2">
-  {lang === 'nl'
-    ? 'Afspraak of verzoek wordt doorgestuurd'
-    : 'Appointment or request is forwarded'}
-</p>
+          <p className="text-sm text-gray-400 mt-2">
+            {lang === 'nl'
+              ? 'Afspraak of verzoek wordt doorgestuurd'
+              : 'Appointment or request is forwarded'}
+          </p>
           <div className="grid md:grid-cols-3 gap-6 mt-6">
             {t.howSteps.map((s, i) => (
-  <div
-    key={i}
-    className="group overflow-hidden rounded-xl border border-gray-800 bg-[#020617]/70 transition-all duration-300 hover:scale-[1.03] hover:border-[#00F0FF] hover:shadow-[0_0_25px_#00F0FF33]"
-  >
-    {/* IMAGE */}
-    <div className="relative h-[160px] w-full overflow-hidden">
-      <img
-        src={`/step-${i + 1}.png`}
-        alt={s.title}
-        className="w-full h-full object-cover opacity-90 transition-all duration-300 group-hover:scale-[1.15] group-hover:brightness-110"
-      />
+              <div
+                key={i}
+                className="group overflow-hidden rounded-xl border border-gray-800 bg-[#020617]/70 transition-all duration-300 hover:scale-[1.03] hover:border-[#00F0FF] hover:shadow-[0_0_25px_#00F0FF33]"
+              >
+                {/* IMAGE */}
+                <div className="relative h-[160px] w-full overflow-hidden">
+                  <img
+                    src={`/step-${i + 1}.png`}
+                    alt={s.title}
+                    className="w-full h-full object-cover opacity-90 transition-all duration-300 group-hover:scale-[1.15] group-hover:brightness-110"
+                  />
 
-      {/* blur overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent" />
+                  {/* blur overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent" />
 
-      {/* glow effect */}
-      <div className="absolute inset-0 shadow-[inset_0_0_40px_#00F0FF22]" />
-    </div>
+                  {/* glow effect */}
+                  <div className="absolute inset-0 shadow-[inset_0_0_40px_#00F0FF22]" />
+                </div>
 
-    {/* TEXT */}
-    <div className="p-4">
-      <h3 className="font-semibold text-white mb-2">{s.title}</h3>
-      {s.text && <p className="text-sm text-gray-400">{s.text}</p>}
-    </div>
-  </div>
-))}
+                {/* TEXT */}
+                <div className="p-4">
+                  <h3 className="font-semibold text-white mb-2">{s.title}</h3>
+                  {s.text && <p className="text-sm text-gray-400">{s.text}</p>}
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
-{/* Agenda integration highlight */}
+        {/* Agenda integration highlight */}
         <div className="mt-6">
           <div className="relative flex items-center gap-6 p-6 rounded-2xl border border-cyan-500/40 bg-cyan-500/8 backdrop-blur-sm shadow-[0_0_30px_#00F0FF20]">
             <div className="flex-shrink-0 w-16 h-16 rounded-xl bg-cyan-500/15 border border-cyan-500/30 flex items-center justify-center">
@@ -341,76 +343,76 @@ export default function HomePage() {
           </div>
         </div>
 
-{/* SCENARIO */}
-<section className="mt-12">
- <h2 className="text-2xl font-bold">
-  {lang === 'nl' ? 'Vraag wordt direct opgelost' : 'Question is resolved instantly'}
-</h2>
+        {/* SCENARIO */}
+        <section className="mt-12">
+          <h2 className="text-2xl font-bold">
+            {lang === 'nl' ? 'Vraag wordt direct opgelost' : 'Question is resolved instantly'}
+          </h2>
 
-<p className="text-sm text-gray-400 mt-2 max-w-md">
-  {lang === 'nl'
-    ? 'Niet elke oproep vraagt uw aandacht'
-    : 'Not every call requires your attention'}
-</p>
+          <p className="text-sm text-gray-400 mt-2 max-w-md">
+            {lang === 'nl'
+              ? 'Niet elke oproep vraagt uw aandacht'
+              : 'Not every call requires your attention'}
+          </p>
 
-<div className="grid md:grid-cols-3 gap-6 mt-6">
-  
-  {/* STEP 1 */}
-  <div className="rounded-xl overflow-hidden border border-gray-800 bg-[#020617]/70 transition-all duration-300 hover:scale-[1.03] hover:border-[#00F0FF] hover:shadow-[0_0_25px_#00F0FF33]">
-    <div className="relative h-[160px] w-full overflow-hidden">
-      <img
-        src="/scenario-1.png"
-        className="w-full h-full object-cover object-center"
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent" />
-    </div>
-    <div className="p-4">
-      <p className="font-semibold text-white mb-2">
-  {lang === 'nl'
-    ? '1. Patiënt belt uw praktijk'
-    : '1. Patient calls your practice'}
-</p>
-    </div>
-  </div>
+          <div className="grid md:grid-cols-3 gap-6 mt-6">
 
-  {/* STEP 2 */}
-  <div className="rounded-xl overflow-hidden border border-gray-800 bg-[#020617]/70 transition-all duration-300 hover:scale-[1.03] hover:border-[#00F0FF] hover:shadow-[0_0_25px_#00F0FF33]">
-    <div className="relative h-[160px] w-full overflow-hidden">
-      <img
-        src="/scenario-2.png"
-        className="w-full h-full object-cover object-center"
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent" />
-    </div>
-    <div className="p-4">
-     <p className="font-semibold text-white mb-2">
-  {lang === 'nl'
-    ? '2. De assistent beantwoordt de vraag en geeft duidelijke informatie'
-    : '2. The assistant answers the question and provides clear information'}
-</p>
-    </div>
-  </div>
+            {/* STEP 1 */}
+            <div className="rounded-xl overflow-hidden border border-gray-800 bg-[#020617]/70 transition-all duration-300 hover:scale-[1.03] hover:border-[#00F0FF] hover:shadow-[0_0_25px_#00F0FF33]">
+              <div className="relative h-[160px] w-full overflow-hidden">
+                <img
+                  src="/scenario-1.png"
+                  className="w-full h-full object-cover object-center"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent" />
+              </div>
+              <div className="p-4">
+                <p className="font-semibold text-white mb-2">
+                  {lang === 'nl'
+                    ? '1. Patiënt belt uw praktijk'
+                    : '1. Patient calls your practice'}
+                </p>
+              </div>
+            </div>
 
-  {/* STEP 3 */}
-  <div className="rounded-xl overflow-hidden border border-gray-800 bg-[#020617]/70 transition-all duration-300 hover:scale-[1.03] hover:border-[#00F0FF] hover:shadow-[0_0_25px_#00F0FF33]">
-    <div className="relative h-[160px] w-full overflow-hidden">
-      <img
-        src="/scenario-3.png"
-        className="w-full h-full object-cover object-center"
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent" />
-    </div>
-    <div className="p-4">
-      <p className="font-semibold text-white mb-2">
-  {lang === 'nl'
-    ? '3. De patiënt is geholpen – geen actie van u nodig'
-    : '3. The patient is helped – no action required from you'}
-</p>
-    </div>
-  </div>
+            {/* STEP 2 */}
+            <div className="rounded-xl overflow-hidden border border-gray-800 bg-[#020617]/70 transition-all duration-300 hover:scale-[1.03] hover:border-[#00F0FF] hover:shadow-[0_0_25px_#00F0FF33]">
+              <div className="relative h-[160px] w-full overflow-hidden">
+                <img
+                  src="/scenario-2.png"
+                  className="w-full h-full object-cover object-center"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent" />
+              </div>
+              <div className="p-4">
+                <p className="font-semibold text-white mb-2">
+                  {lang === 'nl'
+                    ? '2. De assistent beantwoordt de vraag en geeft duidelijke informatie'
+                    : '2. The assistant answers the question and provides clear information'}
+                </p>
+              </div>
+            </div>
 
-</div>
-</section>
+            {/* STEP 3 */}
+            <div className="rounded-xl overflow-hidden border border-gray-800 bg-[#020617]/70 transition-all duration-300 hover:scale-[1.03] hover:border-[#00F0FF] hover:shadow-[0_0_25px_#00F0FF33]">
+              <div className="relative h-[160px] w-full overflow-hidden">
+                <img
+                  src="/scenario-3.png"
+                  className="w-full h-full object-cover object-center"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent" />
+              </div>
+              <div className="p-4">
+                <p className="font-semibold text-white mb-2">
+                  {lang === 'nl'
+                    ? '3. De patiënt is geholpen – geen actie van u nodig'
+                    : '3. The patient is helped – no action required from you'}
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </section>
 
         <section id="forwho" className="mt-24">
           <h2 className="text-2xl font-bold">{t.forWhoTitle}</h2>
@@ -418,7 +420,7 @@ export default function HomePage() {
             {t.forWhoItems.map((f, i) => (<div key={i} className="p-4 bg-[#020617]/80 rounded-xl border border-gray-800"><h3 className="font-semibold">{f.title}</h3><p className="text-sm text-gray-400 mt-2">{f.text}</p></div>))}
           </div>
         </section>
-<section className="mt-24">
+        <section className="mt-24">
           <div className="relative p-8 rounded-2xl border border-gray-800 bg-gradient-to-br from-slate-950 to-slate-900">
             <div className="relative pl-8">
               <p className="text-sm text-gray-400 mb-4">{lang === 'nl' ? 'Van de oprichter' : 'From the founder'}</p>
@@ -473,13 +475,17 @@ export default function HomePage() {
             <h2 className="text-2xl font-bold">{t.demoTitle}</h2>
             <p className="text-sm text-gray-300">{t.demoSubtitle}</p>
             <div className="grid md:grid-cols-2 gap-3 mt-6">
-              <form onSubmit={async (e) => { e.preventDefault(); const form = e.currentTarget; const formData = new FormData(form); const email = formData.get('email') as string; if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { alert(lang === 'nl' ? 'Voer een geldig e-mailadres in.' : 'Please enter a valid email address.'); return; } const res = await fetch('/api/contact', { method: 'POST', body: formData }); if (res.ok) { alert(lang === 'nl' ? 'Uw bericht is succesvol verzonden. Bedankt!' : 'Your message has been sent successfully. Thank you!'); form.reset(); } else { alert(lang === 'nl' ? 'Er is een fout opgetreden. Probeer het opnieuw.' : 'An error occurred. Please try again.'); } }} className="space-y-4 p-4 bg-[#020617]/80 rounded-xl border border-gray-800">
+              <form onSubmit={async (e) => { e.preventDefault(); const form = e.currentTarget; const formData = new FormData(form); const email = formData.get('email') as string; if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { alert(lang === 'nl' ? 'Voer een geldig e-mailadres in.' : 'Please enter a valid email address.'); return; } const res = await fetch('/api/contact', { method: 'POST', body: formData }); if (res.ok) { alert(lang === 'nl' ? 'Uw bericht is succesvol verzonden. Bedankt!' : 'Your message has been sent successfully. Thank you!'); form.reset(); } else { alert(lang === 'nl' ? 'Er is een fout opgetreden. Probeer het opnieuw.' : 'An error occurred. Please try again.'); } }} className="flex flex-col space-y-4 p-4 bg-[#020617]/80 rounded-xl border border-gray-800">
                 <input type="text" name="name" placeholder={t.form.name} className="w-full p-3 bg-[#0B1220] border border-gray-700 rounded-xl" />
                 <input type="text" name="salon" placeholder={t.form.salon} className="w-full p-3 bg-[#0B1220] border border-gray-700 rounded-xl" />
                 <input type="email" name="email" required placeholder={t.form.email} className="w-full p-3 bg-[#0B1220] border border-gray-700 rounded-xl" />
                 <input type="tel" name="phone" placeholder={t.form.phone} className="w-full p-3 bg-[#0B1220] border border-gray-700 rounded-xl" />
                 <textarea name="message" placeholder={t.form.messagePlaceholder} className="w-full p-3 bg-[#0B1220] border border-gray-700 rounded-xl h-24" />
-                <button type="submit" className="w-full px-4 py-3 bg-[#00F0FF] text-[#020617] rounded-full font-semibold mb-6">{t.form.submit}</button>
+                <button type="submit" className="w-full px-4 py-3 bg-[#00F0FF] text-[#020617] rounded-full font-semibold">{t.form.submit}</button>
+                <div className="relative flex-1 min-h-[200px] rounded-xl overflow-hidden border border-cyan-500/20">
+                  <img src="/contact-foto.jpg" alt="Fysiotherapeut in gesprek met patient" className="absolute inset-0 w-full h-full object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#020617]/85 to-[#020617]/10" />
+                </div>
               </form>
               <div className="p-4 bg-[#020617]/85 rounded-xl border border-gray-800">
                 <h3 className="text-lg font-semibold">Contact</h3>
@@ -524,24 +530,24 @@ export default function HomePage() {
                   </div>
                   <div className="space-y-2 text-xs text-gray-400">
                     <div className="flex items-center gap-2">
-  <span className="text-[#00F0FF]">&#x2713;</span>
-  <span>{lang === 'nl' ? 'Actief sinds 2023' : 'Active since 2023'}</span>
-</div>
+                      <span className="text-[#00F0FF]">&#x2713;</span>
+                      <span>{lang === 'nl' ? 'Actief sinds 2023' : 'Active since 2023'}</span>
+                    </div>
 
-<div className="flex items-center gap-2">
-  <span className="text-[#00F0FF]">&#x2713;</span>
-  <span>{lang === 'nl' ? 'AVG-proof' : 'GDPR compliant'}</span>
-</div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-[#00F0FF]">&#x2713;</span>
+                      <span>{lang === 'nl' ? 'AVG-proof' : 'GDPR compliant'}</span>
+                    </div>
 
-<div className="flex items-center gap-2">
-  <span className="text-[#00F0FF]">&#x2713;</span>
-  <span>{lang === 'nl' ? 'Veilige gegevensverwerking' : 'Secure data processing'}</span>
-</div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-[#00F0FF]">&#x2713;</span>
+                      <span>{lang === 'nl' ? 'Veilige gegevensverwerking' : 'Secure data processing'}</span>
+                    </div>
 
-<div className="flex items-center gap-2">
-  <span className="text-[#00F0FF]">&#x2713;</span>
-  <span>{lang === 'nl' ? '14 dagen gratis proberen' : '14-day free trial'}</span>
-</div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-[#00F0FF]">&#x2713;</span>
+                      <span>{lang === 'nl' ? '14 dagen gratis proberen' : '14-day free trial'}</span>
+                    </div>
                   </div>
                 </div>
                 <div className="mt-6 pt-6 border-t border-gray-700">
