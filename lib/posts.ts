@@ -6,9 +6,12 @@ export type Post = {
   readMinutes: number;
   image: string; // path in /public, e.g. /blog/name.jpg (1200x630)
   imageAlt: string;
+  intro?: string[]; // shown after the cover image, before the first section
+  closing?: string; // optional text in the CTA box at the end
   sections: {
     heading: string;
-    paragraphs: string[];
+    paragraphs?: string[];
+    bullets?: string[];
     stats?: { value: string; label: string }[];
   }[];
 };
@@ -16,6 +19,51 @@ export type Post = {
 export const SITE_URL = 'https://forconnect.nl';
 
 export const posts: Post[] = [
+  {
+    slug: 'telefoon-opnemen-tijdens-behandeling',
+    title: 'Telefoon opnemen tijdens een behandeling: moet dat wel?',
+    description:
+      'Opnemen of laten gaan? Met een AI-telefoonassistent hoeft u niet meer te kiezen tussen uw patiënt en de beller.',
+    date: '2026-10-20',
+    readMinutes: 2,
+    image: '/blog/telefoon-opnemen-tijdens-behandeling.jpg',
+    imageAlt: 'Fysiotherapeut neemt de telefoon op terwijl zijn patiënt wacht op de behandeltafel',
+    intro: [
+      'Het is een bekend dilemma. U bent midden in een behandeling en de telefoon gaat. Opnemen voelt onprofessioneel tegenover de patiënt op de bank. Niet opnemen betekent een gemiste beller.',
+    ],
+    sections: [
+      {
+        heading: 'Wat is het probleem?',
+        bullets: [
+          'Een patiënt die u onderbreekt, krijgt niet uw volledige aandacht.',
+          'Een beller die niemand krijgt, belt vaak niet terug. Soms belt hij gewoon de volgende praktijk.',
+          'Een nieuwe patiënt die voor het eerst belt, vormt zijn eerste indruk van uw praktijk aan de telefoon.',
+        ],
+      },
+      {
+        heading: 'Vroeger was dit de keuze: opnemen of laten gaan',
+        paragraphs: [
+          'Beide opties kosten iets: aandacht of een patiënt. Een extra balie-medewerker is voor veel praktijken te duur, en een voicemail wordt zelden afgeluisterd door de beller zelf.',
+        ],
+      },
+      {
+        heading: 'Dat hoeft niet meer',
+        paragraphs: [
+          'Met een AI-telefoonassistent wordt elk gesprek direct aangenomen, in goed Nederlands. De assistent noteert waarvoor de patiënt belt en zet het voor u klaar. U kunt rustig doorgaan met uw behandeling en later alles terugkijken.',
+        ],
+      },
+      {
+        heading: 'Het resultaat',
+        bullets: [
+          'Elke beller wordt geholpen.',
+          'Uw patiënt op de behandeltafel krijgt uw volledige aandacht.',
+          'U verliest geen nieuwe aanvragen meer door gemiste oproepen.',
+        ],
+      },
+    ],
+    closing:
+      'Benieuwd hoe dit in uw praktijk werkt? Neem contact met ons op voor een vrijblijvend gesprek.',
+  },
   {
     slug: 'gemiste-telefoontjes-fysiopraktijk',
     title: 'Gemiste telefoontjes in de fysiopraktijk: wat kost het u echt?',
