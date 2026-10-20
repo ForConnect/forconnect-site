@@ -81,6 +81,12 @@ export default async function BlogPost({
           <div className="absolute inset-0 shadow-[inset_0_0_40px_#00F0FF22]" />
         </div>
 
+        {post.intro?.map((para, i) => (
+          <p key={i} className={`text-gray-300 leading-relaxed ${i === 0 ? 'mt-8' : 'mt-3'}`}>
+            {para}
+          </p>
+        ))}
+
         {post.sections.map((s, i) => (
           <section key={i} className="mt-10">
             <h2 className="text-xl font-semibold">{s.heading}</h2>
@@ -97,18 +103,29 @@ export default async function BlogPost({
                 ))}
               </div>
             )}
-            {s.paragraphs.map((para, j) => (
+            {s.paragraphs?.map((para, j) => (
               <p key={j} className="text-gray-300 leading-relaxed mt-3">
                 {para}
               </p>
             ))}
+            {s.bullets && (
+              <ul className="mt-4 space-y-3">
+                {s.bullets.map((b, k) => (
+                  <li key={k} className="flex gap-3 text-gray-300 leading-relaxed">
+                    <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-[#00F0FF] shadow-[0_0_8px_#00F0FF]" />
+                    <span>{b}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
           </section>
         ))}
 
         <div className="mt-14 p-8 rounded-2xl border border-cyan-500/30 bg-gradient-to-br from-slate-950 to-slate-900 shadow-lg">
           <h2 className="text-xl font-bold">Hoor zelf hoe het klinkt</h2>
           <p className="text-gray-300 text-sm mt-2">
-            Plan een live demo of bel direct de demo-lijn. 14 dagen gratis proberen, geen creditcard nodig.
+            {post.closing ??
+              'Plan een live demo of bel direct de demo-lijn. 14 dagen gratis proberen, geen creditcard nodig.'}
           </p>
           <div className="flex flex-wrap gap-4 mt-5">
             <Link
