@@ -19,13 +19,18 @@ const DEMO_NL_HREF = "tel:+31266690470";
 const DEMO_BE = "+32 78 700 402";
 const DEMO_BE_HREF = "tel:+3278700402";
 
-const BG = "#0C1528";
+const BG = "#f3f7fb";
+const DARK = "#0a0f1a";
+const TEXT = "#0f172a";
 const CYAN = "#00e5ff";
-const MUTED = "#9ca3af";
+const ACCENT = "#0e7490";
+const MUTED = "#475569";
+const LINE = "rgba(15,23,42,0.10)";
 
 const CARD: CSSProperties = {
-  background: "#111827",
-  border: "1px solid rgba(255,255,255,0.08)",
+  background: "#ffffff",
+  border: `1px solid ${LINE}`,
+  boxShadow: "0 1px 3px rgba(15,23,42,0.06)",
   borderRadius: 16,
   padding: 22,
 };
@@ -42,7 +47,7 @@ const SUB: CSSProperties = {
 const BTN: CSSProperties = {
   display: "inline-block",
   background: CYAN,
-  color: BG,
+  color: DARK,
   fontWeight: 600,
   padding: "14px 28px",
   borderRadius: 10,
@@ -54,8 +59,8 @@ const BTN: CSSProperties = {
 const BTN2: CSSProperties = {
   ...BTN,
   background: "transparent",
-  color: "#fff",
-  border: "1px solid rgba(255,255,255,0.25)",
+  color: TEXT,
+  border: "1px solid rgba(15,23,42,0.3)",
 };
 const IMG: CSSProperties = {
   width: "100%",
@@ -63,15 +68,15 @@ const IMG: CSSProperties = {
   borderRadius: 12,
   display: "block",
   marginBottom: 20,
-  background: "#111827",
+  background: "#e2e8f0",
 };
 const INPUT: CSSProperties = {
   width: "100%",
   padding: "12px 14px",
   borderRadius: 10,
-  border: "1px solid rgba(255,255,255,0.15)",
-  background: "#0a0f1a",
-  color: "#fff",
+  border: "1px solid rgba(15,23,42,0.2)",
+  background: "#ffffff",
+  color: TEXT,
   fontSize: 15,
   marginBottom: 12,
   boxSizing: "border-box",
@@ -212,12 +217,17 @@ export default function WinkelsPage() {
     <main
       style={{
         background: BG,
-        color: "#fff",
+        color: TEXT,
         minHeight: "100vh",
         fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, sans-serif",
       }}
     >
-      <NeuralNet />
+      <div
+        aria-hidden="true"
+        style={{ position: "fixed", inset: 0, pointerEvents: "none", zIndex: 5, filter: "brightness(0.55) saturate(1.8)" }}
+      >
+        <NeuralNet />
+      </div>
       <div style={{ position: "relative", zIndex: 1 }}>
       <style>{`
         html { scroll-behavior: smooth; }
@@ -238,9 +248,9 @@ export default function WinkelsPage() {
           maxWidth: 1200,
         }}
       >
-        <a href="/" style={{ color: "#fff", textDecoration: "none", lineHeight: 1.1 }}>
+        <a href="/" style={{ color: TEXT, textDecoration: "none", lineHeight: 1.1 }}>
           <span style={{ fontWeight: 700, fontSize: 20 }}>
-            For<span style={{ color: CYAN }}>Connect</span>
+            For<span style={{ color: ACCENT }}>Connect</span>
           </span>
           <br />
           <span style={{ color: MUTED, fontSize: 11 }}>AI Voice Agent</span>
@@ -266,14 +276,14 @@ export default function WinkelsPage() {
           }}
         >
           <div>
-            <p style={{ color: CYAN, fontSize: 13, letterSpacing: 1.5, textTransform: "uppercase", margin: "0 0 16px" }}>
+            <p style={{ color: ACCENT, fontSize: 13, letterSpacing: 1.5, textTransform: "uppercase", margin: "0 0 16px" }}>
               AI Telefoonassistent voor Winkels
             </p>
             <span
               style={{
                 display: "inline-block",
-                border: "1px solid rgba(0,229,255,0.4)",
-                color: CYAN,
+                border: "1px solid rgba(14,116,144,0.4)",
+                color: ACCENT,
                 fontSize: 13,
                 padding: "4px 12px",
                 borderRadius: 20,
@@ -302,11 +312,11 @@ export default function WinkelsPage() {
           <div style={{ ...CARD, padding: 24 }}>
             <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 20 }}>
               <span style={{ fontWeight: 600 }}>Live AI demo</span>
-              <span style={{ color: CYAN, fontSize: 13 }}>&#9679; AI actief</span>
+              <span style={{ color: ACCENT, fontSize: 13 }}>&#9679; AI actief</span>
             </div>
             <div
               style={{
-                background: "#1f2937",
+                background: "#e8eef4",
                 borderRadius: 12,
                 padding: "12px 16px",
                 marginBottom: 12,
@@ -319,8 +329,8 @@ export default function WinkelsPage() {
             </div>
             <div
               style={{
-                background: "rgba(0,229,255,0.12)",
-                border: "1px solid rgba(0,229,255,0.3)",
+                background: "rgba(0,229,255,0.15)",
+                border: "1px solid rgba(14,116,144,0.35)",
                 borderRadius: 12,
                 padding: "12px 16px",
                 marginLeft: "auto",
@@ -334,7 +344,7 @@ export default function WinkelsPage() {
             </div>
             <div
               style={{
-                background: "#1f2937",
+                background: "#e8eef4",
                 borderRadius: 12,
                 padding: "12px 16px",
                 maxWidth: "88%",
@@ -364,7 +374,7 @@ export default function WinkelsPage() {
             ))}
           </div>
           <div style={{ ...CARD, marginTop: 16, textAlign: "center" }}>
-            <h3 style={{ fontSize: 18, margin: "0 0 8px", color: CYAN }}>Agenda-integratie mogelijk</h3>
+            <h3 style={{ fontSize: 18, margin: "0 0 8px", color: ACCENT }}>Agenda-integratie mogelijk</h3>
             <p style={{ color: MUTED, margin: 0, lineHeight: 1.6 }}>
               Koppel uw Google- of Outlook-agenda en laat de assistent afspraken inplannen op basis van uw
               beschikbaarheid.
@@ -392,7 +402,7 @@ export default function WinkelsPage() {
               Niet elke oproep is vriendelijk. De assistent blijft altijd kalm, luistert, toont begrip en zoekt naar een
               oplossing - ongeacht hoe de klant praat.
             </p>
-            <ol style={{ color: "#e5e7eb", lineHeight: 1.9, paddingLeft: 20, margin: 0 }}>
+            <ol style={{ color: "#1e293b", lineHeight: 1.9, paddingLeft: 20, margin: 0 }}>
               <li>Klant belt, geïrriteerd over een bestelling</li>
               <li>De assistent erkent het probleem en noteert de details</li>
               <li>U ontvangt een duidelijke samenvatting en pakt het op</li>
@@ -455,14 +465,14 @@ export default function WinkelsPage() {
               style={{ borderRadius: "50%", objectFit: "cover", flexShrink: 0 }}
             />
             <div style={{ flex: "1 1 320px" }}>
-              <p style={{ color: CYAN, fontSize: 13, letterSpacing: 1.5, textTransform: "uppercase", margin: "0 0 12px" }}>
+              <p style={{ color: ACCENT, fontSize: 13, letterSpacing: 1.5, textTransform: "uppercase", margin: "0 0 12px" }}>
                 Van de oprichter
               </p>
               <p style={{ lineHeight: 1.7, margin: "0 0 10px", fontSize: 17 }}>
                 Wanneer u met ForConnect werkt, voelt dat voor mij als samenwerken. Uw klanten worden voor een groot
                 deel ook onze verantwoordelijkheid - en die neem ik serieus.
               </p>
-              <p style={{ lineHeight: 1.7, margin: "0 0 16px", fontSize: 17, color: "#d1d5db" }}>
+              <p style={{ lineHeight: 1.7, margin: "0 0 16px", fontSize: 17, color: "#334155" }}>
                 Daarom is onze assistent er om uw winkel te ondersteunen - zodat u zich met een gerust gevoel volledig
                 kunt richten op uw klanten.
               </p>
@@ -480,7 +490,7 @@ export default function WinkelsPage() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))", gap: 16, marginTop: 24 }}>
             {why.map((w) => (
               <div key={w.t} style={CARD}>
-                <h3 style={{ fontSize: 18, margin: "0 0 8px", color: CYAN }}>{w.t}</h3>
+                <h3 style={{ fontSize: 18, margin: "0 0 8px", color: ACCENT }}>{w.t}</h3>
                 <p style={{ color: MUTED, margin: 0, lineHeight: 1.6 }}>{w.d}</p>
               </div>
             ))}
@@ -513,7 +523,7 @@ export default function WinkelsPage() {
                       left: "50%",
                       transform: "translateX(-50%)",
                       background: CYAN,
-                      color: BG,
+                      color: DARK,
                       fontSize: 12,
                       fontWeight: 700,
                       padding: "4px 12px",
@@ -532,8 +542,8 @@ export default function WinkelsPage() {
                 </div>
                 <ul style={{ listStyle: "none", padding: 0, margin: "0 0 24px", flex: 1 }}>
                   {p.items.map((i) => (
-                    <li key={i} style={{ color: "#d1d5db", fontSize: 14, lineHeight: 1.5, marginBottom: 8 }}>
-                      <span style={{ color: CYAN }}>&#10003;</span> {i}
+                    <li key={i} style={{ color: "#334155", fontSize: 14, lineHeight: 1.5, marginBottom: 8 }}>
+                      <span style={{ color: ACCENT }}>&#10003;</span> {i}
                     </li>
                   ))}
                 </ul>
@@ -573,7 +583,7 @@ export default function WinkelsPage() {
                 style={{ ...IMG, marginBottom: 16, height: 170, objectFit: "cover" }}
               />
               <h3 style={{ fontSize: 20, margin: "0 0 8px" }}>Contact</h3>
-              <div style={{ color: "#d1d5db", lineHeight: 1.8, fontSize: 15 }}>
+              <div style={{ color: "#334155", lineHeight: 1.8, fontSize: 15 }}>
                 <div>
                   <span style={{ color: MUTED }}>Bedrijf:</span> ForConnect
                 </div>
@@ -582,30 +592,30 @@ export default function WinkelsPage() {
                 </div>
                 <div>
                   <span style={{ color: MUTED }}>E-mail:</span>{" "}
-                  <a href={`mailto:${EMAIL}`} style={{ color: CYAN }}>
+                  <a href={`mailto:${EMAIL}`} style={{ color: ACCENT }}>
                     {EMAIL}
                   </a>
                 </div>
                 <div>
                   <span style={{ color: MUTED }}>Telefoon:</span>{" "}
-                  <a href={PHONE_HREF} style={{ color: CYAN }}>
+                  <a href={PHONE_HREF} style={{ color: ACCENT }}>
                     {PHONE}
                   </a>
                 </div>
                 <div>
-                  <a href={WHATSAPP} style={{ color: CYAN }}>
+                  <a href={WHATSAPP} style={{ color: ACCENT }}>
                     WhatsApp: {PHONE}
                   </a>
                 </div>
               </div>
               <p style={{ margin: "14px 0 4px", fontWeight: 600 }}>Of probeer onze DEMO-lijn</p>
               <div style={{ lineHeight: 1.8, fontSize: 15 }}>
-                <a href={DEMO_NL_HREF} style={{ color: CYAN, textDecoration: "none" }}>
+                <a href={DEMO_NL_HREF} style={{ color: ACCENT, textDecoration: "none" }}>
                   {DEMO_NL}
                 </a>{" "}
                 <span style={{ color: MUTED }}>Nederland</span>
                 <br />
-                <a href={DEMO_BE_HREF} style={{ color: CYAN, textDecoration: "none" }}>
+                <a href={DEMO_BE_HREF} style={{ color: ACCENT, textDecoration: "none" }}>
                   {DEMO_BE}
                 </a>{" "}
                 <span style={{ color: MUTED }}>België</span>
@@ -617,13 +627,13 @@ export default function WinkelsPage() {
                 gratis proberen
               </p>
               <div style={{ display: "flex", gap: 16, marginTop: "auto", paddingTop: 12, fontSize: 14 }}>
-                <a href="https://www.instagram.com/forconnect.nl" style={{ color: CYAN }}>
+                <a href="https://www.instagram.com/forconnect.nl" style={{ color: ACCENT }}>
                   Instagram
                 </a>
-                <a href="https://www.facebook.com/share/1JRDzjsycH/" style={{ color: CYAN }}>
+                <a href="https://www.facebook.com/share/1JRDzjsycH/" style={{ color: ACCENT }}>
                   Facebook
                 </a>
-                <a href="https://www.linkedin.com/company/forconnect-ai/" style={{ color: CYAN }}>
+                <a href="https://www.linkedin.com/company/forconnect-ai/" style={{ color: ACCENT }}>
                   LinkedIn
                 </a>
               </div>
@@ -650,7 +660,7 @@ export default function WinkelsPage() {
       {/* Footer */}
       <footer
         style={{
-          borderTop: "1px solid rgba(255,255,255,0.08)",
+          borderTop: "1px solid rgba(15,23,42,0.10)",
           padding: "28px 24px",
           textAlign: "center",
           color: MUTED,
@@ -658,8 +668,8 @@ export default function WinkelsPage() {
           lineHeight: 1.8,
         }}
       >
-        <div style={{ color: "#fff", fontWeight: 700, fontSize: 18 }}>
-          For<span style={{ color: CYAN }}>Connect</span>
+        <div style={{ color: TEXT, fontWeight: 700, fontSize: 18 }}>
+          For<span style={{ color: ACCENT }}>Connect</span>
         </div>
         <div>Gemaakt voor winkels in Nederland.</div>
         <div>Actief sinds 2023</div>

@@ -4,14 +4,15 @@ import { useState } from "react";
 
 const CYAN = "#00e5ff";
 const BG = "#0a0f1a";
+const TEXT = "#0f172a";
 
 const INPUT = {
   width: "100%",
   padding: "12px 14px",
   borderRadius: 10,
-  border: "1px solid rgba(255,255,255,0.15)",
-  background: "#0a0f1a",
-  color: "#fff",
+  border: "1px solid rgba(15,23,42,0.2)",
+  background: "#ffffff",
+  color: TEXT,
   fontSize: 15,
   marginBottom: 12,
   boxSizing: "border-box",
@@ -47,8 +48,9 @@ export default function ContactForm() {
     <form
       onSubmit={onSubmit}
       style={{
-        background: "#111827",
-        border: "1px solid rgba(255,255,255,0.08)",
+        background: "#ffffff",
+        border: "1px solid rgba(15,23,42,0.10)",
+        boxShadow: "0 1px 3px rgba(15,23,42,0.06)",
         borderRadius: 16,
         padding: 22,
         flex: 1,
@@ -85,10 +87,10 @@ export default function ContactForm() {
         {status === "sending" ? "Verzenden..." : "Verzenden"}
       </button>
       {status === "ok" && (
-        <p style={{ color: CYAN, marginTop: 12 }}>Uw bericht is succesvol verzonden. Bedankt!</p>
+        <p style={{ color: "#0e7490", marginTop: 12 }}>Uw bericht is succesvol verzonden. Bedankt!</p>
       )}
       {status === "error" && (
-        <p style={{ color: "#f87171", marginTop: 12 }}>
+        <p style={{ color: "#dc2626", marginTop: 12 }}>
           Er is een fout opgetreden. Probeer het opnieuw.
         </p>
       )}
