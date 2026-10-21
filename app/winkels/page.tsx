@@ -492,6 +492,59 @@ export default function WinkelsPage() {
         </div>
       </section>
 
+      {/* Bericht voorbeeld */}
+      <section style={SECTION}>
+        <div
+          style={{
+            ...WRAP,
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+            gap: 32,
+            alignItems: "center",
+          }}
+        >
+          <div style={{ ...CARD, padding: 0, overflow: "hidden" }}>
+            <div style={{ padding: "14px 22px", borderBottom: `1px solid ${LINE}` }}>
+              <div style={{ fontSize: 13, color: MUTED }}>Van: ForConnect</div>
+              <div style={{ fontWeight: 600, marginTop: 4 }}>Nieuw bericht: vraag over retour</div>
+            </div>
+            <div style={{ padding: 22, lineHeight: 1.9, fontSize: 15 }}>
+              <div>
+                <span style={{ color: MUTED }}>Naam:</span> Jansen
+              </div>
+              <div>
+                <span style={{ color: MUTED }}>Telefoon:</span> automatisch herkend
+              </div>
+              <div>
+                <span style={{ color: MUTED }}>Reden:</span> Retour van schoenen, maat te klein
+              </div>
+              <div>
+                <span style={{ color: MUTED }}>Urgentie:</span> Normaal
+              </div>
+              <div style={{ marginTop: 10, color: ACCENT, fontSize: 14 }}>Bekijk het volledige bericht</div>
+            </div>
+          </div>
+          <div>
+            <h2 style={{ ...H2, textAlign: "left" }}>Een bericht dat u echt helpt</h2>
+            <p style={{ color: MUTED, lineHeight: 1.7, margin: "0 0 16px" }}>
+              Bij een afspraak of bericht ontvangt u een korte samenvatting per e-mail, met het volledige bericht
+              erbij. Zo ziet u in een oogopslag wat er nodig is.
+            </p>
+            <ul style={{ listStyle: "none", padding: 0, margin: 0, color: "#d1d5db", lineHeight: 1.9 }}>
+              <li>
+                <span style={{ color: ACCENT }}>&#10003;</span> Samenvatting en volledig bericht in uw inbox
+              </li>
+              <li>
+                <span style={{ color: ACCENT }}>&#10003;</span> Afspraken direct per e-mail naar uw winkel
+              </li>
+              <li>
+                <span style={{ color: ACCENT }}>&#10003;</span> Urgente vragen duidelijk gemarkeerd
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* Prijzen */}
       <section id="prijzen" style={SECTION}>
         <div style={WRAP}>
