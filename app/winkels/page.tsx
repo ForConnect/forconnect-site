@@ -251,9 +251,6 @@ export default function WinkelsPage() {
               {l}
             </a>
           ))}
-          <a href="/blog" style={{ color: MUTED, textDecoration: "none", fontSize: 14 }}>
-            Blog
-          </a>
         </nav>
       </header>
 
