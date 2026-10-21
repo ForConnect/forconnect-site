@@ -19,18 +19,17 @@ const DEMO_NL_HREF = "tel:+31266690470";
 const DEMO_BE = "+32 78 700 402";
 const DEMO_BE_HREF = "tel:+3278700402";
 
-const BG = "#f3f7fb";
+const BG = "#111d38";
 const DARK = "#0a0f1a";
-const TEXT = "#0f172a";
+const TEXT = "#ffffff";
 const CYAN = "#00e5ff";
-const ACCENT = "#0e7490";
-const MUTED = "#475569";
-const LINE = "rgba(15,23,42,0.10)";
+const ACCENT = "#00e5ff";
+const MUTED = "#9ca3af";
+const LINE = "rgba(255,255,255,0.08)";
 
 const CARD: CSSProperties = {
-  background: "#ffffff",
+  background: "#111827",
   border: `1px solid ${LINE}`,
-  boxShadow: "0 1px 3px rgba(15,23,42,0.06)",
   borderRadius: 16,
   padding: 22,
 };
@@ -60,7 +59,7 @@ const BTN2: CSSProperties = {
   ...BTN,
   background: "transparent",
   color: TEXT,
-  border: "1px solid rgba(15,23,42,0.3)",
+  border: "1px solid rgba(255,255,255,0.25)",
 };
 const IMG: CSSProperties = {
   width: "100%",
@@ -68,14 +67,14 @@ const IMG: CSSProperties = {
   borderRadius: 12,
   display: "block",
   marginBottom: 20,
-  background: "#e2e8f0",
+  background: "#111827",
 };
 const INPUT: CSSProperties = {
   width: "100%",
   padding: "12px 14px",
   borderRadius: 10,
-  border: "1px solid rgba(15,23,42,0.2)",
-  background: "#ffffff",
+  border: "1px solid rgba(255,255,255,0.15)",
+  background: "#0a0f1a",
   color: TEXT,
   fontSize: 15,
   marginBottom: 12,
@@ -222,12 +221,7 @@ export default function WinkelsPage() {
         fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, sans-serif",
       }}
     >
-      <div
-        aria-hidden="true"
-        style={{ position: "fixed", inset: 0, pointerEvents: "none", zIndex: 5, filter: "brightness(0.55) saturate(1.8)" }}
-      >
-        <NeuralNet />
-      </div>
+      <NeuralNet />
       <div style={{ position: "relative", zIndex: 1 }}>
       <style>{`
         html { scroll-behavior: smooth; }
@@ -282,7 +276,7 @@ export default function WinkelsPage() {
             <span
               style={{
                 display: "inline-block",
-                border: "1px solid rgba(14,116,144,0.4)",
+                border: "1px solid rgba(0,229,255,0.4)",
                 color: ACCENT,
                 fontSize: 13,
                 padding: "4px 12px",
@@ -316,7 +310,7 @@ export default function WinkelsPage() {
             </div>
             <div
               style={{
-                background: "#e8eef4",
+                background: "#1f2937",
                 borderRadius: 12,
                 padding: "12px 16px",
                 marginBottom: 12,
@@ -329,8 +323,8 @@ export default function WinkelsPage() {
             </div>
             <div
               style={{
-                background: "rgba(0,229,255,0.15)",
-                border: "1px solid rgba(14,116,144,0.35)",
+                background: "rgba(0,229,255,0.12)",
+                border: "1px solid rgba(0,229,255,0.3)",
                 borderRadius: 12,
                 padding: "12px 16px",
                 marginLeft: "auto",
@@ -344,7 +338,7 @@ export default function WinkelsPage() {
             </div>
             <div
               style={{
-                background: "#e8eef4",
+                background: "#1f2937",
                 borderRadius: 12,
                 padding: "12px 16px",
                 maxWidth: "88%",
@@ -402,7 +396,7 @@ export default function WinkelsPage() {
               Niet elke oproep is vriendelijk. De assistent blijft altijd kalm, luistert, toont begrip en zoekt naar een
               oplossing - ongeacht hoe de klant praat.
             </p>
-            <ol style={{ color: "#1e293b", lineHeight: 1.9, paddingLeft: 20, margin: 0 }}>
+            <ol style={{ color: "#e5e7eb", lineHeight: 1.9, paddingLeft: 20, margin: 0 }}>
               <li>Klant belt, geïrriteerd over een bestelling</li>
               <li>De assistent erkent het probleem en noteert de details</li>
               <li>U ontvangt een duidelijke samenvatting en pakt het op</li>
@@ -472,7 +466,7 @@ export default function WinkelsPage() {
                 Wanneer u met ForConnect werkt, voelt dat voor mij als samenwerken. Uw klanten worden voor een groot
                 deel ook onze verantwoordelijkheid - en die neem ik serieus.
               </p>
-              <p style={{ lineHeight: 1.7, margin: "0 0 16px", fontSize: 17, color: "#334155" }}>
+              <p style={{ lineHeight: 1.7, margin: "0 0 16px", fontSize: 17, color: "#d1d5db" }}>
                 Daarom is onze assistent er om uw winkel te ondersteunen - zodat u zich met een gerust gevoel volledig
                 kunt richten op uw klanten.
               </p>
@@ -542,7 +536,7 @@ export default function WinkelsPage() {
                 </div>
                 <ul style={{ listStyle: "none", padding: 0, margin: "0 0 24px", flex: 1 }}>
                   {p.items.map((i) => (
-                    <li key={i} style={{ color: "#334155", fontSize: 14, lineHeight: 1.5, marginBottom: 8 }}>
+                    <li key={i} style={{ color: "#d1d5db", fontSize: 14, lineHeight: 1.5, marginBottom: 8 }}>
                       <span style={{ color: ACCENT }}>&#10003;</span> {i}
                     </li>
                   ))}
@@ -583,7 +577,7 @@ export default function WinkelsPage() {
                 style={{ ...IMG, marginBottom: 16, height: 170, objectFit: "cover" }}
               />
               <h3 style={{ fontSize: 20, margin: "0 0 8px" }}>Contact</h3>
-              <div style={{ color: "#334155", lineHeight: 1.8, fontSize: 15 }}>
+              <div style={{ color: "#d1d5db", lineHeight: 1.8, fontSize: 15 }}>
                 <div>
                   <span style={{ color: MUTED }}>Bedrijf:</span> ForConnect
                 </div>
@@ -660,7 +654,7 @@ export default function WinkelsPage() {
       {/* Footer */}
       <footer
         style={{
-          borderTop: "1px solid rgba(15,23,42,0.10)",
+          borderTop: "1px solid rgba(255,255,255,0.08)",
           padding: "28px 24px",
           textAlign: "center",
           color: MUTED,
