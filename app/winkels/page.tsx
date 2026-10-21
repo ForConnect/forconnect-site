@@ -34,7 +34,7 @@ const CARD: CSSProperties = {
   padding: 22,
 };
 const WRAP: CSSProperties = { maxWidth: 1100, margin: "0 auto", padding: "0 24px" };
-const SECTION: CSSProperties = { padding: "52px 0" };
+const SECTION: CSSProperties = { padding: "36px 0" };
 const H2: CSSProperties = { fontSize: 36, fontWeight: 700, margin: "0 0 10px", textAlign: "center" };
 const SUB: CSSProperties = {
   color: MUTED,
@@ -259,7 +259,7 @@ export default function WinkelsPage() {
       </header>
 
       {/* Hero */}
-      <section id="home" style={{ ...SECTION, paddingTop: 24 }}>
+      <section id="home" style={{ ...SECTION, paddingTop: 24, paddingBottom: 8 }}>
         <div
           style={{
             ...WRAP,
@@ -439,7 +439,7 @@ export default function WinkelsPage() {
 
       {/* Oprichter */}
       <section style={SECTION}>
-        <div style={{ ...WRAP, maxWidth: 960 }}>
+        <div style={WRAP}>
           <div
             style={{
               ...CARD,
