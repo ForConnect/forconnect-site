@@ -493,7 +493,6 @@ export default function BeautyPage() {
                   "Volledige gespreksrapportage per e-mail",
                   "1 telefoonnummer",
                   "Tot 60 belminuten",
-                  "Extra minuten: \u20AC0,25 per minuut",
                 ],
               },
               {
@@ -508,7 +507,6 @@ export default function BeautyPage() {
                   "Afspraaklink per sms voor de beller",
                   "1 telefoonnummer",
                   "Tot 150 belminuten",
-                  "Extra minuten: \u20AC0,15 per minuut",
                 ],
               },
               {
@@ -523,7 +521,6 @@ export default function BeautyPage() {
                   "Afspraaklink per sms voor de beller",
                   "1 telefoonnummer",
                   "Tot 300 belminuten",
-                  "Extra minuten: \u20AC0,15 per minuut",
                 ],
               },
               {
