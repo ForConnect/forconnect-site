@@ -359,45 +359,47 @@ export default function KappersPage() {
           >
             {[
               {
-                name: "Starter",
-                sub: "Voor startende salons.",
-                price: "39",
+                name: "Starter Lite",
+                sub: "Voor solosalons en met weinig gesprekken.",
+                price: "19",
                 priceLabel: "per maand",
                 featured: false,
                 features: [
                   "AI beantwoordt oproepen 24/7",
                   "Volledige gespreksrapportage per e-mail",
-                  "E-mail notificaties",
                   "1 telefoonnummer",
-                  "Tot 150 belminuten",
+                  "Tot 60 belminuten",
+                  "Extra minuten: \u20AC0,25 per minuut",
                 ],
               },
               {
-                name: "Basis",
-                sub: "Meest gekozen",
-                price: "59",
+                name: "Starter",
+                sub: "Voor startende salons. Meest gekozen",
+                price: "39",
                 priceLabel: "per maand",
                 featured: true,
                 features: [
                   "AI beantwoordt oproepen 24/7",
                   "Volledige gespreksrapportage per e-mail",
-                  "E-mail notificaties",
+                  "Afspraaklink per sms voor de beller",
                   "1 telefoonnummer",
-                  "Tot 300 belminuten",
+                  "Tot 150 belminuten",
+                  "Extra minuten: \u20AC0,15 per minuut",
                 ],
               },
               {
-                name: "Plus",
+                name: "Basis",
                 sub: "Voor groeiende salons.",
-                price: "99",
+                price: "59",
                 priceLabel: "per maand",
                 featured: false,
                 features: [
-                  "Alles van Basis, plus:",
-                  "Aangepaste gespreksflow",
-                  "2 telefoonnummers",
-                  "Prioriteit ondersteuning",
-                  "Tot 600 belminuten",
+                  "AI beantwoordt oproepen 24/7",
+                  "Volledige gespreksrapportage per e-mail",
+                  "Afspraaklink per sms voor de beller",
+                  "1 telefoonnummer",
+                  "Tot 300 belminuten",
+                  "Extra minuten: \u20AC0,15 per minuut",
                 ],
               },
               {
@@ -407,10 +409,12 @@ export default function KappersPage() {
                 priceLabel: null,
                 featured: false,
                 features: [
-                  "Alles van Plus, plus:",
-                  "Agenda integratie (Google/Outlook)",
+                  "Alles van Basis, plus:",
+                  "Aangepaste gespreksflow",
                   "Meerdere telefoonnummers/locaties",
+                  "Agenda-integratie",
                   "Geavanceerde call flows",
+                  "Prioriteit ondersteuning",
                   "Onbeperkte belminuten",
                 ],
               },
@@ -470,6 +474,9 @@ export default function KappersPage() {
               </div>
             ))}
           </div>
+          <p style={{ textAlign: "center", color: "#94a3b8", fontSize: "13px", marginTop: "32px" }}>
+            14 dagen gratis proberen - Geen creditcard vereist - Geen verplichtingen - Stop op elk moment
+          </p>
         </section>
 
         {/* CONTACT FORM */}
