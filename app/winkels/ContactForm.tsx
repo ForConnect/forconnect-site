@@ -50,7 +50,11 @@ export default function ContactForm() {
         background: "#111827",
         border: "1px solid rgba(255,255,255,0.08)",
         borderRadius: 16,
-        padding: 28,
+        padding: 22,
+        flex: 1,
+        display: "flex",
+        flexDirection: "column",
+        boxSizing: "border-box",
       }}
     >
       <input name="name" placeholder="Naam" style={INPUT} />
@@ -61,7 +65,7 @@ export default function ContactForm() {
         name="message"
         rows={4}
         placeholder="Bijvoorbeeld: minder gemiste oproepen..."
-        style={INPUT}
+        style={{ ...INPUT, flex: 1, minHeight: 110, resize: "none", fontFamily: "inherit" }}
       />
       <button
         type="submit"

@@ -435,32 +435,39 @@ export default function WinkelsPage() {
 
       {/* Oprichter */}
       <section style={SECTION}>
-        <div style={{ ...WRAP, maxWidth: 820 }}>
-          <div style={{ ...CARD, padding: 28 }}>
-            <p style={{ color: CYAN, fontSize: 13, letterSpacing: 1.5, textTransform: "uppercase", margin: "0 0 16px" }}>
-              Van de oprichter
-            </p>
-            <p style={{ lineHeight: 1.7, margin: "0 0 16px", fontSize: 17 }}>
-              Wanneer u met ForConnect werkt, voelt dat voor mij als samenwerken. Uw klanten worden voor een groot deel
-              ook onze verantwoordelijkheid - en die neem ik serieus.
-            </p>
-            <p style={{ lineHeight: 1.7, margin: "0 0 28px", fontSize: 17, color: "#d1d5db" }}>
-              Daarom is onze assistent er om uw winkel te ondersteunen - zodat u zich met een gerust gevoel volledig kunt
-              richten op uw klanten.
-            </p>
-            <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/milos-optimized.jpg"
-                alt="Milos Stevanovic"
-                width={64}
-                height={64}
-                style={{ borderRadius: "50%", objectFit: "cover" }}
-              />
-              <div>
-                <div style={{ fontWeight: 600 }}>Milos Stevanovic</div>
-                <div style={{ color: MUTED, fontSize: 14 }}>Oprichter, ForConnect</div>
-              </div>
+        <div style={{ ...WRAP, maxWidth: 960 }}>
+          <div
+            style={{
+              ...CARD,
+              padding: 28,
+              display: "flex",
+              gap: 28,
+              alignItems: "center",
+              flexWrap: "wrap",
+            }}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/milos-optimized.jpg"
+              alt="Milos Stevanovic"
+              width={120}
+              height={120}
+              style={{ borderRadius: "50%", objectFit: "cover", flexShrink: 0 }}
+            />
+            <div style={{ flex: "1 1 320px" }}>
+              <p style={{ color: CYAN, fontSize: 13, letterSpacing: 1.5, textTransform: "uppercase", margin: "0 0 12px" }}>
+                Van de oprichter
+              </p>
+              <p style={{ lineHeight: 1.7, margin: "0 0 10px", fontSize: 17 }}>
+                Wanneer u met ForConnect werkt, voelt dat voor mij als samenwerken. Uw klanten worden voor een groot
+                deel ook onze verantwoordelijkheid - en die neem ik serieus.
+              </p>
+              <p style={{ lineHeight: 1.7, margin: "0 0 16px", fontSize: 17, color: "#d1d5db" }}>
+                Daarom is onze assistent er om uw winkel te ondersteunen - zodat u zich met een gerust gevoel volledig
+                kunt richten op uw klanten.
+              </p>
+              <div style={{ fontWeight: 600 }}>Milos Stevanovic</div>
+              <div style={{ color: MUTED, fontSize: 14 }}>Oprichter, ForConnect</div>
             </div>
           </div>
         </div>
@@ -544,83 +551,82 @@ export default function WinkelsPage() {
 
       {/* Demo + Contact */}
       <section id="demo" style={SECTION}>
-        <div
-          style={{
-            ...WRAP,
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-            gap: 32,
-            alignItems: "start",
-          }}
-        >
-          <div>
-            <h2 style={{ ...H2, textAlign: "left" }}>Plan een live demo</h2>
-            <p style={{ color: MUTED, lineHeight: 1.6, margin: "0 0 20px" }}>
-              Ontdek in enkele minuten hoe ForConnect uw oproepen afhandelt.
-            </p>
-            <ContactForm />
-          </div>
-          <div id="contact">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/winkel-hero.jpg"
-              alt="Winkel in Nederland"
-              style={{ ...IMG, marginBottom: 16, maxHeight: 220, objectFit: "cover" }}
-            />
-            <h3 style={{ fontSize: 22, margin: "0 0 8px" }}>Contact</h3>
-            <div style={{ color: "#d1d5db", lineHeight: 1.8, fontSize: 15 }}>
-              <div>
-                <span style={{ color: MUTED }}>Bedrijf:</span> ForConnect
-              </div>
-              <div>
-                <span style={{ color: MUTED }}>KVK-nummer:</span> 42126595
-              </div>
-              <div>
-                <span style={{ color: MUTED }}>E-mail:</span>{" "}
-                <a href={`mailto:${EMAIL}`} style={{ color: CYAN }}>
-                  {EMAIL}
-                </a>
-              </div>
-              <div>
-                <span style={{ color: MUTED }}>Telefoon:</span>{" "}
-                <a href={PHONE_HREF} style={{ color: CYAN }}>
-                  {PHONE}
-                </a>
-              </div>
-              <div>
-                <a href={WHATSAPP} style={{ color: CYAN }}>
-                  WhatsApp: {PHONE}
-                </a>
-              </div>
+        <div style={WRAP}>
+          <h2 style={H2}>Plan een live demo</h2>
+          <p style={SUB}>Ontdek in enkele minuten hoe ForConnect uw oproepen afhandelt.</p>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+              gap: 24,
+              alignItems: "stretch",
+            }}
+          >
+            <div style={{ display: "flex" }}>
+              <ContactForm />
             </div>
-            <p style={{ margin: "14px 0 4px", fontWeight: 600 }}>Of probeer onze DEMO-lijn</p>
-            <div style={{ lineHeight: 1.8, fontSize: 15 }}>
-              <a href={DEMO_NL_HREF} style={{ color: CYAN, textDecoration: "none" }}>
-                {DEMO_NL}
-              </a>{" "}
-              <span style={{ color: MUTED }}>Nederland</span>
-              <br />
-              <a href={DEMO_BE_HREF} style={{ color: CYAN, textDecoration: "none" }}>
-                {DEMO_BE}
-              </a>{" "}
-              <span style={{ color: MUTED }}>België</span>
-            </div>
-            <p style={{ color: MUTED, fontSize: 13, lineHeight: 1.7, margin: "14px 0 0" }}>
-              24/7 beschikbaar - Actief in Nederland en België
-              <br />
-              &#10003; Actief sinds 2023 &#10003; AVG-proof &#10003; Veilige gegevensverwerking &#10003; 14 dagen gratis
-              proberen
-            </p>
-            <div style={{ display: "flex", gap: 16, marginTop: 12, fontSize: 14 }}>
-              <a href="https://www.instagram.com/forconnect.nl" style={{ color: CYAN }}>
-                Instagram
-              </a>
-              <a href="https://www.facebook.com/share/1JRDzjsycH/" style={{ color: CYAN }}>
-                Facebook
-              </a>
-              <a href="https://www.linkedin.com/company/forconnect-ai/" style={{ color: CYAN }}>
-                LinkedIn
-              </a>
+            <div id="contact" style={{ ...CARD, display: "flex", flexDirection: "column" }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/winkel-hero.jpg"
+                alt="Winkel in Nederland"
+                style={{ ...IMG, marginBottom: 16, height: 170, objectFit: "cover" }}
+              />
+              <h3 style={{ fontSize: 20, margin: "0 0 8px" }}>Contact</h3>
+              <div style={{ color: "#d1d5db", lineHeight: 1.8, fontSize: 15 }}>
+                <div>
+                  <span style={{ color: MUTED }}>Bedrijf:</span> ForConnect
+                </div>
+                <div>
+                  <span style={{ color: MUTED }}>KVK-nummer:</span> 42126595
+                </div>
+                <div>
+                  <span style={{ color: MUTED }}>E-mail:</span>{" "}
+                  <a href={`mailto:${EMAIL}`} style={{ color: CYAN }}>
+                    {EMAIL}
+                  </a>
+                </div>
+                <div>
+                  <span style={{ color: MUTED }}>Telefoon:</span>{" "}
+                  <a href={PHONE_HREF} style={{ color: CYAN }}>
+                    {PHONE}
+                  </a>
+                </div>
+                <div>
+                  <a href={WHATSAPP} style={{ color: CYAN }}>
+                    WhatsApp: {PHONE}
+                  </a>
+                </div>
+              </div>
+              <p style={{ margin: "14px 0 4px", fontWeight: 600 }}>Of probeer onze DEMO-lijn</p>
+              <div style={{ lineHeight: 1.8, fontSize: 15 }}>
+                <a href={DEMO_NL_HREF} style={{ color: CYAN, textDecoration: "none" }}>
+                  {DEMO_NL}
+                </a>{" "}
+                <span style={{ color: MUTED }}>Nederland</span>
+                <br />
+                <a href={DEMO_BE_HREF} style={{ color: CYAN, textDecoration: "none" }}>
+                  {DEMO_BE}
+                </a>{" "}
+                <span style={{ color: MUTED }}>België</span>
+              </div>
+              <p style={{ color: MUTED, fontSize: 13, lineHeight: 1.7, margin: "14px 0 0" }}>
+                24/7 beschikbaar - Actief in Nederland en België
+                <br />
+                &#10003; Actief sinds 2023 &#10003; AVG-proof &#10003; Veilige gegevensverwerking &#10003; 14 dagen
+                gratis proberen
+              </p>
+              <div style={{ display: "flex", gap: 16, marginTop: "auto", paddingTop: 12, fontSize: 14 }}>
+                <a href="https://www.instagram.com/forconnect.nl" style={{ color: CYAN }}>
+                  Instagram
+                </a>
+                <a href="https://www.facebook.com/share/1JRDzjsycH/" style={{ color: CYAN }}>
+                  Facebook
+                </a>
+                <a href="https://www.linkedin.com/company/forconnect-ai/" style={{ color: CYAN }}>
+                  LinkedIn
+                </a>
+              </div>
             </div>
           </div>
         </div>
