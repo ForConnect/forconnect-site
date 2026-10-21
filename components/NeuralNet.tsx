@@ -155,7 +155,7 @@ function Net({ net, flip }: { net: ReturnType<typeof build>; flip?: boolean }) {
 
 export default function NeuralNet() {
   return (
-    <div className="pointer-events-none fixed inset-y-0 left-0 right-0 z-0 hidden xl:block" aria-hidden="true">
+    <div className="pointer-events-none fixed inset-y-0 left-0 right-0 hidden xl:block" style={{ zIndex: 5 }} aria-hidden="true">
       <div className="absolute left-0 top-0 h-full w-[27vw] max-w-[460px]"><Net net={LEFT} /></div>
       <div className="absolute right-0 top-0 h-full w-[27vw] max-w-[460px]"><Net net={RIGHT} flip /></div>
     </div>
