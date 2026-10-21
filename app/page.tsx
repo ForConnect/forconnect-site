@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Waveform from '@/components/Waveform';
+import NeuralNet from '@/components/NeuralNet';
 
 type ContentType = {
   nav: string[];
@@ -47,7 +48,7 @@ const content: Record<'nl' | 'en', ContentType> = {
   nl: {
     nav: ['Home', 'Hoe het werkt', 'Voor wie', 'Voordelen', 'Prijzen', 'Demo', 'Contact', 'FAQ', 'Blog'],
     heroBadge: 'AI Telefoonassistent voor Fysiopraktijken / Kinesitherapiepraktijken',
-    heroTitle: 'Geen onderbroken behandelingen meer.',
+    heroTitle: 'Uw persoonlijke AI telefoonassistent.',
     heroSubtitle: 'Uw telefoon wordt beantwoord, patiëntgegevens worden genoteerd en netjes naar uw e-mail gestuurd - zodat u ongestoord kunt behandelen.',
     heroPrimaryCta: 'Plan een demo',
     howTitle: 'Hoe werkt ForConnect?',
@@ -74,9 +75,9 @@ const content: Record<'nl' | 'en', ContentType> = {
     pricingSubtitle: 'Transparante pakketten, afgestemd op jouw praktijk. 14 dagen gratis proberen.',
     plans: [
       { name: 'Starter Lite', price: '\u20AC19', per: 'per maand', description: 'Voor solopraktijken en met weinig gesprekken.', features: ['AI beantwoordt oproepen 24/7', 'Volledige gespreksrapportage per e-mail', '1 telefoonnummer', 'Tot 60 belminuten'] },
-      { name: 'Starter', price: '\u20AC39', per: 'per maand', description: 'Voor startende praktijken. Meest gekozen', features: ['AI beantwoordt oproepen 24/7', 'Volledige gespreksrapportage per e-mail', 'Afspraaklink per sms voor de beller', '1 telefoonnummer', 'Tot 150 belminuten'], highlight: true },
-      { name: 'Basis', price: '\u20AC59', per: 'per maand', description: 'Voor groeiende praktijken.', features: ['AI beantwoordt oproepen 24/7', 'Volledige gespreksrapportage per e-mail', 'Afspraaklink per sms voor de beller', '1 telefoonnummer', 'Tot 300 belminuten'] },
-      { name: 'Pro Plus', price: 'Prijs op maat', per: '', description: 'Voor bedrijven met speciale wensen.', features: ['Alles van Basis, plus:', 'Aangepaste gespreksflow', 'Meerdere telefoonnummers/locaties', 'Agenda-integratie', 'Geavanceerde call flows', 'Prioriteit ondersteuning', 'Onbeperkte belminuten'] },
+      { name: 'Starter', price: '\u20AC39', per: 'per maand', description: 'Voor startende praktijken. Meest gekozen', features: ['AI beantwoordt oproepen 24/7', 'Volledige gespreksrapportage per e-mail', '1 telefoonnummer', 'Tot 150 belminuten'], highlight: true },
+      { name: 'Basis', price: '\u20AC59', per: 'per maand', description: 'Voor groeiende praktijken.', features: ['AI beantwoordt oproepen 24/7', 'Volledige gespreksrapportage per e-mail', '1 telefoonnummer', 'Tot 300 belminuten'] },
+      { name: 'Pro Plus', price: 'Prijs op maat', per: '', description: 'Voor bedrijven met speciale wensen.', features: ['Alles van Basis, plus:', 'Aangepaste gespreksflow', 'Meerdere telefoonnummers/locaties', 'Agenda-integratie', 'Prioriteit ondersteuning'] },
     ],
     demoTitle: 'Plan een live demo',
     demoSubtitle: 'Ontdek in enkele minuten hoe ForConnect jouw oproepen afhandelt.',
@@ -94,7 +95,7 @@ const content: Record<'nl' | 'en', ContentType> = {
   en: {
     nav: ['Home', 'How it works', 'For whom', 'Benefits', 'Pricing', 'Demo', 'FAQ', 'Blog'],
     heroBadge: 'AI Phone Assistant for Physiotherapy Practices',
-    heroTitle: 'No more interrupted treatments.',
+    heroTitle: 'Your personal AI phone assistant.',
     heroSubtitle: 'Your phone is answered, patient details are recorded and sent to your email - so you can treat without interruptions.',
     heroPrimaryCta: 'Book a demo',
     howTitle: 'How does ForConnect work?',
@@ -121,9 +122,9 @@ const content: Record<'nl' | 'en', ContentType> = {
     pricingSubtitle: 'Flexible plans for growing businesses. 14-day free trial.',
     plans: [
       { name: 'Starter Lite', price: '\u20AC19', per: 'per month', description: 'For solo practices with few calls.', features: ['AI answers calls 24/7', 'Complete call reports via email', '1 phone number', 'Up to 60 call minutes'] },
-      { name: 'Starter', price: '\u20AC39', per: 'per month', description: 'For starting practices. Most popular', features: ['AI answers calls 24/7', 'Complete call reports via email', 'Appointment link by SMS for the caller', '1 phone number', 'Up to 150 call minutes'], highlight: true },
-      { name: 'Basis', price: '\u20AC59', per: 'per month', description: 'For growing practices.', features: ['AI answers calls 24/7', 'Complete call reports via email', 'Appointment link by SMS for the caller', '1 phone number', 'Up to 300 call minutes'] },
-      { name: 'Pro Plus', price: 'Custom', per: '', description: 'For businesses with special needs.', features: ['Everything in Basis, plus:', 'Personalized call flow', 'Multiple phone numbers/locations', 'Calendar integration', 'Advanced call flows', 'Priority support', 'Unlimited call minutes'] },
+      { name: 'Starter', price: '\u20AC39', per: 'per month', description: 'For starting practices. Most popular', features: ['AI answers calls 24/7', 'Complete call reports via email', '1 phone number', 'Up to 150 call minutes'], highlight: true },
+      { name: 'Basis', price: '\u20AC59', per: 'per month', description: 'For growing practices.', features: ['AI answers calls 24/7', 'Complete call reports via email', '1 phone number', 'Up to 300 call minutes'] },
+      { name: 'Pro Plus', price: 'Custom', per: '', description: 'For businesses with special needs.', features: ['Everything in Basis, plus:', 'Personalized call flow', 'Multiple phone numbers/locations', 'Calendar integration', 'Priority support'] },
     ],
     demoTitle: 'Book a live demo',
     demoSubtitle: 'See how ForConnect handles your calls.',
@@ -147,13 +148,14 @@ export default function HomePage() {
   const scrollToId = (id: string) => { const el = document.getElementById(id); if (el) el.scrollIntoView({ behavior: 'smooth' }); };
 
   return (
-    <div className="min-h-screen bg-[#040815] text-white">
+    <div className="min-h-screen bg-[#0C1528] text-white">
+      <NeuralNet />
       <div className="pointer-events-none fixed inset-0 opacity-40 blur-3xl">
         <div className="absolute -top-32 -left-32 h-80 w-80 rounded-full bg-[#00F0FF33]" />
         <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-[#00F0FF22]" />
       </div>
-      <div className="relative mx-auto max-w-6xl px-4 pb-16 pt-6">
-        <header className="relative flex items-center justify-between py-4">
+      <div className="relative mx-auto max-w-6xl px-4 pb-14 pt-5">
+        <header className="relative flex items-center justify-between py-3">
           <div className="flex items-center gap-2">
             <div className="h-10 w-10 flex items-center justify-center rounded-xl border border-[#00F0FF55] shadow-[0_0_20px_#00F0FF66]">
               <span className="text-xl text-[#00F0FF] font-bold">F</span>
@@ -208,8 +210,8 @@ export default function HomePage() {
           )}
         </header>
 
-        <section id="hero" className="pt-16 grid md:grid-cols-2 gap-10 items-center">
-          <div className="space-y-6">
+        <section id="hero" className="pt-12 grid md:grid-cols-2 gap-10 items-center">
+          <div className="space-y-5">
             <div className="inline-flex items-center gap-2 px-3 py-1 border border-gray-700 bg-[#020617]/80 text-xs rounded-full">
               <span className="h-2 w-2 rounded-full bg-[#00F0FF]" />
               <span>{t.heroBadge}</span>
@@ -242,7 +244,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="mt-24">
+        <section className="mt-20">
           <div className="relative p-8 rounded-2xl border border-cyan-500/30 bg-gradient-to-br from-slate-950 to-slate-900 shadow-lg">
             <div className="absolute top-6 left-6 text-cyan-500/20 text-6xl">&ldquo;</div>
             <div className="relative pl-8">
@@ -259,7 +261,7 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-        <section className="mt-16">
+        <section className="mt-12">
           <div className="p-8 rounded-2xl border border-cyan-500/30 bg-gradient-to-br from-slate-950 to-slate-900 shadow-lg">
 
             <h2 className="text-xl md:text-2xl font-bold text-white mb-3">
@@ -282,7 +284,7 @@ export default function HomePage() {
 
           </div>
         </section>
-        <section id="how" className="mt-24">
+        <section id="how" className="mt-20">
           <h2 className="text-2xl font-bold">{t.howTitle}</h2>
 
           <p className="text-sm text-gray-400 mt-2">
@@ -414,13 +416,13 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="forwho" className="mt-24">
+        <section id="forwho" className="mt-20">
           <h2 className="text-2xl font-bold">{t.forWhoTitle}</h2>
           <div className="grid md:grid-cols-4 gap-6 mt-6">
             {t.forWhoItems.map((f, i) => (<div key={i} className="p-4 bg-[#020617]/80 rounded-xl border border-gray-800"><h3 className="font-semibold">{f.title}</h3><p className="text-sm text-gray-400 mt-2">{f.text}</p></div>))}
           </div>
         </section>
-        <section className="mt-24">
+        <section className="mt-20">
           <div className="relative p-8 rounded-2xl border border-gray-800 bg-gradient-to-br from-slate-950 to-slate-900">
             <div className="relative pl-8">
               <p className="text-sm text-gray-400 mb-4">{lang === 'nl' ? 'Van de oprichter' : 'From the founder'}</p>
@@ -437,21 +439,21 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="benefits" className="mt-24">
+        <section id="benefits" className="mt-20">
           <h2 className="text-2xl font-bold">{t.benefitsTitle}</h2>
           <div className="grid md:grid-cols-4 gap-6 mt-6">
             {t.benefits.map((b, i) => (<div key={i} className="p-4 bg-[#020617]/70 rounded-xl border border-gray-800"><h3 className="font-semibold">{b.title}</h3><p className="text-sm text-gray-400 mt-2">{b.text}</p></div>))}
           </div>
         </section>
 
-        <section id="pricing" className="mt-24">
+        <section id="pricing" className="mt-20">
           <h2 className="text-2xl font-bold">{t.pricingTitle}</h2>
           <p className="text-sm text-gray-400">{t.pricingSubtitle}</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6 max-w-7xl mx-auto">
             {t.plans.map((p, i) => (
               <div key={i} className={`p-6 rounded-xl border ${p.highlight ? 'border-[#00F0FF] shadow-[0_0_25px_#00F0FF55]' : 'border-gray-700'} bg-[#020617]/70 flex flex-col`}>
                 <h3 className="font-semibold text-lg">{p.name}</h3>
-                <p className="text-sm text-gray-400 mt-1">{p.description}</p>
+                <p className="text-sm text-gray-400 mt-1 min-h-[2.5rem]">{p.description}</p>
                 <div className="flex items-baseline gap-2 mt-4">
                   <span className="text-3xl font-bold">{p.price}</span>
                   <span className="text-sm text-gray-400">{p.per}</span>
@@ -468,7 +470,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="demo" className="mt-24 relative overflow-hidden rounded-2xl">
+        <section id="demo" className="mt-20 relative overflow-hidden rounded-2xl">
           <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/contact-bg.png')" }} />
           <div className="absolute inset-0 bg-black/70" />
           <div className="relative p-6">
@@ -563,14 +565,14 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="faq" className="mt-24">
+        <section id="faq" className="mt-20">
           <h2 className="text-2xl font-bold">{t.faqTitle}</h2>
           <div className="mt-6 space-y-3">
             {t.faqItems.map((f, i) => (<div key={i} className="p-4 bg-[#020617]/70 rounded-xl border border-gray-800"><div className="font-semibold">{f.q}</div><div className="text-sm text-gray-400 mt-1">{f.a}</div></div>))}
           </div>
         </section>
 
-        <footer className="mt-24 border-t border-gray-800 pt-6 text-xs text-gray-500">
+        <footer className="mt-20 border-t border-gray-800 pt-6 text-xs text-gray-500">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
               <p className="font-semibold text-white mb-1">ForConnect</p>

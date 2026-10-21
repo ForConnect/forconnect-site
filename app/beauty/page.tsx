@@ -1,10 +1,12 @@
 "use client";
 
+import NeuralNet from "@/components/NeuralNet";
+
 export default function BeautyPage() {
   const serif = "Georgia, 'Iowan Old Style', 'Times New Roman', serif";
   const sans = "'Segoe UI', system-ui, sans-serif";
 
-  const bg = "#0c0a16";
+  const bg = "#151028";
   const cardBg = "rgba(255,255,255,0.04)";
   const cardBorder = "rgba(0,229,255,0.22)";
   const cyan = "#00e5ff";
@@ -24,6 +26,7 @@ export default function BeautyPage() {
         minHeight: "100vh",
       }}
     >
+      <NeuralNet />
       {/* NAV */}
       <nav
         style={{
@@ -504,7 +507,6 @@ export default function BeautyPage() {
                 features: [
                   "AI beantwoordt oproepen 24/7",
                   "Volledige gespreksrapportage per e-mail",
-                  "Afspraaklink per sms voor de beller",
                   "1 telefoonnummer",
                   "Tot 150 belminuten",
                 ],
@@ -518,7 +520,6 @@ export default function BeautyPage() {
                 features: [
                   "AI beantwoordt oproepen 24/7",
                   "Volledige gespreksrapportage per e-mail",
-                  "Afspraaklink per sms voor de beller",
                   "1 telefoonnummer",
                   "Tot 300 belminuten",
                 ],
@@ -534,9 +535,7 @@ export default function BeautyPage() {
                   "Aangepaste gespreksflow",
                   "Meerdere telefoonnummers/locaties",
                   "Agenda-integratie",
-                  "Geavanceerde call flows",
                   "Prioriteit ondersteuning",
-                  "Onbeperkte belminuten",
                 ],
               },
             ].map((pkg) => (
@@ -555,7 +554,7 @@ export default function BeautyPage() {
                 }}
               >
                 <h3 style={{ fontFamily: serif, fontSize: "20px", fontWeight: 700, marginBottom: "6px", color: text }}>{pkg.name}</h3>
-                <p style={{ color: pkg.featured ? cyan : textMuted, fontSize: "14px", marginBottom: "20px" }}>
+                <p style={{ color: pkg.featured ? cyan : textMuted, fontSize: "14px", marginBottom: "20px", minHeight: "42px" }}>
                   {pkg.sub}
                 </p>
                 {pkg.price ? (

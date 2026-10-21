@@ -1,17 +1,20 @@
 "use client";
 
+import NeuralNet from "@/components/NeuralNet";
+
 export default function KappersPage() {
 
 
   return (
     <main
       style={{
-        backgroundColor: "#0a0f1a",
+        backgroundColor: "#0C1528",
         color: "#ffffff",
         fontFamily: "'Segoe UI', system-ui, sans-serif",
         minHeight: "100vh",
       }}
     >
+      <NeuralNet />
       {/* NAV */}
       <nav
         style={{
@@ -380,7 +383,6 @@ export default function KappersPage() {
                 features: [
                   "AI beantwoordt oproepen 24/7",
                   "Volledige gespreksrapportage per e-mail",
-                  "Afspraaklink per sms voor de beller",
                   "1 telefoonnummer",
                   "Tot 150 belminuten",
                 ],
@@ -394,7 +396,6 @@ export default function KappersPage() {
                 features: [
                   "AI beantwoordt oproepen 24/7",
                   "Volledige gespreksrapportage per e-mail",
-                  "Afspraaklink per sms voor de beller",
                   "1 telefoonnummer",
                   "Tot 300 belminuten",
                 ],
@@ -410,9 +411,7 @@ export default function KappersPage() {
                   "Aangepaste gespreksflow",
                   "Meerdere telefoonnummers/locaties",
                   "Agenda-integratie",
-                  "Geavanceerde call flows",
                   "Prioriteit ondersteuning",
-                  "Onbeperkte belminuten",
                 ],
               },
             ].map((pkg) => (
@@ -430,7 +429,7 @@ export default function KappersPage() {
                 }}
               >
                 <h3 style={{ fontSize: "20px", fontWeight: 800, marginBottom: "6px" }}>{pkg.name}</h3>
-                <p style={{ color: pkg.featured ? "#00e5ff" : "#94a3b8", fontSize: "14px", marginBottom: "20px" }}>
+                <p style={{ color: pkg.featured ? "#00e5ff" : "#94a3b8", fontSize: "14px", marginBottom: "20px", minHeight: "42px" }}>
                   {pkg.sub}
                 </p>
                 {pkg.price ? (
