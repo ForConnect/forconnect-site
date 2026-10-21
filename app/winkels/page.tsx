@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { CSSProperties } from "react";
 import ContactForm from "./ContactForm";
+import NeuralNet from "@/components/NeuralNet";
 
 export const metadata: Metadata = {
   title: "ForConnect voor winkels - AI telefoonassistent",
@@ -18,7 +19,7 @@ const DEMO_NL_HREF = "tel:+31266690470";
 const DEMO_BE = "+32 78 700 402";
 const DEMO_BE_HREF = "tel:+3278700402";
 
-const BG = "#0a0f1a";
+const BG = "#0C1528";
 const CYAN = "#00e5ff";
 const MUTED = "#9ca3af";
 
@@ -26,16 +27,16 @@ const CARD: CSSProperties = {
   background: "#111827",
   border: "1px solid rgba(255,255,255,0.08)",
   borderRadius: 16,
-  padding: 28,
+  padding: 22,
 };
 const WRAP: CSSProperties = { maxWidth: 1100, margin: "0 auto", padding: "0 24px" };
-const SECTION: CSSProperties = { padding: "96px 0" };
-const H2: CSSProperties = { fontSize: 36, fontWeight: 700, margin: "0 0 16px", textAlign: "center" };
+const SECTION: CSSProperties = { padding: "52px 0" };
+const H2: CSSProperties = { fontSize: 36, fontWeight: 700, margin: "0 0 10px", textAlign: "center" };
 const SUB: CSSProperties = {
   color: MUTED,
   textAlign: "center",
   maxWidth: 640,
-  margin: "0 auto 56px",
+  margin: "0 auto 28px",
   lineHeight: 1.6,
 };
 const BTN: CSSProperties = {
@@ -216,6 +217,8 @@ export default function WinkelsPage() {
         fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, sans-serif",
       }}
     >
+      <NeuralNet />
+      <div style={{ position: "relative", zIndex: 1 }}>
       <style>{`
         html { scroll-behavior: smooth; }
         .fc-nav { display: flex; gap: 22px; }
@@ -255,13 +258,13 @@ export default function WinkelsPage() {
       </header>
 
       {/* Hero */}
-      <section id="home" style={{ ...SECTION, paddingTop: 64 }}>
+      <section id="home" style={{ ...SECTION, paddingTop: 24 }}>
         <div
           style={{
             ...WRAP,
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-            gap: 56,
+            gap: 32,
             alignItems: "center",
           }}
         >
@@ -353,7 +356,7 @@ export default function WinkelsPage() {
         <div style={WRAP}>
           <h2 style={H2}>Hoe werkt ForConnect?</h2>
           <p style={SUB}>Afspraak of verzoek wordt doorgestuurd</p>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 24 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 16 }}>
             {steps.map((s) => (
               <div key={s.t} style={CARD}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -363,7 +366,7 @@ export default function WinkelsPage() {
               </div>
             ))}
           </div>
-          <div style={{ ...CARD, marginTop: 24, textAlign: "center" }}>
+          <div style={{ ...CARD, marginTop: 16, textAlign: "center" }}>
             <h3 style={{ fontSize: 18, margin: "0 0 8px", color: CYAN }}>Agenda-integratie mogelijk</h3>
             <p style={{ color: MUTED, margin: 0, lineHeight: 1.6 }}>
               Koppel uw Google- of Outlook-agenda en laat de assistent afspraken inplannen op basis van uw
@@ -380,7 +383,7 @@ export default function WinkelsPage() {
             ...WRAP,
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-            gap: 56,
+            gap: 32,
             alignItems: "center",
           }}
         >
@@ -406,7 +409,7 @@ export default function WinkelsPage() {
         <div style={WRAP}>
           <h2 style={H2}>Wat de assistent voor uw winkel doet</h2>
           <p style={SUB}>Niet elke oproep vraagt uw aandacht.</p>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 24 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 16 }}>
             {features.map((f) => (
               <div key={f.t} style={CARD}>
                 <div style={{ width: 8, height: 8, borderRadius: 8, background: CYAN, marginBottom: 20 }} />
@@ -422,7 +425,7 @@ export default function WinkelsPage() {
       <section id="voorwie" style={SECTION}>
         <div style={WRAP}>
           <h2 style={H2}>Voor wie is ForConnect?</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 24, marginTop: 48 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 16, marginTop: 24 }}>
             {audience.map((a) => (
               <div key={a.t} style={CARD}>
                 <h3 style={{ fontSize: 18, margin: "0 0 10px" }}>{a.t}</h3>
@@ -436,7 +439,7 @@ export default function WinkelsPage() {
       {/* Oprichter */}
       <section style={SECTION}>
         <div style={{ ...WRAP, maxWidth: 820 }}>
-          <div style={{ ...CARD, padding: 40 }}>
+          <div style={{ ...CARD, padding: 28 }}>
             <p style={{ color: CYAN, fontSize: 13, letterSpacing: 1.5, textTransform: "uppercase", margin: "0 0 16px" }}>
               Van de oprichter
             </p>
@@ -470,7 +473,7 @@ export default function WinkelsPage() {
       <section id="voordelen" style={SECTION}>
         <div style={WRAP}>
           <h2 style={H2}>Waarom kiezen voor ForConnect?</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))", gap: 24, marginTop: 48 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))", gap: 16, marginTop: 24 }}>
             {why.map((w) => (
               <div key={w.t} style={CARD}>
                 <h3 style={{ fontSize: 18, margin: "0 0 8px", color: CYAN }}>{w.t}</h3>
@@ -486,7 +489,7 @@ export default function WinkelsPage() {
         <div style={WRAP}>
           <h2 style={H2}>Prijzen</h2>
           <p style={SUB}>Transparante pakketten, afgestemd op uw bedrijf. 14 dagen gratis proberen.</p>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))", gap: 24 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))", gap: 16 }}>
             {plans.map((p) => (
               <div
                 key={p.name}
@@ -544,30 +547,33 @@ export default function WinkelsPage() {
 
       {/* Demo + Contact */}
       <section id="demo" style={SECTION}>
-        <div style={{ ...WRAP, maxWidth: 760 }}>
-          <h2 style={H2}>Plan een live demo</h2>
-          <p style={SUB}>Ontdek in enkele minuten hoe ForConnect uw oproepen afhandelt.</p>
-          <ContactForm />
-        </div>
-      </section>
-
-      <section id="contact" style={SECTION}>
         <div
           style={{
             ...WRAP,
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-            gap: 40,
-            alignItems: "center",
+            gap: 32,
+            alignItems: "start",
           }}
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/winkel-hero.jpg" alt="Winkel in Nederland" style={{ ...IMG, marginBottom: 0 }} />
           <div>
-            <h2 style={{ ...H2, textAlign: "left" }}>Contact</h2>
-            <div style={{ color: "#d1d5db", lineHeight: 2 }}>
+            <h2 style={{ ...H2, textAlign: "left" }}>Plan een live demo</h2>
+            <p style={{ color: MUTED, lineHeight: 1.6, margin: "0 0 20px" }}>
+              Ontdek in enkele minuten hoe ForConnect uw oproepen afhandelt.
+            </p>
+            <ContactForm />
+          </div>
+          <div id="contact">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/winkel-hero.jpg"
+              alt="Winkel in Nederland"
+              style={{ ...IMG, marginBottom: 16, maxHeight: 220, objectFit: "cover" }}
+            />
+            <h3 style={{ fontSize: 22, margin: "0 0 8px" }}>Contact</h3>
+            <div style={{ color: "#d1d5db", lineHeight: 1.8, fontSize: 15 }}>
               <div>
-                <span style={{ color: MUTED }}>Bedrijf:</span> ForConnect (Nederlandse onderneming)
+                <span style={{ color: MUTED }}>Bedrijf:</span> ForConnect
               </div>
               <div>
                 <span style={{ color: MUTED }}>KVK-nummer:</span> 42126595
@@ -590,8 +596,8 @@ export default function WinkelsPage() {
                 </a>
               </div>
             </div>
-            <p style={{ margin: "24px 0 8px", fontWeight: 600 }}>Of probeer onze DEMO-lijn</p>
-            <div style={{ lineHeight: 2 }}>
+            <p style={{ margin: "14px 0 4px", fontWeight: 600 }}>Of probeer onze DEMO-lijn</p>
+            <div style={{ lineHeight: 1.8, fontSize: 15 }}>
               <a href={DEMO_NL_HREF} style={{ color: CYAN, textDecoration: "none" }}>
                 {DEMO_NL}
               </a>{" "}
@@ -602,13 +608,13 @@ export default function WinkelsPage() {
               </a>{" "}
               <span style={{ color: MUTED }}>België</span>
             </div>
-            <p style={{ color: MUTED, fontSize: 14, lineHeight: 1.8, margin: "24px 0 0" }}>
+            <p style={{ color: MUTED, fontSize: 13, lineHeight: 1.7, margin: "14px 0 0" }}>
               24/7 beschikbaar - Actief in Nederland en België
               <br />
               &#10003; Actief sinds 2023 &#10003; AVG-proof &#10003; Veilige gegevensverwerking &#10003; 14 dagen gratis
               proberen
             </p>
-            <div style={{ display: "flex", gap: 16, marginTop: 20, fontSize: 14 }}>
+            <div style={{ display: "flex", gap: 16, marginTop: 12, fontSize: 14 }}>
               <a href="https://www.instagram.com/forconnect.nl" style={{ color: CYAN }}>
                 Instagram
               </a>
@@ -627,9 +633,9 @@ export default function WinkelsPage() {
       <section id="faq" style={SECTION}>
         <div style={{ ...WRAP, maxWidth: 760 }}>
           <h2 style={H2}>Veelgestelde vragen</h2>
-          <div style={{ marginTop: 40 }}>
+          <div style={{ marginTop: 24 }}>
             {faqs.map((f) => (
-              <details key={f.q} style={{ ...CARD, padding: "20px 24px", marginBottom: 12 }}>
+              <details key={f.q} style={{ ...CARD, padding: "16px 20px", marginBottom: 10 }}>
                 <summary style={{ cursor: "pointer", fontWeight: 600, fontSize: 17 }}>{f.q}</summary>
                 <p style={{ color: MUTED, lineHeight: 1.6, margin: "12px 0 0" }}>{f.a}</p>
               </details>
@@ -642,7 +648,7 @@ export default function WinkelsPage() {
       <footer
         style={{
           borderTop: "1px solid rgba(255,255,255,0.08)",
-          padding: "40px 24px",
+          padding: "28px 24px",
           textAlign: "center",
           color: MUTED,
           fontSize: 14,
@@ -657,6 +663,7 @@ export default function WinkelsPage() {
         <div>KVK: 42126595 &middot; {PHONE}</div>
         <div style={{ marginTop: 8 }}>&copy; 2026 ForConnect. Alle rechten voorbehouden.</div>
       </footer>
+      </div>
     </main>
   );
 }
