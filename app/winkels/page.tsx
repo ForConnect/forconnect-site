@@ -33,7 +33,7 @@ const CARD: CSSProperties = {
   borderRadius: 16,
   padding: 22,
 };
-const WRAP: CSSProperties = { maxWidth: 1100, margin: "0 auto", padding: "0 24px" };
+const WRAP: CSSProperties = { maxWidth: 1200, margin: "0 auto", padding: "0 24px" };
 const SECTION: CSSProperties = { padding: "36px 0" };
 const H2: CSSProperties = { fontSize: 36, fontWeight: 700, margin: "0 0 10px", textAlign: "center" };
 const SUB: CSSProperties = {
@@ -239,7 +239,6 @@ export default function WinkelsPage() {
           justifyContent: "space-between",
           alignItems: "center",
           height: 72,
-          maxWidth: 1200,
         }}
       >
         <a href="/" style={{ color: TEXT, textDecoration: "none", lineHeight: 1.1 }}>
@@ -270,84 +269,86 @@ export default function WinkelsPage() {
           }}
         >
           <div>
-            <p style={{ color: ACCENT, fontSize: 13, letterSpacing: 1.5, textTransform: "uppercase", margin: "0 0 16px" }}>
-              AI Telefoonassistent voor Winkels
-            </p>
             <span
               style={{
-                display: "inline-block",
-                border: "1px solid rgba(0,229,255,0.4)",
-                color: ACCENT,
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 8,
+                border: "1px solid rgba(255,255,255,0.2)",
                 fontSize: 13,
-                padding: "4px 12px",
+                padding: "6px 14px",
                 borderRadius: 20,
-                marginBottom: 20,
+                marginBottom: 14,
               }}
             >
-              &#10003; Actief sinds 2023
+              <span style={{ width: 8, height: 8, borderRadius: 8, background: CYAN, display: "inline-block" }} />
+              AI Telefoonassistent voor Winkels
             </span>
-            <h1 className="fc-h1" style={{ fontSize: 52, lineHeight: 1.1, fontWeight: 800, margin: "0 0 20px" }}>
-              Uw persoonlijke telefoonassistent voor uw winkel
+            <div style={{ color: MUTED, fontSize: 15, margin: "0 0 16px" }}>&#10003; Actief sinds 2023</div>
+            <h1 className="fc-h1" style={{ fontSize: 56, lineHeight: 1.08, fontWeight: 800, margin: "0 0 18px" }}>
+              Uw persoonlijke telefoonassistent.
             </h1>
-            <p style={{ color: MUTED, fontSize: 18, lineHeight: 1.6, margin: "0 0 32px" }}>
+            <p style={{ color: "#d1d5db", fontSize: 17, lineHeight: 1.6, margin: "0 0 24px", maxWidth: 560 }}>
               Uw telefoon wordt beantwoord, vragen over artikelen en voorraad worden afgehandeld en alles wordt netjes
               naar uw e-mail gestuurd - zodat u zich kunt richten op de klanten in uw winkel.
             </p>
-            <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
-              <a href="#demo" style={BTN}>
-                Plan een demo
-              </a>
-              <a href={DEMO_NL_HREF} style={BTN2}>
-                Bel de demo-lijn
-              </a>
-            </div>
+            <a href="#demo" style={BTN}>
+              Plan een demo
+            </a>
           </div>
 
-          <div style={{ ...CARD, padding: 24 }}>
-            <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 20 }}>
-              <span style={{ fontWeight: 600 }}>Live AI demo</span>
-              <span style={{ color: ACCENT, fontSize: 13 }}>&#9679; AI actief</span>
+          <div>
+            <div style={{ ...CARD, padding: 24, borderRadius: 24 }}>
+              <div style={{ color: MUTED, fontSize: 14, marginBottom: 16 }}>Live AI demo</div>
+              <div
+                style={{
+                  background: "#1f2937",
+                  borderRadius: 12,
+                  padding: "12px 16px",
+                  marginBottom: 12,
+                  maxWidth: "88%",
+                  fontSize: 15,
+                  lineHeight: 1.5,
+                }}
+              >
+                Goedemiddag, u spreekt met de digitale assistent van de winkel. Waarmee kan ik u helpen?
+              </div>
+              <div
+                style={{
+                  background: "rgba(0,229,255,0.12)",
+                  border: "1px solid rgba(0,229,255,0.3)",
+                  borderRadius: 12,
+                  padding: "12px 16px",
+                  marginLeft: "auto",
+                  marginBottom: 12,
+                  maxWidth: "88%",
+                  fontSize: 15,
+                  lineHeight: 1.5,
+                  textAlign: "right",
+                }}
+              >
+                Hebben jullie deze jas nog in maat M?
+              </div>
+              <div
+                style={{
+                  background: "#1f2937",
+                  borderRadius: 12,
+                  padding: "12px 16px",
+                  maxWidth: "88%",
+                  fontSize: 15,
+                  lineHeight: 1.5,
+                }}
+              >
+                Natuurlijk, ik kijk direct voor u. U kunt de jas ook bekijken op onze website.
+              </div>
+              <div style={{ color: MUTED, fontSize: 13, textAlign: "right", marginTop: 14 }}>* AI actief</div>
             </div>
-            <div
-              style={{
-                background: "#1f2937",
-                borderRadius: 12,
-                padding: "12px 16px",
-                marginBottom: 12,
-                maxWidth: "88%",
-                fontSize: 15,
-                lineHeight: 1.5,
-              }}
+            <a
+              href={DEMO_NL_HREF}
+              style={{ ...BTN, display: "block", textAlign: "center", borderRadius: 30, marginTop: 16 }}
             >
-              Goedemiddag, u spreekt met de digitale assistent van de winkel. Waarmee kan ik u helpen?
-            </div>
-            <div
-              style={{
-                background: "rgba(0,229,255,0.12)",
-                border: "1px solid rgba(0,229,255,0.3)",
-                borderRadius: 12,
-                padding: "12px 16px",
-                marginLeft: "auto",
-                marginBottom: 12,
-                maxWidth: "88%",
-                fontSize: 15,
-                lineHeight: 1.5,
-              }}
-            >
-              Hebben jullie deze jas nog in maat M?
-            </div>
-            <div
-              style={{
-                background: "#1f2937",
-                borderRadius: 12,
-                padding: "12px 16px",
-                maxWidth: "88%",
-                fontSize: 15,
-                lineHeight: 1.5,
-              }}
-            >
-              Natuurlijk, ik kijk direct voor u. U kunt de jas ook bekijken op onze website.
-            </div>
+              &#128222; Bel de demo-lijn
+            </a>
           </div>
         </div>
       </section>
@@ -705,23 +706,48 @@ export default function WinkelsPage() {
       </section>
 
       {/* Footer */}
-      <footer
-        style={{
-          borderTop: "1px solid rgba(255,255,255,0.08)",
-          padding: "28px 24px",
-          textAlign: "center",
-          color: MUTED,
-          fontSize: 14,
-          lineHeight: 1.8,
-        }}
-      >
-        <div style={{ color: TEXT, fontWeight: 700, fontSize: 18 }}>
-          For<span style={{ color: ACCENT }}>Connect</span>
+      <footer style={{ ...WRAP, paddingBottom: 28 }}>
+        <div
+          style={{
+            borderTop: `1px solid ${LINE}`,
+            paddingTop: 28,
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "flex-start",
+            gap: 24,
+            flexWrap: "wrap",
+            color: MUTED,
+            fontSize: 14,
+            lineHeight: 1.8,
+          }}
+        >
+          <div>
+            <div style={{ color: TEXT, fontWeight: 700, fontSize: 15 }}>ForConnect</div>
+            <div>Gemaakt voor winkels in Nederland.</div>
+            <div>Actief sinds 2023</div>
+            <div>KVK: 42126595 &middot; {PHONE}</div>
+            <div style={{ marginTop: 14 }}>&copy; 2026 ForConnect. Alle rechten voorbehouden.</div>
+          </div>
+          <div style={{ display: "flex", gap: 14, alignItems: "center", paddingTop: 6 }}>
+            <a href="https://www.instagram.com/forconnect.nl" aria-label="Instagram" style={{ color: MUTED, display: "flex" }}>
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/share/1JRDzjsycH/" aria-label="Facebook" style={{ color: MUTED, display: "flex" }}>
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/company/forconnect-ai/" aria-label="LinkedIn" style={{ color: MUTED, display: "flex" }}>
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
+          </div>
         </div>
-        <div>Gemaakt voor winkels in Nederland.</div>
-        <div>Actief sinds 2023</div>
-        <div>KVK: 42126595 &middot; {PHONE}</div>
-        <div style={{ marginTop: 8 }}>&copy; 2026 ForConnect. Alle rechten voorbehouden.</div>
       </footer>
       </div>
     </main>

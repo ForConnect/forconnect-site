@@ -49,7 +49,7 @@ const content: Record<'nl' | 'en', ContentType> = {
     nav: ['Home', 'Hoe het werkt', 'Voor wie', 'Voordelen', 'Prijzen', 'Demo', 'Contact', 'FAQ', 'Blog'],
     heroBadge: 'AI Telefoonassistent voor Fysiopraktijken / Kinesitherapiepraktijken',
     heroTitle: 'Uw persoonlijke AI telefoonassistent.',
-    heroSubtitle: 'Uw telefoon wordt beantwoord wanneer niemand kan opnemen, patiëntgegevens worden genoteerd en netjes naar uw e-mail gestuurd - zodat u direct kunt zien wie prioriteit heeft en ongestoord kunt behandelen.',
+    heroSubtitle: 'Uw telefoon wordt beantwoord **wanneer niemand kan opnemen**, patiëntgegevens worden genoteerd en netjes naar uw **e-mail gestuurd** - zodat u direct kunt zien **wie prioriteit heeft** en **ongestoord kunt behandelen**.',
     heroPrimaryCta: 'Plan een demo',
     howTitle: 'Hoe werkt ForConnect?',
     howSteps: [
@@ -96,7 +96,7 @@ const content: Record<'nl' | 'en', ContentType> = {
     nav: ['Home', 'How it works', 'For whom', 'Benefits', 'Pricing', 'Demo', 'FAQ', 'Blog'],
     heroBadge: 'AI Phone Assistant for Physiotherapy Practices',
     heroTitle: 'Your personal AI phone assistant.',
-    heroSubtitle: 'Your phone is answered when no one can pick up, patient details are recorded and sent to your email - so you can see right away who has priority and treat without interruptions.',
+    heroSubtitle: 'Your phone is answered **when no one can pick up**, patient details are recorded and **sent to your email** - so you can see right away **who has priority** and **treat without interruptions**.',
     heroPrimaryCta: 'Book a demo',
     howTitle: 'How does ForConnect work?',
     howSteps: [
@@ -140,6 +140,22 @@ const content: Record<'nl' | 'en', ContentType> = {
     footerRights: '\u00A9 2026 ForConnect. All rights reserved.',
   },
 };
+
+function renderHeroText(text: string) {
+  const noBreak = (part: string, key: string) =>
+    part.split('e-mail').flatMap((chunk, i, arr) =>
+      i < arr.length - 1
+        ? [chunk, <span key={`${key}-${i}`} className="whitespace-nowrap">e-mail</span>]
+        : [chunk]
+    );
+  return text.split('**').map((part, i) =>
+    i % 2 ? (
+      <strong key={i} className="font-bold text-white">{noBreak(part, `b${i}`)}</strong>
+    ) : (
+      <span key={i}>{noBreak(part, `t${i}`)}</span>
+    )
+  );
+}
 
 export default function HomePage() {
   const [lang, setLang] = useState<'nl' | 'en'>('nl');
@@ -232,11 +248,7 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#020617]/40 via-transparent to-transparent" />
               </div>
               <p className="text-gray-300 text-base leading-relaxed lg:max-w-[235px]">
-                {t.heroSubtitle.split('e-mail').flatMap((part: string, i: number, arr: string[]) =>
-                  i < arr.length - 1
-                    ? [part, <span key={i} className="whitespace-nowrap">e-mail</span>]
-                    : [part]
-                )}
+                {renderHeroText(t.heroSubtitle)}
               </p>
             </div>
           </div>
