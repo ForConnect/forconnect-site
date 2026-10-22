@@ -281,18 +281,39 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="mt-20">
+        <section className="mt-20 grid md:grid-cols-2 gap-6">
           <div className="relative p-8 rounded-2xl border border-cyan-500/30 bg-gradient-to-br from-slate-950 to-slate-900 shadow-lg">
             <div className="absolute top-6 left-6 text-cyan-500/20 text-6xl">&ldquo;</div>
-            <div className="relative pl-8">
+            <div className="relative pl-8 flex h-full flex-col">
               <p className="text-base md:text-lg text-gray-200 leading-relaxed italic mb-6">{lang === 'nl' ? 'Geen gemiste patienten meer. Ik ontvang alle gesprekken per e-mail met reden en contactgegevens, zodat ik meteen weet wie prioriteit heeft. Patienten zijn ook blij dat ze altijd worden geholpen, en ik kan ongestoord behandelen.' : 'No more missed patients. I receive every call by email with reason and contact details, so I immediately know who has priority. Patients are also happy that they are always helped, and I can treat without interruptions.'}</p>
-              <div className="flex items-center gap-4">
+              <div className="mt-auto flex items-center gap-4">
                 <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center overflow-hidden">
                   <img src="/arnhem-west-fysio-logo.png" alt="Arnhem West Fysio" className="w-full h-full object-contain p-1" />
                 </div>
                 <div>
                   <p className="text-sm text-gray-400">Nina Radmilovic</p>
                   <p className="font-semibold text-white">Arnhem West Fysio</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="relative p-8 rounded-2xl border border-cyan-500/30 bg-gradient-to-br from-slate-950 to-slate-900 shadow-lg">
+            <div className="absolute top-6 left-6 text-cyan-500/20 text-6xl">&ldquo;</div>
+            <div className="relative pl-8 flex h-full flex-col">
+              <p className="text-base md:text-lg text-gray-200 leading-relaxed italic mb-6">{lang === 'nl' ? 'Als wij de telefoon niet kunnen opnemen, neemt de assistente op. Ze praat vriendelijk en geduldig met de patiënt, beantwoordt vragen en verzamelt alle gegevens voor een afspraak, wijziging of annulering, die ze direct aan ons doorgeeft. Een praktische hulp, ook voor onze patiënten: ze hebben altijd iemand aan de lijn.' : 'When we cannot answer the phone, the assistant picks up. She talks to the patient in a friendly and patient way, answers questions and collects all the details for an appointment, change or cancellation, which she passes on to us straight away. A practical help, also for our patients: they always have someone on the line.'}</p>
+              <div className="mt-auto flex items-center gap-4">
+                <div className="relative w-10 h-10 rounded-full bg-white flex items-center justify-center overflow-hidden">
+                  <span className="absolute text-lg font-bold text-[#020617]">Z</span>
+                  <img
+                    src="/zorgperron-logo.png"
+                    alt="Het Zorgperron"
+                    className="relative w-full h-full object-cover"
+                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                  />
+                </div>
+                <div>
+                  <p className="text-sm text-gray-400">Ted Beers</p>
+                  <p className="font-semibold text-white">Het Zorgperron</p>
                 </div>
               </div>
             </div>
