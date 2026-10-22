@@ -20,6 +20,49 @@ export const SITE_URL = 'https://forconnect.nl';
 
 export const posts: Post[] = [
   {
+    slug: 'een-assistent-voor-alle-vestigingen',
+    title: 'Tien fysiotherapeuten, drie vestigingen, vijf telefoons: hoeveel assistenten heeft u nodig?',
+    description:
+      'Meerdere vestigingen en telefoons? U heeft maar één digitale assistent nodig, voor alle fysiotherapeuten en alle locaties.',
+    date: '2026-10-22',
+    readMinutes: 2,
+    image: '/blog/een-assistent-alle-vestigingen.jpg',
+    imageAlt: 'Een digitale assistent verbindt meerdere vestigingen van een fysiopraktijk',
+    intro: [
+      'Een reactie die we soms horen: mooi, maar wij hebben 10 fysiotherapeuten, 3 vestigingen en 5 telefoons. Dan hebben we toch meerdere assistenten nodig?',
+      'Nee. U heeft er maar één nodig.',
+    ],
+    sections: [
+      {
+        heading: 'Eén assistent voor alle vestigingen',
+        paragraphs: [
+          'De digitale assistent van ForConnect neemt op wanneer niemand kan opnemen. Ze werkt voor al uw fysiotherapeuten en al uw vestigingen tegelijk.',
+          'Dus geen aparte assistent per locatie en geen aparte assistent per telefoon.',
+        ],
+      },
+      {
+        heading: 'Eenvoudig in te stellen',
+        paragraphs: [
+          'Het instellen is eenvoudig. Of u het wilt proberen, bepaalt u zelf. Wij zorgen dat het kan.',
+        ],
+      },
+      {
+        heading: 'Wat kost het?',
+        paragraphs: [
+          'Eén assistent kost u per maand ongeveer evenveel als één keer per maand met uw collega\'s een paar drankjes drinken.',
+          'Daarvoor krijgt u een assistent die voor uw hele praktijk beschikbaar is:',
+        ],
+        bullets: [
+          'Elke beller wordt geholpen, op elke vestiging.',
+          'Alle gegevens komen per e-mail bij u terecht.',
+          'Uw team kan ongestoord doorwerken.',
+        ],
+      },
+    ],
+    closing:
+      'Wilt u het proberen? Neem op elke manier contact met ons op, wij regelen de rest.',
+  },
+  {
     slug: 'robot-of-prettige-assistent',
     title: 'Praat de beller met een robot of met een prettige assistent?',
     description:
