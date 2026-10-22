@@ -20,6 +20,55 @@ export const SITE_URL = 'https://forconnect.nl';
 
 export const posts: Post[] = [
   {
+    slug: 'persoonlijk-contact-blijft-behouden',
+    title: 'Blijft het persoonlijke contact behouden? Ja, uw digitale assistent vervangt niemand',
+    description:
+      'Een AI-telefoonassistent vervangt uw team niet, maar helpt wanneer niemand kan opnemen. Lees wat ze wel en niet doet.',
+    date: '2026-08-08',
+    readMinutes: 3,
+    image: '/blog/persoonlijk-contact.jpg',
+    imageAlt: 'Fysiotherapeut praat persoonlijk met een patient in de praktijk',
+    intro: [
+      'Een vraag die we vaak horen: verdwijnt het persoonlijke contact met mijn patiënten als een AI de telefoon opneemt?',
+      'Het antwoord is nee. Persoonlijk contact blijft bij u en uw team, waar het hoort.',
+    ],
+    sections: [
+      {
+        heading: 'Uw digitale assistent vervangt u niet',
+        paragraphs: [
+          'De digitale assistent van ForConnect vervangt u of uw medewerkers niet. Ze helpt wanneer niemand kan opnemen: tijdens een behandeling, in de pauze, buiten openingstijd of als de balie niet bezet is.',
+          'Daarna belt u of uw team de patiënt gewoon zelf terug, op uw eigen manier.',
+        ],
+      },
+      {
+        heading: 'Wat de assistent wel doet',
+        bullets: [
+          'Ze neemt op wanneer niemand kan opnemen.',
+          'Ze beantwoordt vragen, bijvoorbeeld over tarieven, vergoedingen en verzekeringen, wie er werkt en wanneer.',
+          'Ze verzamelt de gegevens voor een afspraak maken, wijzigen of annuleren.',
+          'Ze stuurt alles per e-mail naar uw praktijk, zodat u in een oogopslag ziet wat er nodig is.',
+        ],
+      },
+      {
+        heading: 'De patiënt weet waar hij aan toe is',
+        paragraphs: [
+          'Tijdens het gesprek hoort de patiënt dat het verzoek is doorgegeven en dat er iemand contact opneemt zodra het kan. Er is geen onzekerheid, geen voicemail en geen vraag of het bericht wel is aangekomen.',
+          'De patiënt weet dat zijn verzoek is gedaan en hoeft alleen nog op uw contact te wachten. Dat geeft rust.',
+        ],
+      },
+      {
+        heading: 'Het resultaat',
+        bullets: [
+          'Het persoonlijke contact blijft bij uw team.',
+          'Elke beller wordt geholpen, ook als niemand kan opnemen.',
+          'Patiënten zijn gerustgesteld en voelen zich serieus genomen.',
+          'U en uw team kunnen ongestoord doorwerken.',
+        ],
+      },
+    ],
+    closing: 'Benieuwd hoe dit in uw praktijk werkt? Neem vrijblijvend contact met ons op.',
+  },
+  {
     slug: 'extra-telefoonassistent-naast-baliemedewerker',
     title: 'Heeft u al een baliemedewerker? Dan is een extra digitale telefoonassistent nog steeds praktisch',
     description:
