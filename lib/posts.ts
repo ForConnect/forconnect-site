@@ -20,6 +20,57 @@ export const SITE_URL = 'https://forconnect.nl';
 
 export const posts: Post[] = [
   {
+    slug: 'extra-telefoonassistent-naast-baliemedewerker',
+    title: 'Heeft u al een baliemedewerker? Dan is een extra digitale telefoonassistent nog steeds praktisch',
+    description:
+      'Ook met een baliemedewerker zijn er momenten waarop niemand opneemt. Lees hoe een AI-assistent die gaten dekt, zonder uw team te vervangen.',
+    date: '2026-06-22',
+    readMinutes: 2,
+    image: '/blog/extra-telefoonassistent.jpg',
+    imageAlt: 'Lege balie van een fysiopraktijk buiten openingstijden terwijl de telefoon overgaat',
+    intro: [
+      'Heeft uw praktijk een baliemedewerker of een assistent die de telefoon opneemt? Dan denkt u misschien dat u niets mist.',
+      'Toch zijn er momenten waarop niemand kan opnemen. Dat is niemand kwalijk te nemen, maar de beller merkt het wel.',
+    ],
+    sections: [
+      {
+        heading: 'Wanneer niemand kan opnemen',
+        paragraphs: ['Ook de beste baliemedewerker kan niet altijd aan de telefoon zitten:'],
+        bullets: [
+          'Tijdens de lunchpauze.',
+          'Voor en na openingstijd.',
+          'In het weekend en op feestdagen.',
+          'Als uw baliemedewerker met vakantie is of ziek thuis zit.',
+          'Als de balie druk is en de telefoon blijft overgaan.',
+        ],
+      },
+      {
+        heading: 'Ook bij een parttime of fulltime baliemedewerker',
+        paragraphs: [
+          'Bij een parttime baliemedewerker zijn er dagen of dagdelen zonder bezetting. Maar ook bij een fulltime medewerker blijven er gaten: pauzes, vakanties, ziekte en alle uren buiten kantoortijd.',
+          'Eén persoon kan nooit de hele week bereikbaar zijn. En een beller die niemand krijgt, belt vaak gewoon de volgende praktijk.',
+        ],
+      },
+      {
+        heading: 'Een extra assistent, geen vervanging',
+        paragraphs: [
+          'De AI-telefoonassistent van ForConnect vervangt uw baliemedewerker niet. Zie haar als een extra collega die inspringt wanneer niemand kan opnemen.',
+          'Zij neemt elk gesprek aan, in goed Nederlands, noteert de gegevens en de reden van het telefoontje en stuurt alles per e-mail naar uw praktijk. Uw baliemedewerker ziet na terugkomst direct wie er heeft gebeld en kan gericht terugbellen.',
+        ],
+      },
+      {
+        heading: 'Wat het oplevert',
+        bullets: [
+          'Uw patiënten zijn de hele week gedekt, ook op momenten dat de balie leeg is.',
+          'Tevredenere patiënten, omdat elke beller wordt geholpen.',
+          'Minder gemiste nieuwe aanvragen en dus meer omzet.',
+          'Minder druk op uw team, dat ongestoord kan werken.',
+        ],
+      },
+    ],
+    closing: 'Benieuwd hoe dit naast uw eigen balie werkt? Neem vrijblijvend contact met ons op.',
+  },
+  {
     slug: 'voicemail-is-geen-oplossing',
     title: 'Voicemail is geen oplossing. Dat merken wij zelf elke dag.',
     description:
