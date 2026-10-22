@@ -53,9 +53,9 @@ const content: Record<'nl' | 'en', ContentType> = {
     heroPrimaryCta: 'Plan een demo',
     howTitle: 'Hoe werkt ForConnect?',
     howSteps: [
-      { title: '1. Patient belt uw praktijk', text: '' },
+      { title: '1. Patiënt belt uw praktijk. Als niemand kan opnemen, neemt de assistent op', text: '' },
       { title: '2. De AI assistent voert het gesprek, beantwoordt vragen en handelt directe verzoeken af', text: '' },
-      { title: '3. Indien nodig ontvangt u alles per e-mail – klaar om afspraken in te plannen, te wijzigen of te annuleren', text: '' },
+      { title: '3. U ontvangt alles per e-mail – ook wijzigingen en annuleringen. Daarvoor hoeft u de patiënt niet meer te bellen, alleen voor een nieuwe afspraak', text: '' },
     ],
     forWhoTitle: 'Voor wie is ForConnect?',
     forWhoItems: [
@@ -100,9 +100,9 @@ const content: Record<'nl' | 'en', ContentType> = {
     heroPrimaryCta: 'Book a demo',
     howTitle: 'How does ForConnect work?',
     howSteps: [
-      { title: '1. Patient calls your practice', text: '' },
+      { title: '1. Patient calls your practice. If no one can answer, the assistant picks up', text: '' },
       { title: '2. The AI assistant handles the conversation and processes the request', text: '' },
-      { title: '3. If needed, you receive everything by email – ready to schedule, change or cancel appointments', text: '' },
+      { title: '3. You receive everything by email – including changes and cancellations. You do not need to call the patient for those, only to schedule a new appointment', text: '' },
     ],
     forWhoTitle: 'Who is ForConnect for?',
     forWhoItems: [
@@ -408,8 +408,8 @@ export default function HomePage() {
               <div className="p-4">
                 <p className="font-semibold text-white mb-2">
                   {lang === 'nl'
-                    ? '1. Patiënt belt uw praktijk'
-                    : '1. Patient calls your practice'}
+                    ? '1. Patiënt belt uw praktijk. Als niemand kan opnemen, neemt de assistent op'
+                    : '1. Patient calls your practice. If no one can answer, the assistant picks up'}
                 </p>
               </div>
             </div>
