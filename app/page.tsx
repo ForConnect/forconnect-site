@@ -226,7 +226,12 @@ export default function HomePage() {
           )}
         </header>
 
-        <section id="hero" className="pt-12 grid md:grid-cols-2 gap-10 items-end">
+        <section id="hero" className="relative pt-12 grid md:grid-cols-2 gap-10 items-end">
+          <img
+            src="/avg-seal.png"
+            alt={lang === 'nl' ? 'AVG-conform' : 'GDPR compliant'}
+            className="hidden xl:block pointer-events-none absolute left-1/2 top-[60%] -translate-x-1/2 -translate-y-1/2 h-40 w-auto drop-shadow-[0_0_25px_#00F0FF55]"
+          />
           <div className="space-y-5">
             <div className="inline-flex items-center gap-2 px-3 py-1 border border-gray-700 bg-[#020617]/80 text-xs rounded-full">
               <span className="h-2 w-2 rounded-full bg-[#00F0FF]" />
@@ -236,8 +241,13 @@ export default function HomePage() {
             <div className="mt-3 text-sm text-gray-400">
               ✓ Actief sinds 2023
             </div>
-            <h1 className="text-4xl lg:text-5xl font-bold">{t.heroTitle}</h1>
-            <div className="flex items-center gap-6">
+            <div className="w-fit space-y-5">
+            <h1 className="text-4xl lg:text-5xl font-bold tracking-[0.03em] leading-[1.15]">
+              {lang === 'nl'
+                ? <>{t.heroTitle.split(' ').slice(0, -1).join(' ')}<br />{t.heroTitle.split(' ').slice(-1)[0]}</>
+                : t.heroTitle}
+            </h1>
+            <div className="flex items-center gap-6 w-0 min-w-full">
               <div className="relative hidden lg:block w-[170px] h-[215px] flex-shrink-0 rounded-3xl overflow-hidden border border-cyan-500/30 shadow-[0_0_25px_#00F0FF33]">
                 <img
                   src="/hero-assistent.jpg"
@@ -247,12 +257,13 @@ export default function HomePage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#020617]/40 via-transparent to-transparent" />
               </div>
-              <p className="text-gray-300 text-base leading-relaxed lg:max-w-[235px]">
+              <p className="text-gray-300 text-base leading-relaxed flex-1">
                 {renderHeroText(t.heroSubtitle)}
               </p>
             </div>
+            </div>
           </div>
-          <div className="flex flex-col items-center md:items-start md:w-[420px] mt-10 md:mt-0">
+          <div className="flex flex-col items-center md:items-start md:justify-self-end md:w-[420px] mt-10 md:mt-0">
             <div className="p-6 rounded-3xl bg-[#020617]/70 border border-gray-800 w-full h-[300px] flex flex-col justify-between shadow-[0_0_25px_#00F0FF22]">
               <div>
                 <div className="text-xs text-gray-400 mb-4">Live AI demo</div>
