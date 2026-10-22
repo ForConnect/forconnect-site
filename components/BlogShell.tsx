@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
+import NeuralNet from '@/components/NeuralNet';
 
 const links = [
   { label: 'Home', href: '/' },
@@ -15,7 +16,8 @@ const links = [
 
 export default function BlogShell({ children }: { children: React.ReactNode }) {
   return (
-    <div className="min-h-screen bg-[#040815] text-white">
+    <div className="min-h-screen bg-[#0C1528] text-white">
+      <NeuralNet />
       <div className="pointer-events-none fixed inset-0 opacity-40 blur-3xl">
         <div className="absolute -top-32 -left-32 h-80 w-80 rounded-full bg-[#00F0FF33]" />
         <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-[#00F0FF22]" />
