@@ -20,6 +20,55 @@ export const SITE_URL = 'https://forconnect.nl';
 
 export const posts: Post[] = [
   {
+    slug: 'robot-of-prettige-assistent',
+    title: 'Praat de beller met een robot of met een prettige assistent?',
+    description:
+      'Veel mensen willen niet met een robot praten. Lees waarom onze digitale assistent juist prettig, rustig en menselijk klinkt.',
+    date: '2026-09-12',
+    readMinutes: 2,
+    image: '/blog/prettige-assistent.jpg',
+    imageAlt: 'Patient belt met een tevreden gezicht terwijl een digitale assistent het gesprek aanneemt',
+    intro: [
+      'Mensen willen niet met een robot praten. Dat horen we vaak, en dat begrijpen we goed.',
+      'Maar praat een beller bij ForConnect echt met een robot, of met een prettige assistent?',
+    ],
+    sections: [
+      {
+        heading: 'Geen robot, maar een prettige assistent',
+        paragraphs: [
+          'De digitale assistent van ForConnect spreekt Nederlands op het niveau van een echt persoon. Zo goed, dat bellers soms denken dat ze met een mens praten, ook al stelt ze zich voor als digitale AI-assistent.',
+          'Er zijn geen stijve robotzinnen en geen keuzemenu met toetsen. Ze praat gewoon, zoals een goede baliemedewerker dat doet.',
+        ],
+      },
+      {
+        heading: 'Altijd rustig, vriendelijk en empathisch',
+        paragraphs: [
+          'Ze is altijd rustig en goedgemutst, en heeft aandacht voor de beller. Ook als iemand pijn heeft of haast, blijft ze kalm en luistert ze.',
+          'Daardoor is elk gesprek prettig. En de beller weet precies waar hij aan toe is:',
+        ],
+        bullets: [
+          'Zijn verzoek wordt genoteerd.',
+          'Hij hoort dat het is doorgegeven aan de praktijk.',
+          'Hij weet dat er contact met hem wordt opgenomen.',
+        ],
+      },
+      {
+        heading: 'En wat doet u?',
+        paragraphs: [
+          'U hoeft alleen nog de patiënt te contacteren, als dat nodig is. De gegevens en de reden van het gesprek staan in uw e-mail, dus u kunt gericht terugbellen.',
+        ],
+      },
+      {
+        heading: 'Hoor en ervaar het zelf',
+        paragraphs: [
+          'Lezen is één ding, het zelf horen is wat telt. Doe een proefaanvraag en ervaar hoe het is om met onze assistent te praten.',
+        ],
+      },
+    ],
+    closing:
+      'Bel de demo-lijn op +31 26 791 32 73 en hoor zelf hoe prettig een gesprek met onze digitale assistent is.',
+  },
+  {
     slug: 'persoonlijk-contact-blijft-behouden',
     title: 'Blijft het persoonlijke contact behouden? Ja, uw digitale assistent vervangt niemand',
     description:
