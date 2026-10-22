@@ -20,11 +20,76 @@ export const SITE_URL = 'https://forconnect.nl';
 
 export const posts: Post[] = [
   {
+    slug: 'voicemail-is-geen-oplossing',
+    title: 'Voicemail is geen oplossing. Dat merken wij zelf elke dag.',
+    description:
+      'Een beller die de voicemail krijgt, weet niets. Lees waarom een telefoonassistent die opneemt meer doet dan een voicemail.',
+    date: '2026-10-01',
+    readMinutes: 3,
+    image: '/blog/voicemail-is-geen-oplossing.jpg',
+    imageAlt: 'Man met rugpijn kijkt naar zijn telefoon waarop ForConnect het gesprek aanneemt',
+    intro: [
+      'Wij bellen dagelijks met fysiopraktijken. In de meeste gevallen krijgen we de voicemail. Soms nemen ze helemaal niet op en blijft de telefoon gewoon overgaan.',
+      'Dat is niemand kwalijk te nemen. U staat midden in een behandeling.',
+    ],
+    sections: [
+      {
+        heading: 'Wat doet een voicemail met de beller?',
+        paragraphs: ['Een beller die de voicemail krijgt, weet niets:'],
+        bullets: [
+          'Wordt er vandaag nog teruggebeld, of pas morgen?',
+          'Is mijn bericht wel aangekomen?',
+          'Moet ik het nog bij een andere praktijk proberen?',
+        ],
+      },
+      {
+        heading: 'Wat een beller eigenlijk nodig heeft',
+        paragraphs: [
+          'Iemand met pijn of een dringende vraag wil niet wachten in onzekerheid. Veel bellers spreken niets in en bellen de volgende praktijk. U merkt dat nooit, want een gemiste beller laat geen spoor achter.',
+          'Niet per se direct een afspraak. Wel het gevoel dat er iemand is:',
+        ],
+        bullets: [
+          'Er neemt iemand op.',
+          'De gegevens worden genoteerd.',
+          'Er wordt gezegd dat de praktijk zo snel mogelijk terugbelt.',
+        ],
+      },
+      {
+        heading: 'Een telefoonassistent die meer doet dan opnemen',
+        paragraphs: [
+          'Dat is vaak genoeg om iemand gerust te stellen. De patiënt voelt zich serieus genomen.',
+          'De AI-telefoonassistent van ForConnect neemt elk gesprek aan, in goed Nederlands. Hij noteert de gegevens en vraagt ook waarvoor de patiënt belt. Zo wordt meteen duidelijk hoe dringend iets is.',
+          'Tijdens het gesprek gaat er een e-mail naar de praktijk. Daarin ziet u in één oogopslag:',
+        ],
+        bullets: [
+          'De reden van het telefoontje en hoe urgent het lijkt.',
+          'Of er actie nodig is. Een afmelding vraagt bijvoorbeeld niets van de beller. U hoeft alleen de agenda aan te passen.',
+          'Of het administratief is. Wordt er binnen 24 uur afgemeld, dan bepaalt u of er een factuur moet volgen.',
+          'Of er een gaatje in de agenda ontstaat, zodat u kunt proberen die plek nog op te vullen en geen omzet misloopt.',
+        ],
+      },
+      {
+        heading: 'Rust voor de beller en voor u',
+        paragraphs: [
+          'Ondertussen hoort de beller dat er iemand is, dat zijn gegevens genoteerd zijn en dat de praktijk zo snel mogelijk terugbelt. U gaat rustig door met uw behandeling en pakt de e-mails op wanneer het uitkomt.',
+          'Betaalbaar, en zonder extra personeel.',
+        ],
+      },
+      {
+        heading: 'Een vraag om mee te nemen',
+        paragraphs: [
+          'Hoeveel bellers hebben de afgelopen maand de voicemail gekregen en niets ingesproken? U weet het niet. En precies dat is het punt.',
+        ],
+      },
+    ],
+    closing: 'Benieuwd hoe dit in uw praktijk zou werken? Neem vrijblijvend contact met ons op.',
+  },
+  {
     slug: 'telefoon-opnemen-tijdens-behandeling',
     title: 'Telefoon opnemen tijdens een behandeling: moet dat wel?',
     description:
       'Opnemen of laten gaan? Met een AI-telefoonassistent hoeft u niet meer te kiezen tussen uw patiënt en de beller.',
-    date: '2026-10-20',
+    date: '2025-06-10',
     readMinutes: 2,
     image: '/blog/telefoon-opnemen-tijdens-behandeling.jpg',
     imageAlt: 'Fysiotherapeut neemt de telefoon op terwijl zijn patiënt wacht op de behandeltafel',
@@ -69,7 +134,7 @@ export const posts: Post[] = [
     title: 'Gemiste telefoontjes in de fysiopraktijk: wat kost het u echt?',
     description:
       'Elke gemiste oproep is een patient die naar een andere praktijk belt. Lees hoe u dit voorkomt zonder extra personeel.',
-    date: '2026-10-14',
+    date: '2025-12-01',
     readMinutes: 4,
     image: '/blog/gemiste-telefoontjes.jpg',
     imageAlt: 'Telefoon rinkelt in een fysiopraktijk terwijl de fysiotherapeut een patient behandelt',
