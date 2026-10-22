@@ -230,7 +230,7 @@ export default function HomePage() {
           <img
             src="/avg-seal.png"
             alt={lang === 'nl' ? 'AVG-conform' : 'GDPR compliant'}
-            className="hidden xl:block pointer-events-none absolute left-1/2 top-[60%] -translate-x-1/2 -translate-y-1/2 h-40 w-auto drop-shadow-[0_0_25px_#00F0FF55]"
+            className="hidden xl:block pointer-events-none absolute left-1/2 top-[68%] -translate-x-1/2 -translate-y-1/2 h-36 w-auto drop-shadow-[0_0_25px_#00F0FF55]"
           />
           <div className="space-y-5">
             <div className="inline-flex items-center gap-2 px-3 py-1 border border-gray-700 bg-[#020617]/80 text-xs rounded-full">
