@@ -210,7 +210,7 @@ export default function HomePage() {
           )}
         </header>
 
-        <section id="hero" className="pt-12 grid md:grid-cols-2 gap-10 items-center">
+        <section id="hero" className="pt-12 grid md:grid-cols-2 xl:grid-cols-[1fr_auto] gap-10 items-center">
           <div className="space-y-5">
             <div className="inline-flex items-center gap-2 px-3 py-1 border border-gray-700 bg-[#020617]/80 text-xs rounded-full">
               <span className="h-2 w-2 rounded-full bg-[#00F0FF]" />
@@ -226,7 +226,21 @@ export default function HomePage() {
               <button onClick={() => scrollToId('demo')} className="px-6 py-3 bg-[#00F0FF] text-[#020617] rounded-full font-semibold shadow-[0_0_20px_#00F0FF88] hover:bg-[#66F6FF] transition">{t.heroPrimaryCta}</button>
             </div>
           </div>
-          <div className="flex flex-col items-center md:items-start md:w-[420px] mt-10 md:mt-0">
+          <div className="flex items-start gap-4 mt-10 md:mt-0">
+          <div className="relative hidden xl:block w-[200px] h-[300px] flex-shrink-0 rounded-3xl overflow-hidden border border-cyan-500/30 shadow-[0_0_25px_#00F0FF33]">
+            <img
+              src="/hero-assistent.jpg"
+              alt={lang === 'nl' ? 'Vriendelijke digitale assistente van ForConnect' : 'Friendly ForConnect digital assistant'}
+              className="h-full w-full object-cover"
+              style={{ objectPosition: '38% 40%' }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#020617]/70 via-transparent to-transparent" />
+            <div className="absolute bottom-3 left-3 right-3 flex items-center justify-center gap-2 rounded-full bg-[#020617]/80 px-3 py-1.5 text-xs text-gray-200 border border-gray-700">
+              <span className="h-2 w-2 rounded-full bg-green-400" />
+              <span>{lang === 'nl' ? 'Digitale assistent' : 'Digital assistant'}</span>
+            </div>
+          </div>
+          <div className="flex flex-col items-center md:items-start w-full md:w-[420px]">
             <div className="p-6 rounded-3xl bg-[#020617]/70 border border-gray-800 w-full h-[300px] flex flex-col justify-between shadow-[0_0_25px_#00F0FF22]">
               <div>
                 <div className="text-xs text-gray-400 mb-4">Live AI demo</div>
@@ -241,6 +255,7 @@ export default function HomePage() {
                 <span>&#x1F4DE;</span> {lang === 'nl' ? 'Bel de demo-lijn' : 'Call demo line'}
               </a>
             </div>
+          </div>
           </div>
         </section>
 
