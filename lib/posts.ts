@@ -109,7 +109,7 @@ export const posts: Post[] = [
       },
     ],
     closing:
-      'Bel de demo-lijn op +31 26 791 32 73 en hoor zelf hoe prettig een gesprek met onze digitale assistent is.',
+      'Bel de demo-lijn op +31 26 669 04 75 en hoor zelf hoe prettig een gesprek met onze digitale assistent is.',
   },
   {
     slug: 'persoonlijk-contact-blijft-behouden',

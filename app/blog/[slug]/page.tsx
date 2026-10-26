@@ -135,7 +135,7 @@ export default async function BlogPost({
               Plan een demo
             </Link>
             <a
-              href="tel:+31266690470"
+              href="tel:+31266690475"
               className="px-6 py-3 rounded-full border border-gray-600 hover:border-[#00F0FF] transition"
             >
               Bel de demo-lijn

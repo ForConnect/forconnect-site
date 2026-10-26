@@ -14,8 +14,8 @@ const PHONE = "+31 6 34 48 37 01";
 const PHONE_HREF = "tel:+31634483701";
 const WHATSAPP = "https://wa.me/31634483701";
 const EMAIL = "info@forconnect.nl";
-const DEMO_NL = "+31 26 669 04 70";
-const DEMO_NL_HREF = "tel:+31266690470";
+const DEMO_NL = "+31 26 669 04 75";
+const DEMO_NL_HREF = "tel:+31266690475";
 const DEMO_BE = "+32 78 700 402";
 const DEMO_BE_HREF = "tel:+3278700402";
 

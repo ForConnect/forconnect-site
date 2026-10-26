@@ -138,7 +138,7 @@ export default function KappersPage() {
           </p>
           <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
             <a
-              href="tel:+31267913273"
+              href="tel:+31266690475"
               style={{
                 backgroundColor: "#00e5ff",
                 color: "#0a0f1a",
