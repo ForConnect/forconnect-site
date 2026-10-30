@@ -20,6 +20,58 @@ export const SITE_URL = 'https://forconnect.nl';
 
 export const posts: Post[] = [
   {
+    slug: 'annuleringen-gaatje-in-de-agenda',
+    title: 'Annulering binnen 24 uur: zo vult u het gaatje in de agenda',
+    description:
+      'Een patiënt annuleert, de assistent regelt het gesprek en u ziet direct dat er een plek vrij is. Lees hoe één opgevulde afspraak de assistent al terugverdient.',
+    date: '2026-10-30',
+    readMinutes: 3,
+    image: '/blog/annulering-gaatje-agenda.jpg',
+    imageAlt: 'Fysiotherapeut ziet een vrij moment in de agenda en belt een patiënt van de wachtlijst',
+    intro: [
+      'Een patiënt belt om af te zeggen. Soms is het ruim van tevoren, soms pas een paar uur voor de afspraak. Voor u betekent het één ding: een gaatje in de agenda.',
+      'Dat gaatje is verloren omzet, tenzij u het op tijd ziet en opvult.',
+    ],
+    sections: [
+      {
+        heading: 'Wat gebeurt er nu vaak?',
+        bullets: [
+          'De patiënt belt en niemand neemt op, of laat een voicemail achter die pas later wordt beluisterd.',
+          'U hoort pas de volgende dag dat er een plek vrij was.',
+          'De wachtlijst blijft wachten, terwijl de behandeltafel leeg staat.',
+        ],
+      },
+      {
+        heading: 'Hoe het met de assistent gaat',
+        paragraphs: [
+          'De digitale assistent van ForConnect neemt de oproep aan en handelt de annulering af. De patiënt weet dat het is doorgegeven en u hoeft hem niet terug te bellen.',
+          'Tegelijk ontvangt u direct een e-mail met de naam van de patiënt, het tijdstip en de reden. U ziet in één oogopslag dat er een plek vrij is.',
+        ],
+      },
+      {
+        heading: 'Van annulering naar opgevulde plek',
+        paragraphs: [
+          'Heeft u een wachtlijst? Dan belt u de eerstvolgende patiënt en biedt hem de vrijgekomen plek aan. Zo is het gaatje opgevuld en loopt u geen omzet mis.',
+          'Het enige wat u zelf doet, is die ene patiënt van de wachtlijst bellen. De rest is al geregeld.',
+        ],
+      },
+      {
+        heading: 'Betaalt de assistent zich terug?',
+        paragraphs: [
+          'Reken zelf maar na: één opgevulde afspraak levert u een behandeling op die anders was verdwenen. Bij een gemiddeld tarief kan één opgevuld gaatje de kosten van de assistent over twee maanden al goedmaken.',
+          'En dat is nog zonder de nieuwe patiënten die u niet meer misloopt omdat er altijd iemand opneemt.',
+        ],
+      },
+      {
+        heading: 'Een vraag om mee te nemen',
+        paragraphs: [
+          'Hoeveel annuleringen hoort u te laat om de plek nog op te vullen? Met een assistent die opneemt en direct een e-mail stuurt, weet u het op tijd.',
+        ],
+      },
+    ],
+    closing: 'Benieuwd hoe dit in uw praktijk werkt? Neem vrijblijvend contact met ons op.',
+  },
+  {
     slug: 'een-assistent-voor-alle-vestigingen',
     title: 'Tien fysiotherapeuten, drie vestigingen, vijf telefoons: hoeveel assistenten heeft u nodig?',
     description:
