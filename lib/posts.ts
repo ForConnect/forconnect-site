@@ -20,6 +20,59 @@ export const SITE_URL = 'https://forconnect.nl';
 
 export const posts: Post[] = [
   {
+    slug: 'patienten-die-geen-nederlands-spreken',
+    title: 'Klinkt praktisch, maar veel van mijn patiënten spreken geen Nederlands',
+    description:
+      'Spreekt een beller geen Nederlands, dan schakelt de assistent over naar zijn taal. Lees hoe elke patiënt zich welkom voelt, zonder dat u een vreemde taal hoeft te spreken.',
+    date: '2026-11-08',
+    readMinutes: 3,
+    image: '/blog/meertalig-patienten.jpg',
+    imageAlt: 'Lachende vrouw belt met haar telefoon en kiest haar eigen taal bij de ForConnect assistent',
+    intro: [
+      '“Klinkt praktisch, maar veel van mijn patiënten spreken geen Nederlands.”',
+      'Dat horen wij vaak, en het is een terechte vraag. Een patiënt die zich niet verstaanbaar kan maken aan de telefoon, is voor niemand prettig. Niet voor hem en niet voor u.',
+    ],
+    sections: [
+      {
+        heading: 'Wat gebeurt er nu vaak?',
+        bullets: [
+          'De beller spreekt geen Nederlands en legt weer neer.',
+          'Of hij krijgt de voicemail, begrijpt niet wat er gevraagd wordt en spreekt niets in.',
+          'Hij belt de volgende praktijk, waar misschien wel iemand zijn taal spreekt.',
+        ],
+      },
+      {
+        heading: 'U merkt het nooit',
+        paragraphs: [
+          'Een beller die afhaakt laat geen spoor achter. U weet dus niet hoeveel mensen er al bij u hebben gebeld en weer hebben opgehangen.',
+        ],
+      },
+      {
+        heading: 'Zo werkt het met de assistent',
+        paragraphs: [
+          'De assistent neemt op in het Nederlands. Hoort zij dat de beller een andere taal spreekt, dan verbindt ze het gesprek direct door naar een assistent die die taal spreekt, zoals:',
+        ],
+        bullets: ['Engels', 'Arabisch', 'Turks', 'Duits', 'Frans', 'en andere talen'],
+      },
+      {
+        heading: 'Dezelfde zorg, in elke taal',
+        paragraphs: [
+          'De beller hoeft niets te doen. Hij praat gewoon in zijn eigen taal.',
+          'Ook in een andere taal noteert de assistent de gegevens en de reden van het telefoontje. De beller hoort dat de praktijk zo snel mogelijk terugbelt.',
+          'U ontvangt daarna een e-mail in het Nederlands, dus u ziet in één oogopslag wat er nodig is. U hoeft zelf geen vreemde taal te spreken.',
+          'Zo voelt elke patiënt zich welkom, vanaf het eerste telefoontje.',
+        ],
+      },
+      {
+        heading: 'Een vraag om mee te nemen',
+        paragraphs: [
+          'Hoeveel mensen hebben de afgelopen maand uw praktijk gebeld, konden zich niet verstaanbaar maken en kozen een andere praktijk? U weet het niet. Met een assistent die meepraat in de taal van de beller, mist u niemand.',
+        ],
+      },
+    ],
+    closing: 'Benieuwd hoe dit in uw praktijk werkt? Neem vrijblijvend contact met ons op.',
+  },
+  {
     slug: 'annuleringen-gaatje-in-de-agenda',
     title: 'Annulering binnen 24 uur: zo vult u het gaatje in de agenda',
     description:
